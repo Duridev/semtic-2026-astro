@@ -1,0 +1,33 @@
+# Robots.txt para SEMTIC Agencia Digital
+
+# Allow all bots to crawl the entire site
+User-agent: *
+Allow: /
+
+# Disallow admin and private directories
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+
+# Specify sitemap location
+Sitemap: https://semtic.cl/sitemap.xml
+
+# Crawl delay for politeness
+Crawl-delay: 1
+
+# Rules for specific search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+# Block bad bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /

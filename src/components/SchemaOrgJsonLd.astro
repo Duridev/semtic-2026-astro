@@ -1,0 +1,135 @@
+---
+// Schema.org JSON-LD structured data for SEO
+const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "SEMTIC Agencia Digital",
+    "url": "https://semtic.cl",
+    "logo": "https://semtic.cl/logo-semtic.png",
+    "description": "Agencia digital especializada en desarrollo web, e-commerce, SEO y marketing digital",
+    "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "CL",
+        "addressRegion": "Region Metropolitana"
+    },
+    "sameAs": [
+        "https://www.facebook.com/semtic",
+        "https://www.instagram.com/semtic",
+        "https://www.linkedin.com/company/semtic",
+        "https://www.tiktok.com/@semtic"
+    ],
+    "contact": {
+        "@type": "ContactPoint",
+        "telephone": "+56912345678",
+        "contactType": "Customer Service",
+        "areaServed": "CL",
+        "availableLanguage": "es"
+    },
+    "priceRange": "$$",
+    "knowsAbout": [
+        "Web Design",
+        "Web Development",
+        "E-commerce",
+        "SEO",
+        "Digital Marketing",
+        "Social Media Management",
+        "Graphic Design"
+    ]
+};
+
+const servicesSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "SEMTIC Agencia Digital",
+    "url": "https://semtic.cl",
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Digital Services",
+        "itemListElement": [
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Diseño y Desarrollo Web",
+                    "description": "Creamos sitios web modernos, rápidos y optimizados para SEO que convierten visitas en clientes"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "E-commerce",
+                    "description": "Plataformas de tienda online para aumentar ventas digitales"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Posicionamiento SEO",
+                    "description": "Optimización para que aparezcas mejor en Google y generes más leads"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Gestión de Redes Sociales",
+                    "description": "Gestionamos tus redes sociales para convertir seguidores en clientes"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Campañas Digitales",
+                    "description": "Campañas en Google Ads y redes sociales con resultados medibles"
+                }
+            }
+        ]
+    }
+};
+
+const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "¿Cuánto demora tener mi página web lista?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Una web estándar toma entre 7 y 15 días; un e-commerce, entre 15 y 45 días. Antes de partir hacemos un diagnóstico gratis para definir tiempos estimados."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "¿Qué incluye el diseño de mi página web?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Incluye diseño profesional, desarrollo completo, versión mobile, integración con WhatsApp, formularios, optimización básica SEO, seguridad, configuración de hosting y soporte inicial."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "¿Qué es SEO y por qué lo necesito?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "SEO es la optimización para buscadores. Te ayuda a que tu negocio aparezca mejor en Google sin pagar por clic. Esto significa más visitas, más consultas y más ventas."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "¿Qué es Google Ads o SEM?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Google Ads es publicidad pagada en Google que muestra tu negocio a personas que buscan exactamente lo que ofreces. Resultados rápidos, clientes reales y campañas ajustadas a tu presupuesto."
+            }
+        }
+    ]
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)}></script>
+<script type="application/ld+json" set:html={JSON.stringify(servicesSchema)}></script>
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
