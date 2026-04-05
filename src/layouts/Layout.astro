@@ -229,19 +229,16 @@ const canonicalUrl = new URL(Astro.url.pathname, siteUrl);
                         >Inicio</a
                     >
                     <div>
-                        <div
-                            class="flex items-center justify-between rounded-lg hover:bg-white/5 pr-4"
+                        <button
+                            onclick="document.getElementById('mobile-servicios-dropdown').classList.toggle('hidden'); document.getElementById('mobile-servicios-icon').classList.toggle('rotate-180')"
+                            class="w-full flex items-center justify-between rounded-lg hover:bg-white/5 pr-4 text-left focus:outline-none group"
+                            aria-label="Desplegar menú de servicios"
                         >
-                            <a
-                                href="/#servicios"
-                                class="block w-full text-sm uppercase tracking-widest text-gray-300 hover:text-[#2dd4bf] hover:drop-shadow-[0_0_8px_rgba(45,212,191,0.8)] transition-all py-3 px-4"
-                                >Servicios</a
+                            <span
+                                class="block w-full text-sm uppercase tracking-widest text-gray-300 group-hover:text-[#2dd4bf] group-hover:drop-shadow-[0_0_8px_rgba(45,212,191,0.8)] transition-all py-3 px-4"
+                                >Servicios</span
                             >
-                            <button
-                                onclick="document.getElementById('mobile-servicios-dropdown').classList.toggle('hidden'); document.getElementById('mobile-servicios-icon').classList.toggle('rotate-180')"
-                                class="p-2 text-gray-400 focus:outline-none"
-                                aria-label="Desplegar menú de servicios"
-                            >
+                            <div class="p-2 text-gray-400">
                                 <svg
                                     id="mobile-servicios-icon"
                                     class="w-5 h-5 transition-transform"
@@ -254,8 +251,8 @@ const canonicalUrl = new URL(Astro.url.pathname, siteUrl);
                                         stroke-width="2"
                                         d="M19 9l-7 7-7-7"></path></svg
                                 >
-                            </button>
-                        </div>
+                            </div>
+                        </button>
                         <div
                             id="mobile-servicios-dropdown"
                             class="hidden pl-8 pr-4 py-2 border-l border-white/10 ml-6 mt-1"
