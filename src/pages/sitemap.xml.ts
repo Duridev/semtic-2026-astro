@@ -14,6 +14,24 @@ const pages = [
         changefreq: 'weekly'
     },
     {
+        url: '/agencia-marketing-digital',
+        lastmod: new Date().toISOString().split('T')[0],
+        priority: 0.9,
+        changefreq: 'monthly'
+    },
+    {
+        url: '/desarrollo-paginas-web',
+        lastmod: new Date().toISOString().split('T')[0],
+        priority: 0.9,
+        changefreq: 'monthly'
+    },
+    {
+        url: '/publicidad-google-meta-ads',
+        lastmod: new Date().toISOString().split('T')[0],
+        priority: 0.9,
+        changefreq: 'monthly'
+    },
+    {
         url: '/nosotros',
         lastmod: new Date().toISOString().split('T')[0],
         priority: 0.8,
