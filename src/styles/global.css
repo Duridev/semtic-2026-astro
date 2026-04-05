@@ -12,6 +12,26 @@
   --color-semtic-blue: #3b82f6;
   --color-semtic-cyan: #00f2ea;
   --color-semtic-green: #39ff14;
+
+  /* Elevate contrast globally for text-gray-* classes */
+  --color-gray-400: #cbd5e1; /* slate-300 */
+  --color-gray-300: #e2e8f0; /* slate-200 */
+}
+
+html {
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 17px; /* Aumenta ligeramente todo el tamaño relativo en tablets */
+  }
+}
+
+@media (min-width: 1280px) {
+  html {
+    font-size: 18px; /* Aumenta un 12.5% general todos los fuentes, márgenes y paddings en desktop */
+  }
 }
 
 html, body {

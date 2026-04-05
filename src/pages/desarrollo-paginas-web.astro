@@ -1,103 +1,229 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import '../styles/global.css';
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
 ---
 
-<Layout 
-    title="Desarrollo de Páginas Web | SEMTIC" 
+<Layout
+    title="Desarrollo de Páginas Web | SEMTIC"
     description="Diseñamos páginas web modernas, rápidas y optimizadas para convertir visitas en clientes reales para tu empresa."
-    image="https://semtic.cl/og-servicios.png">
-
+    image="https://semtic.cl/og-servicios.png"
+>
     <!-- Hero Section -->
-    <section class="relative min-h-[60vh] flex items-center justify-center pt-32 pb-20 overflow-hidden" style="z-index: 10;">
-        <div class="absolute top-1/4 left-1/4 w-64 md:w-96 h-64 md:h-96 bg-[#00f2ea] rounded-full mix-blend-screen filter blur-[128px] opacity-20 animate-pulse"></div>
-        <div class="absolute bottom-1/4 right-1/4 w-64 md:w-96 h-64 md:h-96 bg-[#4f46e5] rounded-full mix-blend-screen filter blur-[128px] opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+    <section
+        class="relative min-h-[60vh] flex items-center justify-center pt-32 pb-20 overflow-hidden"
+        style="z-index: 10;"
+    >
+        <div
+            class="absolute top-1/4 left-1/4 w-64 md:w-96 h-64 md:h-96 bg-[#00f2ea] rounded-full mix-blend-screen filter blur-[128px] opacity-20 animate-pulse"
+        >
+        </div>
+        <div
+            class="absolute bottom-1/4 right-1/4 w-64 md:w-96 h-64 md:h-96 bg-[#4f46e5] rounded-full mix-blend-screen filter blur-[128px] opacity-20 animate-pulse"
+            style="animation-delay: 2s;"
+        >
+        </div>
 
         <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-            <h1 class="text-5xl md:text-7xl font-[family-name:var(--font-space-grotesk)] font-bold mb-6 leading-tight">
+            <h1
+                class="text-5xl md:text-7xl font-[family-name:var(--font-space-grotesk)] font-bold mb-6 leading-tight"
+            >
                 Desarrollo de <span class="text-gradient">Páginas Web</span>
             </h1>
-            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light leading-relaxed">
-                Sitios web rápidos, dinámicos y diseñados para convertir cada visita en una oportunidad de venta.
+            <p
+                class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light leading-relaxed"
+            >
+                Sitios web rápidos, dinámicos y diseñados para convertir cada
+                visita en una oportunidad de venta.
             </p>
         </div>
     </section>
 
     <!-- Beneficios -->
-    <section class="py-24 relative" style="z-index: 10; background: linear-gradient(to bottom, rgba(5, 5, 17, 0.3), rgba(5, 5, 17, 0.6));">
+    <section
+        class="py-24 relative"
+        style="z-index: 10; background: linear-gradient(to bottom, rgba(5, 5, 17, 0.3), rgba(5, 5, 17, 0.6));"
+    >
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="space-y-8">
-                    <h2 class="text-4xl md:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold mb-6">
-                        Más que un sitio, un <span class="text-gradient">vendedor 24/7</span>
+                    <h2
+                        class="text-4xl md:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold mb-6"
+                    >
+                        Más que un sitio, un <span class="text-gradient"
+                            >vendedor 24/7</span
+                        >
                     </h2>
                     <p class="text-gray-300 text-lg leading-relaxed">
-                        Creamos plataformas a la medida de tu modelo de negocio. Entregamos un sitio seguro, escalable y optimizado para SEO, garantizando que tu empresa destaque sobre la competencia.
+                        Creamos plataformas a la medida de tu modelo de negocio.
+                        Entregamos un sitio seguro, escalable y optimizado para
+                        SEO, garantizando que tu empresa destaque sobre la
+                        competencia.
                     </p>
                     <div class="space-y-4">
                         <div class="flex items-start gap-4">
-                            <span class="w-2 h-2 mt-2 bg-[#00f2ea] rounded-full shadow-[0_0_10px_#00f2ea] shrink-0"></span>
-                            <span class="text-gray-400">Diseño Responsivo: Funciona perfecto en móviles y escritorio.</span>
+                            <span
+                                class="w-2 h-2 mt-2 bg-[#00f2ea] rounded-full shadow-[0_0_10px_#00f2ea] shrink-0"
+                            ></span>
+                            <span class="text-gray-400"
+                                >Diseño Responsivo: Funciona perfecto en móviles
+                                y escritorio.</span
+                            >
                         </div>
                         <div class="flex items-start gap-4">
-                            <span class="w-2 h-2 mt-2 bg-[#00f2ea] rounded-full shadow-[0_0_10px_#00f2ea] shrink-0"></span>
-                            <span class="text-gray-400">Velocidad y Rendimiento: Tiempos de carga ultra rápidos.</span>
+                            <span
+                                class="w-2 h-2 mt-2 bg-[#00f2ea] rounded-full shadow-[0_0_10px_#00f2ea] shrink-0"
+                            ></span>
+                            <span class="text-gray-400"
+                                >Velocidad y Rendimiento: Tiempos de carga ultra
+                                rápidos.</span
+                            >
                         </div>
                         <div class="flex items-start gap-4">
-                            <span class="w-2 h-2 mt-2 bg-[#00f2ea] rounded-full shadow-[0_0_10px_#00f2ea] shrink-0"></span>
-                            <span class="text-gray-400">Sitios Autoadministrables para que mantengas tu contenido al día.</span>
+                            <span
+                                class="w-2 h-2 mt-2 bg-[#00f2ea] rounded-full shadow-[0_0_10px_#00f2ea] shrink-0"
+                            ></span>
+                            <span class="text-gray-400"
+                                >Sitios Autoadministrables para que mantengas tu
+                                contenido al día.</span
+                            >
                         </div>
                     </div>
                 </div>
-                <div class="relative p-10 rounded-3xl bg-[#0a0a1a]/40 border border-white/5 backdrop-blur-md">
-                   <div class="absolute inset-0 bg-gradient-to-br from-[#00f2ea]/10 to-transparent opacity-100 rounded-3xl"></div>
-                   <h3 class="text-2xl font-bold text-white mb-6 font-[family-name:var(--font-space-grotesk)] relative z-10">Tipos de Desarrollo</h3>
-                   <ul class="space-y-6 relative z-10">
-                        <li class="flex items-center gap-4 border-b border-white/10 pb-4">
-                            <div class="w-10 h-10 rounded bg-[#00f2ea]/20 flex items-center justify-center text-[#00f2ea]">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                <div
+                    class="relative p-10 rounded-3xl bg-[#0a0a1a]/40 border border-white/5 backdrop-blur-md"
+                >
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-[#00f2ea]/10 to-transparent opacity-100 rounded-3xl"
+                    >
+                    </div>
+                    <h3
+                        class="text-2xl font-bold text-white mb-6 font-[family-name:var(--font-space-grotesk)] relative z-10"
+                    >
+                        Tipos de Desarrollo
+                    </h3>
+                    <ul class="space-y-6 relative z-10">
+                        <li
+                            class="flex items-center gap-4 border-b border-white/10 pb-4"
+                        >
+                            <div
+                                class="w-10 h-10 rounded bg-[#00f2ea]/20 flex items-center justify-center text-[#00f2ea]"
+                            >
+                                <svg
+                                    class="w-5 h-5"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    ><path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                                    ></path></svg
+                                >
                             </div>
-                            <span class="text-gray-300">Sitios web corporativos e institucionales</span>
+                            <span class="text-gray-300"
+                                >Sitios web corporativos e institucionales</span
+                            >
                         </li>
-                        <li class="flex items-center gap-4 border-b border-white/10 pb-4">
-                            <div class="w-10 h-10 rounded bg-[#00f2ea]/20 flex items-center justify-center text-[#00f2ea]">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                        <li
+                            class="flex items-center gap-4 border-b border-white/10 pb-4"
+                        >
+                            <div
+                                class="w-10 h-10 rounded bg-[#00f2ea]/20 flex items-center justify-center text-[#00f2ea]"
+                            >
+                                <svg
+                                    class="w-5 h-5"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    ><path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+                                    ></path></svg
+                                >
                             </div>
-                            <span class="text-gray-300">Tiendas Online (E-commerce)</span>
+                            <span class="text-gray-300"
+                                >Tiendas Online (E-commerce)</span
+                            >
                         </li>
-                        <li class="flex items-center gap-4 border-b border-white/10 pb-4">
-                            <div class="w-10 h-10 rounded bg-[#00f2ea]/20 flex items-center justify-center text-[#00f2ea]">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <li
+                            class="flex items-center gap-4 border-b border-white/10 pb-4"
+                        >
+                            <div
+                                class="w-10 h-10 rounded bg-[#00f2ea]/20 flex items-center justify-center text-[#00f2ea]"
+                            >
+                                <svg
+                                    class="w-5 h-5"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    ><path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                    ></path></svg
+                                >
                             </div>
-                            <span class="text-gray-300">Landing Pages para campañas publicitarias</span>
+                            <span class="text-gray-300"
+                                >Landing Pages para campañas publicitarias</span
+                            >
                         </li>
                         <li class="flex items-center gap-4">
-                            <div class="w-10 h-10 rounded bg-[#00f2ea]/20 flex items-center justify-center text-[#00f2ea]">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            <div
+                                class="w-10 h-10 rounded bg-[#00f2ea]/20 flex items-center justify-center text-[#00f2ea]"
+                            >
+                                <svg
+                                    class="w-5 h-5"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    ><path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                                    ></path></svg
+                                >
                             </div>
-                            <span class="text-gray-300">Catálogos de productos y portafolios</span>
+                            <span class="text-gray-300"
+                                >Catálogos de productos y portafolios</span
+                            >
                         </li>
-                   </ul>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Final -->
-    <section class="py-20 relative" style="z-index: 10; background: linear-gradient(to bottom, rgba(5, 5, 17, 0.8), rgba(5, 5, 17, 0.95));">
+    <section
+        class="py-20 relative"
+        style="z-index: 10; background: linear-gradient(to bottom, rgba(5, 5, 17, 0.8), rgba(5, 5, 17, 0.95));"
+    >
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl md:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold mb-6">
-                Construye o renueva tu <span class="text-gradient">página web</span>
+            <h2
+                class="text-4xl md:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold mb-6"
+            >
+                Construye o renueva tu <span class="text-gradient"
+                    >página web</span
+                >
             </h2>
             <p class="text-gray-400 mb-10 max-w-xl mx-auto">
-                Hablemos sobre tu proyecto y construyamos una web que enamore a tus clientes.
+                Hablemos sobre tu proyecto y construyamos una web que enamore a
+                tus clientes.
             </p>
             <div class="flex flex-col items-center justify-center">
-                <a href="https://wa.me/56988169404?text=Hola,%20quisiera%20cotizar%20el%20desarrollo%20de%20una%20página%20web" target="_blank" class="inline-flex items-center px-10 py-5 bg-gradient-to-r from-[#25D366] to-[#00f2ea] rounded-full text-[#050511] font-extrabold text-lg tracking-wide shadow-lg hover:shadow-[0_0_40px_rgba(37,211,102,0.5)] transition-all duration-300 transform hover:-translate-y-1">
+                <a
+                    href="https://wa.me/56988169404?text=Hola,%20quisiera%20cotizar%20el%20desarrollo%20de%20una%20página%20web"
+                    target="_blank"
+                    class="inline-flex items-center px-10 py-5 bg-gradient-to-r from-[#25D366] to-[#00f2ea] rounded-full text-[#050511] font-extrabold text-lg tracking-wide shadow-lg hover:shadow-[0_0_40px_rgba(37,211,102,0.5)] transition-all duration-300 transform hover:-translate-y-1"
+                >
                     Agenda una reunión por WhatsApp
                 </a>
             </div>
         </div>
     </section>
-
 </Layout>
