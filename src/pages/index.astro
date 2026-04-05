@@ -282,93 +282,162 @@ import '../styles/global.css';
 
 
     <script>
-        const canvas = document.getElementById('torusCanvas');
-        const ctx = canvas.getContext('2d');
+        function initTorusCanvas() {
+            const canvas = document.getElementById('torusCanvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
 
-        let width, height;
-        let particles = [];
+            let width, height;
+            let particles = [];
+            let animationFrameId;
+            let isVisible = false; // Se activará por el observer
+            
+            // 4. Accesibilidad: Reduce Motion
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const timeMultiplier = prefersReducedMotion ? 0.05 : 1;
+            const speedMultiplier = prefersReducedMotion ? 0 : 1;
 
-        const colors = ['#2dd4bf', '#3b82f6', '#4f46e5', '#818cf8'];
+            const colors = ['#2dd4bf', '#3b82f6', '#4f46e5', '#818cf8'];
 
-        function resize() {
-            width = canvas.width = window.innerWidth;
-            height = canvas.height = window.innerHeight;
-        }
-
-        window.addEventListener('resize', resize);
-        resize();
-
-        class Particle {
-            constructor() {
-                this.reset();
-            }
-
-            reset() {
-                this.u = Math.random() * Math.PI * 2;
-                this.v = Math.random() * Math.PI * 2;
+            // 3. Optimización de Resolución (DPR limit)
+            function resize() {
+                const maxDpr = window.innerWidth < 768 ? 1.5 : 2; // Limita estrés de GPU en móviles y pantallas ultra-alta res
+                const dpr = Math.min(window.devicePixelRatio || 1, maxDpr);
+                width = window.innerWidth;
+                height = window.innerHeight;
                 
-                this.R = 200 + Math.random() * 50;
-                this.r = 80 + Math.random() * 20;
-
-                this.color = colors[Math.floor(Math.random() * colors.length)];
-                this.size = Math.random() * 1.5;
-                this.speedU = 0.002 + Math.random() * 0.005;
-                this.speedV = 0.001 + Math.random() * 0.003;
-            }
-
-            update(mouseX, mouseY) {
-                this.u += this.speedU;
-                this.v += this.speedV;
-
-                let x3d = (this.R + this.r * Math.cos(this.u)) * Math.cos(this.v);
-                let y3d = (this.R + this.r * Math.cos(this.u)) * Math.sin(this.v);
-                let z3d = this.r * Math.sin(this.u);
-
-                const time = Date.now() * 0.0003;
+                canvas.width = width * dpr;
+                canvas.height = height * dpr;
+                canvas.style.width = width + 'px';
+                canvas.style.height = height + 'px';
                 
-                let yTemp = y3d * Math.cos(time) - z3d * Math.sin(time);
-                let zTemp = y3d * Math.sin(time) + z3d * Math.cos(time);
-                y3d = yTemp;
-                z3d = zTemp;
-
-                let xTemp = x3d * Math.cos(time * 0.5) - z3d * Math.sin(time * 0.5);
-                z3d = x3d * Math.sin(time * 0.5) + z3d * Math.cos(time * 0.5);
-                x3d = xTemp;
-
-                const scale = 800 / (800 + z3d);
-                this.x2d = width / 2 + x3d * scale;
-                this.y2d = height / 2 + y3d * scale;
-                this.alpha = scale;
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0); // Escala el contexto sin acumular transformaciones
             }
 
-            draw() {
-                ctx.beginPath();
-                ctx.arc(this.x2d, this.y2d, this.size, 0, Math.PI * 2);
-                ctx.fillStyle = this.color;
-                ctx.globalAlpha = Math.max(0.1, (this.alpha - 0.5));
-                ctx.fill();
-                ctx.globalAlpha = 1;
+            class Particle {
+                constructor() {
+                    this.reset();
+                }
+
+                reset() {
+                    this.u = Math.random() * Math.PI * 2;
+                    this.v = Math.random() * Math.PI * 2;
+                    
+                    this.R = 200 + Math.random() * 50;
+                    this.r = 80 + Math.random() * 20;
+
+                    this.color = colors[Math.floor(Math.random() * colors.length)];
+                    this.size = Math.random() * 1.5;
+                    this.speedU = (0.002 + Math.random() * 0.005) * speedMultiplier;
+                    this.speedV = (0.001 + Math.random() * 0.003) * speedMultiplier;
+                }
+
+                update(timeInSecs) {
+                    this.u += this.speedU;
+                    this.v += this.speedV;
+
+                    let x3d = (this.R + this.r * Math.cos(this.u)) * Math.cos(this.v);
+                    let y3d = (this.R + this.r * Math.cos(this.u)) * Math.sin(this.v);
+                    let z3d = this.r * Math.sin(this.u);
+
+                    const time = timeInSecs * 0.3 * timeMultiplier;
+                    
+                    let yTemp = y3d * Math.cos(time) - z3d * Math.sin(time);
+                    let zTemp = y3d * Math.sin(time) + z3d * Math.cos(time);
+                    y3d = yTemp;
+                    z3d = zTemp;
+
+                    let xTemp = x3d * Math.cos(time * 0.5) - z3d * Math.sin(time * 0.5);
+                    z3d = x3d * Math.sin(time * 0.5) + z3d * Math.cos(time * 0.5);
+                    x3d = xTemp;
+
+                    const scale = 800 / (800 + z3d);
+                    this.x2d = width / 2 + x3d * scale;
+                    this.y2d = height / 2 + y3d * scale;
+                    this.alpha = scale;
+                }
+
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x2d, this.y2d, this.size, 0, Math.PI * 2);
+                    ctx.fillStyle = this.color;
+                    ctx.globalAlpha = Math.max(0.1, (this.alpha - 0.5));
+                    ctx.fill();
+                    ctx.globalAlpha = 1;
+                }
             }
-        }
 
-        const particleCount = window.innerWidth < 768 ? 400 : 900;
-        for (let i = 0; i < particleCount; i++) {
-            particles.push(new Particle());
-        }
+            const particleCount = window.innerWidth < 768 ? 300 : window.innerWidth < 1024 ? 500 : 800; // Reducción técnica para mejor rendimiento
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
 
-        function animate() {
-            ctx.fillStyle = 'rgba(5, 5, 17, 0.2)'; 
-            ctx.fillRect(0, 0, width, height);
+            let startTime = Date.now();
+            let pauseTimeOffset = 0;
+            let lastPauseTime = 0;
 
-            particles.forEach(p => {
-                p.update();
-                p.draw();
+            function animate() {
+                if (!isVisible) return; 
+                
+                ctx.fillStyle = 'rgba(5, 5, 17, 0.2)'; 
+                ctx.fillRect(0, 0, width, height);
+
+                const timeInSecs = (Date.now() - startTime - pauseTimeOffset) / 1000;
+
+                particles.forEach(p => {
+                    p.update(timeInSecs);
+                    p.draw();
+                });
+
+                animationFrameId = requestAnimationFrame(animate);
+            }
+
+            let resizeTimeout;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(resize, 150); // Debounce para no ahogar la UI al redimensionar
             });
+            resize();
 
-            requestAnimationFrame(animate);
+            // 2. Intersection Observer (Pausar si no se ve)
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        if (!isVisible) {
+                            isVisible = true;
+                            if (lastPauseTime > 0) {
+                                pauseTimeOffset += Date.now() - lastPauseTime;
+                            }
+                            animate();
+                        }
+                    } else {
+                        isVisible = false;
+                        cancelAnimationFrame(animationFrameId);
+                        lastPauseTime = Date.now();
+                    }
+                });
+            }, { threshold: 0 }); // Con threshold 0 se pausa apenas desaparece
+            
+            // Observar el contenedor principal del hero (asumiendo que el canvas cubre esa área)
+            const heroSection = document.getElementById('home');
+            if (heroSection) {
+                observer.observe(heroSection);
+            } else {
+                isVisible = true;
+                animate();
+            }
         }
 
-        animate();
+        // 1. Carga Diferida (Non-blocking render)
+        if (typeof window !== 'undefined') {
+            window.addEventListener('load', () => {
+                if (window.requestIdleCallback) {
+                    requestIdleCallback(initTorusCanvas, { timeout: 1000 });
+                } else {
+                    setTimeout(initTorusCanvas, 200);
+                }
+            });
+        }
     </script>
 
 </Layout>
