@@ -1,0 +1,103 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+---
+
+<Layout 
+    title="Generación de Leads en Chile | SEMTIC" 
+    description="Embudos de venta y estrategias para generación de prospectos y leads cualificados B2B y B2C."
+    image="https://semtic.cl/og-servicios.png">
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[60vh] flex items-center justify-center pt-32 pb-20 overflow-hidden" style="z-index: 10;">
+        <div class="absolute top-1/4 left-1/4 w-64 md:w-96 h-64 md:h-96 bg-[#f4a261] rounded-full mix-blend-screen filter blur-[128px] opacity-20 animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-64 md:w-96 h-64 md:h-96 bg-[#e76f51] rounded-full mix-blend-screen filter blur-[128px] opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-[family-name:var(--font-space-grotesk)] font-bold mb-6 leading-tight">
+                Generación de <span class="text-gradient">Leads</span>
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                Diseñamos máquinas de prospección digital para llenar la agenda de tu equipo de ventas con clientes potenciales.
+            </p>
+        </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section class="py-24 relative" style="z-index: 10; background: linear-gradient(to bottom, rgba(5, 5, 17, 0.3), rgba(5, 5, 17, 0.6));">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <h2 class="text-4xl md:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold mb-6">
+                        No esperes a que <span class="text-gradient">los clientes lleguen</span>
+                    </h2>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        Implementamos sistemas sistematizados y predecibles (Embudos de Venta) para captar los datos de tus clientes ideales, educarlos y guiarlos hasta la compra.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <span class="w-2 h-2 mt-2 bg-[#e76f51] rounded-full shadow-[0_0_10px_#e76f51] shrink-0"></span>
+                            <span class="text-gray-400">Embudos de venta (Funnels) orientados a conversión.</span>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="w-2 h-2 mt-2 bg-[#e76f51] rounded-full shadow-[0_0_10px_#e76f51] shrink-0"></span>
+                            <span class="text-gray-400">Integración con CRMs para que tu equipo comercial gestione los leads de forma eficaz.</span>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="w-2 h-2 mt-2 bg-[#e76f51] rounded-full shadow-[0_0_10px_#e76f51] shrink-0"></span>
+                            <span class="text-gray-400">Automatizaciones de Email y SMS para calentar prospectos.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative p-10 rounded-3xl bg-[#0a0a1a]/40 border border-white/5 backdrop-blur-md">
+                   <div class="absolute inset-0 bg-gradient-to-br from-[#e76f51]/10 to-transparent opacity-100 rounded-3xl"></div>
+                   <h3 class="text-2xl font-bold text-white mb-6 font-[family-name:var(--font-space-grotesk)] relative z-10">Nuestro Proceso</h3>
+                   <ul class="space-y-6 relative z-10">
+                        <li class="flex items-center gap-4 border-b border-white/10 pb-4">
+                            <div class="w-10 h-10 rounded bg-[#e76f51]/20 flex items-center justify-center text-[#e76f51]">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                            </div>
+                            <span class="text-gray-300">1. Identificamos a tu Buyer Persona y oferta irresistible.</span>
+                        </li>
+                        <li class="flex items-center gap-4 border-b border-white/10 pb-4">
+                            <div class="w-10 h-10 rounded bg-[#e76f51]/20 flex items-center justify-center text-[#e76f51]">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path></svg>
+                            </div>
+                            <span class="text-gray-300">2. Lanzamos campañas para atraer tráfico a tu Landing Page.</span>
+                        </li>
+                        <li class="flex items-center gap-4 border-b border-white/10 pb-4">
+                            <div class="w-10 h-10 rounded bg-[#e76f51]/20 flex items-center justify-center text-[#e76f51]">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                            </div>
+                            <span class="text-gray-300">3. Capturamos los datos a través de Lead Magnets o formularios optimizados.</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded bg-[#e76f51]/20 flex items-center justify-center text-[#e76f51]">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <span class="text-gray-300">4. Entregamos las oportunidades ("leads") directo a tu WhatsApp o CRM.</span>
+                        </li>
+                   </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-20 relative" style="z-index: 10; background: linear-gradient(to bottom, rgba(5, 5, 17, 0.8), rgba(5, 5, 17, 0.95));">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold mb-6">
+                Obtén un flujo constante de <span class="text-gradient">clientes potenciales</span>
+            </h2>
+            <p class="text-gray-400 mb-10 max-w-xl mx-auto">
+                Implementa un sistema de adquisición eficiente para que nunca falten oportunidades en tu negocio.
+            </p>
+            <div class="flex flex-col items-center justify-center">
+                <a href="https://wa.me/56988169404?text=Hola,%20busco%20ayuda%20con%20estrategias%20de%20generación%20de%20leads" target="_blank" class="inline-flex items-center px-10 py-5 bg-gradient-to-r from-[#25D366] to-[#e76f51] rounded-full text-[#050511] font-extrabold text-lg tracking-wide shadow-lg hover:shadow-[0_0_40px_rgba(37,211,102,0.5)] transition-all duration-300 transform hover:-translate-y-1">
+                    Agenda una reunión por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+</Layout>
