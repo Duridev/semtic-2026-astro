@@ -54,12 +54,16 @@ const pages = [
 export const GET: APIRoute = ({ site }) => {
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
-    <loc>${site}${page.url}</loc>
+${pages.map(page => {
+    // Generate safe absolute URL
+    const absoluteUrl = new URL(page.url, site).href;
+    return `  <url>
+    <loc>${absoluteUrl}</loc>
     <lastmod>${page.lastmod}</lastmod>
     <priority>${page.priority}</priority>
     <changefreq>${page.changefreq}</changefreq>
-  </url>`).join('\n')}
+  </url>`;
+}).join('\n')}
 </urlset>`;
 
     return new Response(xml, {

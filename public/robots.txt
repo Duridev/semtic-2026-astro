@@ -26,8 +26,4 @@ User-agent: AdsBot-Google
 Allow: /
 
 # Block bad bots
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: AhrefsBot
-Disallow: /
+# (You may add specific bad bots here in the future if needed)
