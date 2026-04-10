@@ -391,6 +391,28 @@ const canonicalUrl = new URL(Astro.url.pathname, siteUrl);
             </div>
         </footer>
 
+        <!-- Floating WhatsApp Button -->
+        <a 
+            href="https://wa.me/56988169404?text=Hola,%20quisiera%20conversar%20sobre%20mi%20proyecto"
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="fixed bottom-6 right-6 md:bottom-8 md:right-8 p-0 flex items-center justify-center transition-all duration-300 transform hover:-translate-y-2 hover:scale-110 drop-shadow-[0_0_20px_rgba(37,211,102,0.6)] group"
+            style="z-index: 1000;"
+            aria-label="Contáctanos por WhatsApp"
+        >
+            <!-- Texto flotante opcional (se muestra en hover en Desktop) -->
+            <span class="absolute right-full mr-4 bg-[#050511]/90 border border-[#25D366]/30 backdrop-blur-md text-white text-sm font-medium px-4 py-2 rounded-xl whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none hidden md:block shadow-[0_0_15px_rgba(37,211,102,0.2)]">
+                ¡Hablemos de tu web! 👋
+            </span>
+            <img 
+                src="/WhatsApp.svg.webp" 
+                alt="Chat WhatsApp SEMTIC" 
+                class="w-14 h-14 md:w-16 md:h-16 object-contain drop-shadow-lg"
+                loading="lazy"
+                decoding="async"
+            />
+        </a>
+
         <script>
             // Background particles
             const bgCanvas = document.getElementById("bgCanvas");
