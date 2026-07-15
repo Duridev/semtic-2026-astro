@@ -32,6 +32,12 @@ const pages = [
         changefreq: 'monthly'
     },
     {
+        url: '/servicio-dron-360',
+        lastmod: new Date().toISOString().split('T')[0],
+        priority: 0.9,
+        changefreq: 'monthly'
+    },
+    {
         url: '/nosotros',
         lastmod: new Date().toISOString().split('T')[0],
         priority: 0.8,
