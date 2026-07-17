@@ -162,7 +162,7 @@ import "../styles/global.css";
         </div>
     </section>
 
-    <!-- SECCIÓN DE PORTAFOLIO DE VIDEOS (YouTube Shorts) -->
+    <!-- SECCIÓN DE PORTAFOLIO DE VIDEOS (YouTube & Shorts) -->
     <section class="py-24 relative" style="z-index: 10; background: linear-gradient(to bottom, rgba(5, 5, 17, 0.5), rgba(5, 5, 17, 0.7));">
         <div class="container mx-auto px-4 max-w-7xl">
             <div class="text-center mb-16 max-w-3xl mx-auto">
@@ -170,12 +170,69 @@ import "../styles/global.css";
                     Trabajos y <span class="text-gradient">Demostraciones</span>
                 </h2>
                 <p class="text-gray-400 text-lg font-light">
-                    Explora registros reales de nuestras jornadas de pruebas y grabaciones comerciales. Videos verticales optimizados para alto impacto.
+                    Explora registros reales de nuestras producciones. Desde piezas cinematográficas en 4K en formato horizontal hasta contenido dinámico optimizado para redes sociales.
                 </p>
             </div>
 
-            <!-- Grid de 3 Videos (Shorts aspect-ratio vertical) -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Video Destacado Horizontal (16:9) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-20 bg-[#0a0a1a]/30 border border-white/5 rounded-[2.5rem] p-6 md:p-10 backdrop-blur-md">
+                <div class="lg:col-span-7">
+                    <div 
+                        class="video-container relative aspect-video rounded-2xl overflow-hidden bg-black shadow-2xl cursor-pointer group border border-white/5"
+                        data-video-id="lMw0rQ52GBQ"
+                    >
+                        <!-- Cover Image from YouTube servers -->
+                        <img 
+                            src="https://img.youtube.com/vi/lMw0rQ52GBQ/maxresdefault.jpg" 
+                            alt="Muelle Vergara desde el Aire: Una Nueva Perspectiva de Viña del Mar | Drone 4K" 
+                            class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" 
+                            loading="lazy"
+                            decoding="async"
+                        />
+                        <!-- Play Button Overlay -->
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/25 group-hover:bg-black/10 transition-colors">
+                            <div class="w-20 h-20 rounded-full bg-[#3b82f6]/90 flex items-center justify-center text-white border border-[#3b82f6]/30 shadow-[0_0_40px_rgba(59,130,246,0.4)] group-hover:scale-110 transition-all duration-300">
+                                <svg class="w-10 h-10 fill-current ml-1.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 flex flex-col justify-center">
+                    <span class="inline-block py-1 px-3 rounded-full bg-[#3b82f6]/10 border border-[#3b82f6]/20 text-[#3b82f6] text-xs font-bold tracking-[0.15em] mb-4 uppercase w-fit">
+                        Destacado • Formato Horizontal 4K
+                    </span>
+                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 font-[family-name:var(--font-space-grotesk)] leading-tight">
+                        Muelle Vergara desde el Aire: Viña del Mar
+                    </h3>
+                    <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-6 font-light">
+                        🌊 Sobrevolamos el emblemático Muelle Vergara en Viña del Mar, capturando la costa, la arquitectura urbana y el dinamismo de la Quinta Región desde una perspectiva cinematográfica de alto impacto. Las tomas aéreas profesionales son clave para:
+                    </p>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li class="flex items-start gap-2">
+                            <span class="text-[#2dd4bf] font-bold">✓</span> <strong>Turismo y Hotelería:</strong> mostrando el entorno de forma irresistible.
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-[#2dd4bf] font-bold">✓</span> <strong>Sector Inmobiliario:</strong> destacando ubicaciones y avances de proyectos.
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-[#2dd4bf] font-bold">✓</span> <strong>Publicidad y Redes:</strong> reteniendo la atención con tomas 4K de alta calidad.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Formatos Verticales (Shorts / Reels) -->
+            <div class="border-t border-white/5 pt-16 mb-12">
+                <h3 class="text-xl md:text-2xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)]">
+                    Formatos Verticales <span class="text-gradient">Reels & Shorts</span>
+                </h3>
+                <p class="text-gray-400 text-sm font-light">
+                    Contenido dinámico en formato 9:16 optimizado para el máximo enganche y alcance en Instagram, TikTok y YouTube Shorts.
+                </p>
+            </div>
+
+            <!-- Grid de Videos Verticales (Shorts aspect-ratio vertical) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 
                 <!-- Video 1: Tomas Aéreas en Alta Montaña -->
                 <div class="group flex flex-col h-full bg-[#0a0a1a]/40 border border-white/5 rounded-3xl p-6 backdrop-blur-md hover:border-[#3b82f6]/30 transition-all duration-300">
@@ -200,7 +257,7 @@ import "../styles/global.css";
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)]">Tomas Aéreas en Alta Montaña</h3>
                     <p class="text-gray-400 text-sm leading-relaxed flex-grow">
-                        🏔️ Subimos a la alta montaña para poner a prueba nuestros equipos de grabación aérea en un entorno extremo. Desde el seguimiento de rutas hasta capturas dinámicas, logramos registros estables y fluidos que demuestran el alcance de nuestro servicio.
+                        🏔️ Vuelo de prueba en alta montaña en un entorno extremo. Desde el seguimiento de rutas hasta capturas dinámicas, logramos registros estables y fluidos que demuestran el alcance y precisión del equipo.
                     </p>
                 </div>
 
@@ -228,20 +285,6 @@ import "../styles/global.css";
                     <h3 class="text-xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)]">Tala en Altura con Camión Pluma</h3>
                     <p class="text-gray-400 text-sm leading-relaxed flex-grow">
                         🌲 Registro técnico y corporativo de faena de tala en altura con camión pluma. Las tomas aéreas permiten supervisar áreas de difícil acceso, auditar medidas de seguridad y documentar proyectos industriales o forestales de gran envergadura.
-                    </p>
-                </div>
-
-                <!-- Video 3: Placeholder Próximamente -->
-                <div class="group flex flex-col h-full bg-[#0a0a1a]/20 border border-white/5 border-dashed rounded-3xl p-6 backdrop-blur-sm">
-                    <div class="relative aspect-[9/16] rounded-2xl bg-white/5 flex flex-col items-center justify-center text-center p-6 mb-6">
-                        <div class="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center text-gray-500 border border-white/10 mb-4">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
-                        </div>
-                        <span class="text-gray-500 font-bold uppercase tracking-wider text-xs font-[family-name:var(--font-space-grotesk)]">Próximamente</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-500 mb-3 font-[family-name:var(--font-space-grotesk)]">Inspección Aérea</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed flex-grow">
-                        Espacio reservado para registros de inspecciones técnicas, fotogrametría y seguimiento de proyectos de construcción.
                     </p>
                 </div>
 
