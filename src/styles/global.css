@@ -131,3 +131,27 @@ body {
 @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 .animate-marquee { animation: marquee 50s linear infinite; }
 .animate-marquee:hover { animation-play-state: paused; }
+
+/* Responsive side margins for all content containers to prevent suffocating tight edges */
+.container,
+.hero-container {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+@media (min-width: 768px) {
+  .container,
+  .hero-container {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container,
+  .hero-container {
+    padding-left: 4.5rem !important;
+    padding-right: 4.5rem !important;
+  }
+}
+
