@@ -244,9 +244,36 @@ import "../styles/global.css";
             </div>
 
             <!-- Grid de Videos Verticales (Shorts aspect-ratio vertical) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                 
-                <!-- Video 1: Tomas Aéreas en Alta Montaña -->
+                <!-- Video 1: Inspección Técnica y Seguimiento de Obra -->
+                <div class="group flex flex-col h-full bg-[#0a0a1a]/40 border border-white/5 rounded-3xl p-6 backdrop-blur-md hover:border-[#6366f1]/30 transition-all duration-300">
+                    <div 
+                        class="video-container relative aspect-[9/16] rounded-2xl overflow-hidden bg-black shadow-lg cursor-pointer mb-6"
+                        data-video-id="vU-SqG31IR4"
+                    >
+                        <!-- Cover Image from YouTube servers -->
+                        <img 
+                            src="https://img.youtube.com/vi/vU-SqG31IR4/hqdefault.jpg" 
+                            alt="Inspección Técnica y Seguimiento de Obra | Registro Aéreo con Dron en Cachagua" 
+                            class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" 
+                            loading="lazy"
+                            decoding="async"
+                        />
+                        <!-- Play Button Overlay -->
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/25 group-hover:bg-black/10 transition-colors">
+                            <div class="w-16 h-16 rounded-full bg-[#6366f1]/90 flex items-center justify-center text-white border border-[#6366f1]/30 shadow-[0_0_30px_rgba(99,102,241,0.4)] group-hover:scale-110 transition-all duration-300">
+                                <svg class="w-8 h-8 fill-current ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)]">Inspección y Seguimiento de Obra</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed flex-grow">
+                        🏗️ Registro aéreo de inspección técnica en Cachagua para evaluar el avance de 8 meses de ejecución. Una herramienta clave para la toma de decisiones, optimización de logística y supervisión de seguridad en la construcción.
+                    </p>
+                </div>
+
+                <!-- Video 2: Tomas Aéreas en Alta Montaña -->
                 <div class="group flex flex-col h-full bg-[#0a0a1a]/40 border border-white/5 rounded-3xl p-6 backdrop-blur-md hover:border-[#3b82f6]/30 transition-all duration-300">
                     <div 
                         class="video-container relative aspect-[9/16] rounded-2xl overflow-hidden bg-black shadow-lg cursor-pointer mb-6"
@@ -273,7 +300,7 @@ import "../styles/global.css";
                     </p>
                 </div>
 
-                <!-- Video 2: Tala en Altura con Camión Pluma -->
+                <!-- Video 3: Tala en Altura con Camión Pluma -->
                 <div class="group flex flex-col h-full bg-[#0a0a1a]/40 border border-white/5 rounded-3xl p-6 backdrop-blur-md hover:border-[#2dd4bf]/30 transition-all duration-300">
                     <div 
                         class="video-container relative aspect-[9/16] rounded-2xl overflow-hidden bg-black shadow-lg cursor-pointer mb-6"
