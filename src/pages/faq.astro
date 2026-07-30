@@ -1,286 +1,175 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
+
+const faqs = [
+    {
+        category: "Desarrollo Web",
+        color: "#00f2ea",
+        question: "¿Cuánto demora tener mi página web lista?",
+        answer: "Depende de la complejidad. Una Landing Page o sitio corporativo estándar toma entre 7 y 15 días hábiles; un e-commerce completo entre 15 y 30 días. Realizamos un diagnóstico gratuito inicial para calendarizar con precisión."
+    },
+    {
+        category: "Desarrollo Web",
+        color: "#00f2ea",
+        question: "¿Qué incluye el desarrollo de mi sitio web?",
+        answer: "Incluye diseño UX/UI a medida, maquetación responsive para móviles, integración con WhatsApp y formularios, seguridad SSL, optimización de velocidad de carga, SEO inicial y panel autoadministrable."
+    },
+    {
+        category: "SEO & Ads",
+        color: "#2dd4bf",
+        question: "¿Qué es SEO y por qué mi empresa lo necesita?",
+        answer: "El SEO es la optimización técnica y de contenido para buscadores. Permite que tu negocio aparezca orgánicamente en los primeros lugares de Google cuando tus clientes buscan lo que vendes en su zona."
+    },
+    {
+        category: "SEO & Ads",
+        color: "#39ff14",
+        question: "¿Qué diferencia hay entre Google Ads y Meta Ads?",
+        answer: "Google Ads capta la intención directa de personas que buscan activamente tu servicio. Meta Ads (Instagram y Facebook) genera interés visual interrumpiendo el scroll con anuncios atractivos para crear demanda."
+    },
+    {
+        category: "SEO & Ads",
+        color: "#2dd4bf",
+        question: "¿Puedo combinar SEO con campañas pagadas en Google y Meta?",
+        answer: "¡Totalmente! Es la estrategia ideal: Google y Meta Ads te generan prospectos inmediatos mientras el trabajo de SEO va construyendo posicionamiento orgánico sostenible en el tiempo."
+    },
+    {
+        category: "Redes Sociales",
+        color: "#4f46e5",
+        question: "¿Qué incluye el servicio de Community Manager y Redes Sociales?",
+        answer: "Incluye planificación de línea gráfica, redacción de copys profesionales, diseño de piezas para feed e historias, calendario editorial mensual, programación estratégica y análisis de métricas clave."
+    },
+    {
+        category: "Redes Sociales",
+        color: "#4f46e5",
+        question: "¿Tienen planes para emprendedores y pymes en crecimiento?",
+        answer: "Sí. Ofrecemos planes flexibles ajustados a etapas iniciales, con landing pages livianas y paquetes de manejo de redes esenciales que te ayudan a crecer sin sobrecostos."
+    },
+    {
+        category: "Servicios con Dron",
+        color: "#3b82f6",
+        question: "¿En qué zonas prestan servicio de grabación e inspección con Dron?",
+        answer: "Tenemos cobertura preferente en toda la Región de Valparaíso (Viña del Mar, Valparaíso, Concón, Quilpué, Limache) y la Región Metropolitana (Santiago), con disponibilidad de traslado a cualquier región de Chile."
+    },
+    {
+        category: "Servicios con Dron",
+        color: "#3b82f6",
+        question: "¿Sus operaciones con Dron cuentan con normativa DGAC?",
+        answer: "Sí, todos nuestros vuelos comerciales son ejecutados bajo la normativa vigente de la Dirección General de Aeronáutica Civil (DGAC), previa planificación de espacio aéreo y protocolos de seguridad."
+    },
+    {
+        category: "Desarrollo Web",
+        color: "#00f2ea",
+        question: "¿Puedo usar mi propio dominio (.cl) y hosting?",
+        answer: "Por supuesto. Si ya posees dominio en Nic.cl y servicio de hosting, nos encargamos de realizar las configuraciones DNS. Si no lo tienes, te guiamos en la compra sin costo adicional."
+    },
+    {
+        category: "General",
+        color: "#2dd4bf",
+        question: "¿Cómo es el proceso para agendar un diagnóstico o cotización?",
+        answer: "Es muy fácil: escríbenos directamente por WhatsApp o mediante nuestro formulario de contacto. Analizamos tu proyecto, respondemos tus dudas y te entregamos un presupuesto transparente en menos de 24 horas."
+    }
+];
 ---
 
 <Layout 
-    title="Preguntas Frecuentes: Desarrollo Web, SEO y Marketing Digital" 
-    description="Respuestas a preguntas sobre diseño web, SEO, e-commerce, redes sociales y campañas digitales. Aclara tus dudas con SEMTIC."
+    title="Preguntas Frecuentes | SEMTIC Agencia Digital" 
+    description="Resuelve tus dudas sobre desarrollo web, SEO, campañas de Google y Meta Ads y servicios de dron en Chile."
     image="https://semtic.cl/og-faq.png">
 
-    
-    <!-- Hero Section -->
-    <section class="relative min-h-[50vh] flex items-center justify-center pt-32 pb-16 overflow-hidden" style="z-index: 10;">
-        <div class="absolute top-1/4 left-1/4 w-64 md:w-96 h-64 md:h-96 bg-[#4f46e5] rounded-full mix-blend-screen filter blur-[128px] opacity-20 animate-pulse"></div>
-        <div class="absolute bottom-1/4 right-1/4 w-64 md:w-96 h-64 md:h-96 bg-[#2dd4bf] rounded-full mix-blend-screen filter blur-[128px] opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+    <!-- SECCIÓN 1: HERO -->
+    <section class="relative min-h-[60vh] flex items-center justify-center pt-32 pb-20 overflow-hidden" style="z-index: 10;">
+        <!-- Resplandores neón -->
+        <div class="absolute top-1/4 left-1/4 w-80 md:w-96 h-80 md:h-96 bg-[#4f46e5] rounded-full mix-blend-screen filter blur-[140px] opacity-25 animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-80 md:w-96 h-80 md:h-96 bg-[#2dd4bf] rounded-full mix-blend-screen filter blur-[140px] opacity-25 animate-pulse" style="animation-delay: 2s;"></div>
 
         <div class="relative z-10 text-center px-4 max-w-4xl mx-auto hero-container">
-            <h1 class="text-5xl md:text-7xl font-[family-name:var(--font-space-grotesk)] font-bold mb-6 leading-tight">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-[#2dd4bf]/40 backdrop-blur-md mb-6">
+                <span class="w-2 h-2 rounded-full bg-[#2dd4bf] animate-ping"></span>
+                <span class="text-xs uppercase tracking-widest text-[#2dd4bf] font-bold">💡 Centro de Respuestas & Soporte</span>
+            </div>
+
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-[family-name:var(--font-space-grotesk)] font-bold mb-6 leading-tight text-white">
                 Preguntas <span class="text-gradient">Frecuentes</span>
             </h1>
-            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-                Encuentra respuestas rápidas a las preguntas más comunes sobre nuestros servicios.
+
+            <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
+                Encuentra respuestas claras y rápidas sobre el desarrollo de páginas web, SEO, campañas publicitarias y servicios con drones.
             </p>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="py-20 relative" style="z-index: 10; background: linear-gradient(to bottom, rgba(5, 5, 17, 0.3), rgba(5, 5, 17, 0.6));">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto space-y-4">
-                
-                <!-- FAQ 1 -->
-                <div class="glass rounded-2xl border border-white/10 overflow-hidden">
-                    <button class="faq-button w-full text-left p-6 md:p-8 flex justify-between items-center gap-4 hover:bg-white/5 transition-colors">
-                        <h3 class="text-xl md:text-2xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">¿Cuánto demora tener mi página web lista?</h3>
-                        <svg class="faq-icon w-6 h-6 text-[#00f2ea] transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="p-6 md:p-8 pt-0 text-gray-300 text-base md:text-lg leading-relaxed">
-                            Depende del tipo de proyecto. Una web estándar toma entre 7 y 15 días; y un e-commerce, entre 15 y 45 días. Antes de partir hacemos un diagnóstico gratis para definir tiempos estimados según tu necesidad.
+    <!-- SECCIÓN 2: LISTADO DE FAQ INTERACTIVO -->
+    <section class="py-16 relative" style="z-index: 10;">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="space-y-4">
+                {faqs.map((faq, index) => (
+                    <details class="group rounded-3xl bg-[#0a0a1a]/80 border border-white/10 backdrop-blur-xl transition-all duration-300 open:border-[#2dd4bf]/50 open:bg-[#0a0a1a]/95 shadow-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+                        <summary class="flex justify-between items-center p-6 md:p-8 cursor-pointer select-none">
+                            <div class="flex items-center gap-3 pr-4">
+                                <span class="px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-white/5 border border-white/10 text-[#2dd4bf] shrink-0">
+                                    {faq.category}
+                                </span>
+                                <h3 class="text-lg md:text-xl font-bold text-white font-[family-name:var(--font-space-grotesk)] group-open:text-[#00f2ea] transition-colors leading-snug">
+                                    {faq.question}
+                                </h3>
+                            </div>
+                            <div class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#2dd4bf] group-open:rotate-180 group-open:bg-[#2dd4bf] group-open:text-[#050511] transition-all duration-300 shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                        </summary>
+                        <div class="px-6 md:px-8 pb-8 text-gray-300 text-sm md:text-base leading-relaxed font-light border-t border-white/5 pt-4">
+                            {faq.answer}
                         </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 2 -->
-                <div class="glass rounded-2xl border border-white/10 overflow-hidden">
-                    <button class="faq-button w-full text-left p-6 md:p-8 flex justify-between items-center gap-4 hover:bg-white/5 transition-colors">
-                        <h3 class="text-xl md:text-2xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">¿Qué incluye el diseño de mi página web?</h3>
-                        <svg class="faq-icon w-6 h-6 text-[#4f46e5] transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="p-6 md:p-8 pt-0 text-gray-300 text-base md:text-lg leading-relaxed">
-                            Incluye diseño profesional, desarrollo completo, versión mobile, integración con WhatsApp, formularios, optimización básica SEO, seguridad, configuración de hosting y soporte inicial. Tu sitio queda autoadministrable para que puedas editar contenido fácilmente.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 3 -->
-                <div class="glass rounded-2xl border border-white/10 overflow-hidden">
-                    <button class="faq-button w-full text-left p-6 md:p-8 flex justify-between items-center gap-4 hover:bg-white/5 transition-colors">
-                        <h3 class="text-xl md:text-2xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">¿Qué es SEO y por qué lo necesito?</h3>
-                        <svg class="faq-icon w-6 h-6 text-[#2dd4bf] transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="p-6 md:p-8 pt-0 text-gray-300 text-base md:text-lg leading-relaxed">
-                            SEO es la optimización para buscadores. Te ayuda a que tu negocio aparezca mejor en Google sin pagar por clic. Esto significa más visitas, más consultas y más ventas en el tiempo.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 4 -->
-                <div class="glass rounded-2xl border border-white/10 overflow-hidden">
-                    <button class="faq-button w-full text-left p-6 md:p-8 flex justify-between items-center gap-4 hover:bg-white/5 transition-colors">
-                        <h3 class="text-xl md:text-2xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">¿Qué es Google Ads o SEM?</h3>
-                        <svg class="faq-icon w-6 h-6 text-[#39ff14] transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="p-6 md:p-8 pt-0 text-gray-300 text-base md:text-lg leading-relaxed">
-                            Google Ads (también llamado SEM) es publicidad pagada en Google. Funciona mostrando tu negocio a personas que están buscando exactamente lo que ofreces. Resultados rápidos, clientes reales y campañas ajustadas a tu presupuesto.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 5 -->
-                <div class="glass rounded-2xl border border-white/10 overflow-hidden">
-                    <button class="faq-button w-full text-left p-6 md:p-8 flex justify-between items-center gap-4 hover:bg-white/5 transition-colors">
-                        <h3 class="text-xl md:text-2xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">¿Puedo tener SEO y Google Ads al mismo tiempo?</h3>
-                        <svg class="faq-icon w-6 h-6 text-[#00f2ea] transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="p-6 md:p-8 pt-0 text-gray-300 text-base md:text-lg leading-relaxed">
-                            Sí, y funciona muy bien. SEO mejora tu posicionamiento a mediano plazo; Google Ads te genera clientes inmediatos. Combinarlos acelera resultados.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 6 -->
-                <div class="glass rounded-2xl border border-white/10 overflow-hidden">
-                    <button class="faq-button w-full text-left p-6 md:p-8 flex justify-between items-center gap-4 hover:bg-white/5 transition-colors">
-                        <h3 class="text-xl md:text-2xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">¿Qué incluye el servicio de Community Manager?</h3>
-                        <svg class="faq-icon w-6 h-6 text-[#4f46e5] transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="p-6 md:p-8 pt-0 text-gray-300 text-base md:text-lg leading-relaxed">
-                            Incluye diseño de publicaciones, textos profesionales, estrategia de contenidos, programación mensual, análisis de métricas y asesoría continua. El objetivo es que tu marca se vea bien, crezca y atraiga clientes.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 7 -->
-                <div class="glass rounded-2xl border border-white/10 overflow-hidden">
-                    <button class="faq-button w-full text-left p-6 md:p-8 flex justify-between items-center gap-4 hover:bg-white/5 transition-colors">
-                        <h3 class="text-xl md:text-2xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">¿Cuánto cuesta manejar mis redes sociales?</h3>
-                        <svg class="faq-icon w-6 h-6 text-[#2dd4bf] transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="p-6 md:p-8 pt-0 text-gray-300 text-base md:text-lg leading-relaxed">
-                            Depende del plan y la cantidad de contenido. Durante el diagnóstico gratuito te proponemos la mejor alternativa para tu negocio según tu rubro y objetivos.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 8 -->
-                <div class="glass rounded-2xl border border-white/10 overflow-hidden">
-                    <button class="faq-button w-full text-left p-6 md:p-8 flex justify-between items-center gap-4 hover:bg-white/5 transition-colors">
-                        <h3 class="text-xl md:text-2xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">¿Trabajan con campañas pagadas (Facebook/Instagram Ads)?</h3>
-                        <svg class="faq-icon w-6 h-6 text-[#39ff14] transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="p-6 md:p-8 pt-0 text-gray-300 text-base md:text-lg leading-relaxed">
-                            Sí. Creamos campañas segmentadas, optimizamos el presupuesto y medimos resultados. El objetivo es generar clientes reales, no solo alcance.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 9 -->
-                <div class="glass rounded-2xl border border-white/10 overflow-hidden">
-                    <button class="faq-button w-full text-left p-6 md:p-8 flex justify-between items-center gap-4 hover:bg-white/5 transition-colors">
-                        <h3 class="text-xl md:text-2xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">¿Puedo contratar solo Google Ads o solo Redes Sociales?</h3>
-                        <svg class="faq-icon w-6 h-6 text-[#00f2ea] transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="p-6 md:p-8 pt-0 text-gray-300 text-base md:text-lg leading-relaxed">
-                            Sí. Nuestros servicios son flexibles y se pueden tomar por separado o combinados.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 10 -->
-                <div class="glass rounded-2xl border border-white/10 overflow-hidden">
-                    <button class="faq-button w-full text-left p-6 md:p-8 flex justify-between items-center gap-4 hover:bg-white/5 transition-colors">
-                        <h3 class="text-xl md:text-2xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">¿Ofrecen planes para emprendedores o negocios pequeños?</h3>
-                        <svg class="faq-icon w-6 h-6 text-[#4f46e5] transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="p-6 md:p-8 pt-0 text-gray-300 text-base md:text-lg leading-relaxed">
-                            <p class="mb-3 text-lg">Sí. Tenemos planes básicos para quienes están empezando:</p>
-                            <ul class="space-y-2">
-                                <li class="flex items-start gap-2">
-                                    <span class="w-1.5 h-1.5 mt-2 bg-[#4f46e5] rounded-full flex-shrink-0"></span>
-                                    <span>Página web simple / Landing Page (ideal para captar clientes rápido)</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="w-1.5 h-1.5 mt-2 bg-[#4f46e5] rounded-full flex-shrink-0"></span>
-                                    <span>Plan Community Manager Básico: 2 publicaciones semanales + 3 historias semanales, calendarizadas y diseñadas estratégicamente para visibilidad y captación</span>
-                                </li>
-                            </ul>
-                            <p class="mt-3">Son planes accesibles, pensados para crecer contigo.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 11 -->
-                <div class="glass rounded-2xl border border-white/10 overflow-hidden">
-                    <button class="faq-button w-full text-left p-6 md:p-8 flex justify-between items-center gap-4 hover:bg-white/5 transition-colors">
-                        <h3 class="text-xl md:text-2xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">¿Hacen páginas web a medida o proyectos más complejos?</h3>
-                        <svg class="faq-icon w-6 h-6 text-[#2dd4bf] transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="p-6 md:p-8 pt-0 text-gray-300 text-base md:text-lg leading-relaxed">
-                            Sí. También desarrollamos plataformas personalizadas, sistemas internos, módulos especiales o integraciones a medida para empresas que necesitan soluciones específicas.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 12 -->
-                <div class="glass rounded-2xl border border-white/10 overflow-hidden">
-                    <button class="faq-button w-full text-left p-6 md:p-8 flex justify-between items-center gap-4 hover:bg-white/5 transition-colors">
-                        <h3 class="text-xl md:text-2xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">¿Qué necesito para contratar un sitio web?</h3>
-                        <svg class="faq-icon w-6 h-6 text-[#39ff14] transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="p-6 md:p-8 pt-0 text-gray-300 text-base md:text-lg leading-relaxed">
-                            Solo el nombre de tu negocio, una idea de lo que quieres comunicar y tus fotos o servicios principales. Si no tienes contenido, te ayudamos a crear todo desde cero.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 13 -->
-                <div class="glass rounded-2xl border border-white/10 overflow-hidden">
-                    <button class="faq-button w-full text-left p-6 md:p-8 flex justify-between items-center gap-4 hover:bg-white/5 transition-colors">
-                        <h3 class="text-xl md:text-2xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">¿Puedo usar mi dominio y hosting actual?</h3>
-                        <svg class="faq-icon w-6 h-6 text-[#00f2ea] transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="p-6 md:p-8 pt-0 text-gray-300 text-base md:text-lg leading-relaxed">
-                            Sí. Si ya tienes dominio y hosting, lo configuramos. Si no, te guiamos para comprar lo necesario.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 14 -->
-                <div class="glass rounded-2xl border border-white/10 overflow-hidden">
-                    <button class="faq-button w-full text-left p-6 md:p-8 flex justify-between items-center gap-4 hover:bg-white/5 transition-colors">
-                        <h3 class="text-xl md:text-2xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">¿Ofrecen mantenimiento o actualizaciones?</h3>
-                        <svg class="faq-icon w-6 h-6 text-[#4f46e5] transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="p-6 md:p-8 pt-0 text-gray-300 text-base md:text-lg leading-relaxed">
-                            Sí. Podemos mantener tu web actualizada, optimizada y segura mes a mes.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 15 -->
-                <div class="glass rounded-2xl border border-white/10 overflow-hidden">
-                    <button class="faq-button w-full text-left p-6 md:p-8 flex justify-between items-center gap-4 hover:bg-white/5 transition-colors">
-                        <h3 class="text-xl md:text-2xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">¿Cómo agendo una reunión o cotizo?</h3>
-                        <svg class="faq-icon w-6 h-6 text-[#2dd4bf] transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="p-6 md:p-8 pt-0 text-gray-300 text-base md:text-lg leading-relaxed">
-                            Simple: agenda tu diagnóstico gratis desde WhatsApp o el formulario de contacto. Revisamos tu caso, te damos recomendaciones y te entregamos un presupuesto claro.
-                        </div>
-                    </div>
-                </div>
-
+                    </details>
+                ))}
             </div>
         </div>
     </section>
 
-    <!-- CTA Final -->
-    <section class="py-20 relative" style="z-index: 10; background: linear-gradient(to bottom, rgba(5, 5, 17, 0.6), rgba(5, 5, 17, 0.95));">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl md:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold mb-6">
-                ¿No encontraste tu <span class="text-gradient">respuesta</span>?
-            </h2>
-            <p class="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
-                Contáctanos directamente y con gusto resolveremos todas tus dudas.
-            </p>
-            <div class="flex flex-col items-center justify-center">
-                <a href="https://wa.me/56988169404?text=Hola,%20quiero%20hacer%20una%20consulta" target="_blank" class="inline-flex items-center px-6 md:px-8 py-3.5 md:py-4 bg-gradient-to-r from-[#25D366] to-[#3b82f6] rounded-full text-[#050511] font-extrabold text-sm md:text-base tracking-wide shadow-lg hover:shadow-[0_0_40px_rgba(37,211,102,0.5)] transition-all duration-300 transform hover:-translate-y-1">
-                    <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                    Escríbenos por WhatsApp
+    <!-- SECCIÓN 3: BANNER AL BLOG -->
+    <section class="py-10 relative" style="z-index: 10;">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="p-8 md:p-10 rounded-3xl bg-gradient-to-r from-[#0a0a20] via-[#0d123b] to-[#0a0a20] border border-[#2dd4bf]/40 backdrop-blur-xl relative overflow-hidden shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="max-w-xl">
+                    <span class="px-3 py-1 rounded-full text-xs font-semibold bg-[#2dd4bf]/10 border border-[#2dd4bf]/30 text-[#2dd4bf] mb-3 inline-block">
+                        📖 Guías & Artículos Técnicos
+                    </span>
+                    <h3 class="text-xl md:text-2xl font-bold text-white mb-2 font-[family-name:var(--font-space-grotesk)]">
+                        ¿Buscas información aún más detallada?
+                    </h3>
+                    <p class="text-gray-300 text-sm font-light leading-relaxed">
+                        Explora nuestros artículos en el Blog sobre rendimiento web en Astro, posicionamiento SEO local y servicios de drones en Chile.
+                    </p>
+                </div>
+                <a href="/blog" class="px-6 py-3.5 rounded-full bg-[#2dd4bf] text-[#050511] font-semibold text-sm hover:bg-[#00f2ea] hover:shadow-[0_0_20px_rgba(0,242,234,0.5)] transition-all whitespace-nowrap">
+                    Ir al Blog SEMTIC →
                 </a>
             </div>
         </div>
     </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const faqButtons = document.querySelectorAll('.faq-button');
-            
-            faqButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const content = button.nextElementSibling;
-                    const icon = button.querySelector('.faq-icon');
-                    const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
-                    
-                    faqButtons.forEach(btn => {
-                        const otherContent = btn.nextElementSibling;
-                        const otherIcon = btn.querySelector('.faq-icon');
-                        otherContent.style.maxHeight = '0px';
-                        otherIcon.style.transform = 'rotate(0deg)';
-                    });
-                    
-                    if (!isOpen) {
-                        content.style.maxHeight = content.scrollHeight + 'px';
-                        icon.style.transform = 'rotate(180deg)';
-                    }
-                });
-            });
-        });
-    </script>
+    <!-- SECCIÓN 4: CTA FINAL -->
+    <section class="py-24 relative overflow-hidden" style="z-index: 10;">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="p-10 md:p-14 rounded-3xl bg-gradient-to-r from-[#0a0a20] via-[#0e103b] to-[#0a0a20] border border-[#3b82f6]/40 backdrop-blur-xl text-center relative overflow-hidden shadow-2xl">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-[#00f2ea] to-transparent"></div>
+                <h2 class="text-3xl md:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold mb-4 text-white">
+                    ¿Tienes una pregunta específica?
+                </h2>
+                <p class="text-gray-300 text-base md:text-lg max-w-xl mx-auto mb-8 font-light leading-relaxed">
+                    Escríbenos directamente y un especialista de nuestro equipo responderá todas tus inquietudes de inmediato.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="https://wa.me/56988169404?text=Hola,%20tengo%20una%20consulta%20sobre%20sus%20servicios" target="_blank" class="px-8 py-4 rounded-full bg-gradient-to-r from-[#25D366] to-[#2dd4bf] text-[#050511] font-extrabold text-sm uppercase tracking-wide hover:shadow-[0_0_30px_rgba(45,212,191,0.5)] transition-all transform hover:-translate-y-1 flex items-center gap-2">
+                        💬 Hablar por WhatsApp
+                    </a>
+                    <a href="/contacto" class="px-8 py-4 rounded-full border border-[#2dd4bf] text-[#2dd4bf] font-semibold text-sm hover:bg-[#2dd4bf] hover:text-[#050511] transition-all">
+                        Formulario de Contacto
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </Layout>
