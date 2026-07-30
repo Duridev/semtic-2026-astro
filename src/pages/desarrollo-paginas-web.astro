@@ -4,120 +4,237 @@ import "../styles/global.css";
 ---
 
 <Layout
-    title="Desarrollo de Páginas Web | SEMTIC"
-    description="Diseñamos páginas web modernas, rápidas y optimizadas para convertir visitas en clientes reales para tu empresa."
+    title="Desarrollo de Páginas Web y Tiendas Online en Chile | SEMTIC"
+    description="Diseñamos páginas web modernas, e-commerce ultrarrápidos y landing pages optimizadas para convertir visitas en clientes reales en Santiago, Valparaíso y regiones."
     image="https://semtic.cl/og-servicios.png"
 >
-    <!-- Hero Section -->
-    <section
-        class="relative min-h-[60vh] flex items-center justify-center pt-32 pb-20 overflow-hidden"
-        style="z-index: 10;"
-    >
-        <div
-            class="absolute top-1/4 left-1/4 w-64 md:w-96 h-64 md:h-96 bg-[#00f2ea] rounded-full mix-blend-screen filter blur-[128px] opacity-20 animate-pulse"
-        >
-        </div>
-        <div
-            class="absolute bottom-1/4 right-1/4 w-64 md:w-96 h-64 md:h-96 bg-[#4f46e5] rounded-full mix-blend-screen filter blur-[128px] opacity-20 animate-pulse"
-            style="animation-delay: 2s;"
-        >
-        </div>
+    <!-- SECCIÓN 1: HERO -->
+    <section class="relative min-h-[70vh] flex items-center justify-center pt-32 pb-20 overflow-hidden" style="z-index: 10;">
+        <!-- Resplandores neón -->
+        <div class="absolute top-1/4 left-1/4 w-80 md:w-96 h-80 md:h-96 bg-[#00f2ea] rounded-full mix-blend-screen filter blur-[140px] opacity-25 animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-80 md:w-96 h-80 md:h-96 bg-[#4f46e5] rounded-full mix-blend-screen filter blur-[140px] opacity-25 animate-pulse" style="animation-delay: 2s;"></div>
+        <div class="absolute top-1/3 right-10 w-64 h-64 bg-[#2dd4bf] rounded-full mix-blend-screen filter blur-[120px] opacity-15"></div>
 
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto hero-container">
-            <h1
-                class="text-5xl md:text-6xl lg:text-7xl font-[family-name:var(--font-space-grotesk)] font-bold mb-6 leading-tight"
-            >
-                Diseño de Páginas Web <br class="hidden lg:block"/><span class="text-gradient">Rápidas, Atractivas y Enfocadas en Vender.</span>
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto hero-container">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-[#00f2ea]/40 backdrop-blur-md mb-6">
+                <span class="w-2 h-2 rounded-full bg-[#00f2ea] animate-ping"></span>
+                <span class="text-xs uppercase tracking-widest text-[#00f2ea] font-bold">Desarrollo Web High-Performance</span>
+            </div>
+
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-[family-name:var(--font-space-grotesk)] font-bold mb-6 leading-tight text-white">
+                Diseño de Páginas Web <br class="hidden lg:block"/>
+                <span class="text-gradient">Ultrarrápidas, Atractivas y Enfocadas en Vender</span>
             </h1>
-            <p
-                class="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto mb-10 font-light leading-relaxed"
-            >
-                Tu sitio web no debe ser solo un folleto digital bonito; debe ser tu mejor vendedor operando 24/7. Diseño web profesional en Valparaíso, Limache y Marga Marga para todo Chile.
+
+            <p class="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto mb-10 font-light leading-relaxed">
+                Tu sitio web no debe ser un folleto digital abandonado; debe ser tu mejor canal de ventas disponible las 24 horas del día. Desarrollamos plataformas web modernas en Limache, Valparaíso, Viña del Mar, Marga Marga, Santiago y todo Chile.
             </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="https://wa.me/56988169404?text=Hola%20Semtic!%20Quiero%20cotizar%20el%20desarrollo%20de%20mi%20página%20web" target="_blank" class="px-8 py-4 bg-gradient-to-r from-[#00f2ea] via-[#2dd4bf] to-[#3b82f6] rounded-full text-[#050511] font-extrabold text-sm tracking-wide hover:shadow-[0_0_30px_rgba(0,242,234,0.6)] transition-all duration-300 transform hover:-translate-y-1 uppercase flex items-center gap-2">
+                    🚀 Cotizar mi Nueva Web
+                </a>
+                <a href="#soluciones" class="px-8 py-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-white font-semibold text-sm hover:bg-white/10 hover:border-[#00f2ea]/50 transition-all duration-300">
+                    Ver Tipos de Páginas ↓
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- SECCIÓN DE DOLOR: EL PROBLEMA -->
-    <section class="py-10 md:py-20 relative" style="z-index: 10;">
-        <div class="container mx-auto px-4">
-            <div class="max-w-5xl mx-auto p-10 md:p-16 rounded-[2.5rem] bg-[#0a0a1a]/80 border border-white/5 backdrop-blur-xl text-center relative overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-[#00f2ea] to-transparent opacity-50"></div>
-                <h2 class="text-sm md:text-base font-bold mb-6 text-[#00f2ea] tracking-[0.25em] uppercase">¿Sientes que tu web no está funcionando?</h2>
-                <p class="text-lg md:text-2xl text-gray-300 leading-relaxed font-light">
-                    Una página lenta, desordenada o que no se ve bien en el celular <span class="text-[#00f2ea] font-medium">espanta a tus clientes en segundos.</span> Hoy en día, la primera impresión lo es todo. Si tu web no genera confianza instantánea, tu competencia se llevará la venta.
+    <!-- SECCIÓN 2: EL PROBLEMA WEB -->
+    <section class="py-16 relative" style="z-index: 10;">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="p-10 md:p-14 rounded-3xl bg-[#0a0a1a]/80 border border-white/10 backdrop-blur-xl text-center relative overflow-hidden shadow-2xl">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-[#00f2ea] to-transparent"></div>
+                <h2 class="text-xs md:text-sm font-bold mb-4 text-[#00f2ea] tracking-[0.25em] uppercase font-[family-name:var(--font-space-grotesk)]">¿Por qué pierdes clientes con tu web actual?</h2>
+                <p class="text-lg md:text-2xl text-gray-200 leading-relaxed font-light">
+                    Una página lenta, desordenada o que no carga bien en celulares <span class="text-[#00f2ea] font-medium">espanta a tus clientes en menos de 3 segundos</span>. En la era digital, la velocidad y el diseño intencional son la diferencia entre una venta cerrada y un cliente que se va con la competencia.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN DE SOLUCIONES -->
-    <section class="py-20 relative" style="z-index: 10; background: linear-gradient(to bottom, rgba(5, 5, 17, 0.3), rgba(5, 5, 17, 0.6));">
-        <div class="container mx-auto px-4">
-            
-            <!-- Encabezado de la sección -->
-            <div class="text-center mb-20 max-w-4xl mx-auto hidden">
-                <!-- Se oculta este header porque la sección de dolor ya cumple la función introductoria -->
+    <!-- SECCIÓN 3: SOLUCIONES A MEDIDA (Tipos de Web) -->
+    <section id="soluciones" class="py-20 relative bg-gradient-to-b from-transparent via-[#0a0a20]/60 to-transparent" style="z-index: 10;">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-16">
+                <span class="px-3.5 py-1 rounded-full text-xs font-semibold bg-[#00f2ea]/10 text-[#00f2ea] border border-[#00f2ea]/30 mb-3 inline-block">
+                    💻 Soluciones Web Adaptadas
+                </span>
+                <h2 class="text-3xl md:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold text-white mb-4">
+                    Plataformas Diseñadas para <span class="text-gradient">Cada Necesidad</span>
+                </h2>
+                <p class="text-gray-300 text-base md:text-lg max-w-2xl mx-auto font-light">
+                    Elegimos la arquitectura técnica ideal según los objetivos comerciales de tu empresa.
+                </p>
             </div>
 
-            <!-- Grid de Soluciones (3 Pilares) -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
-                <!-- Tarjeta 1 - UX/UI -->
-                <div class="group relative p-8 md:p-10 rounded-3xl bg-[#0a0a1a]/50 border border-white/5 backdrop-blur-md hover:border-[#4f46e5]/40 transition-all duration-500 hover:-translate-y-2 shadow-xl hover:shadow-[0_10px_40px_-15px_rgba(79,70,229,0.3)]">
-                    <div class="absolute inset-0 bg-gradient-to-br from-[#4f46e5]/10 to-transparent opacity-0 group-hover:opacity-100 rounded-3xl transition-opacity duration-500"></div>
-                    <div class="relative z-10 flex flex-col h-full">
-                        <div class="w-16 h-16 mb-8 rounded-2xl bg-gradient-to-br from-[#4f46e5]/20 to-transparent flex items-center justify-center text-[#4f46e5] border border-[#4f46e5]/20 group-hover:bg-[#4f46e5]/30 transition-colors">
-                            <svg class="w-8 h-8 drop-shadow-[0_0_12px_rgba(79,70,229,0.5)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path></svg>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Solución 1: E-Commerce -->
+                <div class="p-8 md:p-10 rounded-3xl bg-[#0a0a1a]/80 border border-white/10 backdrop-blur-xl relative overflow-hidden group hover:border-[#00f2ea]/50 transition-all duration-300 hover:-translate-y-1 shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 mb-6 rounded-2xl bg-[#00f2ea]/10 border border-[#00f2ea]/30 flex items-center justify-center text-[#00f2ea] group-hover:scale-110 transition-transform">
+                            🛒
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-4 font-[family-name:var(--font-space-grotesk)] leading-tight">Diseño Persuasivo (UX/UI)</h3>
-                        <p class="text-gray-300 text-base md:text-lg leading-relaxed mb-6">
-                            Estructuras limpias y modernas que guían al usuario de forma natural directamente hacia el botón de contacto o compra. No solo es verse bien, es funcionar bien.
+                        <h3 class="text-2xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)]">E-Commerce & Tiendas Online</h3>
+                        <p class="text-gray-300 text-sm font-light leading-relaxed mb-6">
+                            Vende tus productos 24/7 con integración de pasarelas de pago seguras (Webpay Plus, MercadoPago, Fpay), control de inventario y panel autoadministrable.
                         </p>
                     </div>
+                    <ul class="space-y-2.5 text-xs text-gray-300 border-t border-white/10 pt-4">
+                        <li class="flex items-center gap-2"><span class="text-[#00f2ea]">✓</span> Carrito de compras fluido e intuitivo</li>
+                        <li class="flex items-center gap-2"><span class="text-[#00f2ea]">✓</span> Integración con boleta electrónica y envíos</li>
+                        <li class="flex items-center gap-2"><span class="text-[#00f2ea]">✓</span> Optimizado para ventas desde smartphones</li>
+                    </ul>
                 </div>
 
-                <!-- Tarjeta 2 - Velocidad -->
-                <div class="group relative p-8 md:p-10 rounded-3xl bg-[#0a0a1a]/50 border border-white/5 backdrop-blur-md hover:border-[#39ff14]/40 transition-all duration-500 hover:-translate-y-2 shadow-xl hover:shadow-[0_10px_40px_-15px_rgba(57,255,20,0.3)]">
-                    <div class="absolute inset-0 bg-gradient-to-br from-[#39ff14]/10 to-transparent opacity-0 group-hover:opacity-100 rounded-3xl transition-opacity duration-500"></div>
-                    <div class="relative z-10 flex flex-col h-full">
-                        <div class="w-16 h-16 mb-8 rounded-2xl bg-gradient-to-br from-[#39ff14]/20 to-transparent flex items-center justify-center text-[#39ff14] border border-[#39ff14]/20 group-hover:bg-[#39ff14]/30 transition-colors">
-                            <svg class="w-8 h-8 drop-shadow-[0_0_12px_rgba(57,255,20,0.5)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                <!-- Solución 2: Landing Pages -->
+                <div class="p-8 md:p-10 rounded-3xl bg-[#0a0a1a]/80 border border-white/10 backdrop-blur-xl relative overflow-hidden group hover:border-[#2dd4bf]/50 transition-all duration-300 hover:-translate-y-1 shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 mb-6 rounded-2xl bg-[#2dd4bf]/10 border border-[#2dd4bf]/30 flex items-center justify-center text-[#2dd4bf] group-hover:scale-110 transition-transform">
+                            🎯
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-4 font-[family-name:var(--font-space-grotesk)] leading-tight">Velocidad y Rendimiento</h3>
-                        <p class="text-gray-300 text-base md:text-lg leading-relaxed mb-6">
-                            Sitios optimizados técnicamente para cargar en milisegundos. Si tu página vuela, cumples con las exigencias de Google y tus clientes no se van. Landings ultra rápidas y Ecommerces 100% autoadministrables.
+                        <h3 class="text-2xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)]">Landing Pages de Alta Conversión</h3>
+                        <p class="text-gray-300 text-sm font-light leading-relaxed mb-6">
+                            Páginas de aterrizaje enfadadas en una sola oferta o servicio, creadas específicamente para captar prospectos provenientes de campañas de Google Ads y Meta Ads.
                         </p>
                     </div>
+                    <ul class="space-y-2.5 text-xs text-gray-300 border-t border-white/10 pt-4">
+                        <li class="flex items-center gap-2"><span class="text-[#2dd4bf]">✓</span> Botón flotante directo a WhatsApp</li>
+                        <li class="flex items-center gap-2"><span class="text-[#2dd4bf]">✓</span> Formularios de cotización inmediata</li>
+                        <li class="flex items-center gap-2"><span class="text-[#2dd4bf]">✓</span> Carga ultrarrápida sin distracciones</li>
+                    </ul>
                 </div>
 
-                <!-- Tarjeta 3 - Mobile-First -->
-                <div class="group relative p-8 md:p-10 rounded-3xl bg-[#0a0a1a]/50 border border-white/5 backdrop-blur-md hover:border-[#00f2ea]/40 transition-all duration-500 hover:-translate-y-2 shadow-xl hover:shadow-[0_10px_40px_-15px_rgba(0,242,234,0.3)]">
-                    <div class="absolute inset-0 bg-gradient-to-br from-[#00f2ea]/10 to-transparent opacity-0 group-hover:opacity-100 rounded-3xl transition-opacity duration-500"></div>
-                    <div class="relative z-10 flex flex-col h-full">
-                        <div class="w-16 h-16 mb-8 rounded-2xl bg-gradient-to-br from-[#00f2ea]/20 to-transparent flex items-center justify-center text-[#00f2ea] border border-[#00f2ea]/20 group-hover:bg-[#00f2ea]/30 transition-colors">
-                            <svg class="w-8 h-8 drop-shadow-[0_0_12px_rgba(0,242,234,0.5)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                <!-- Solución 3: Sitios Corporativos -->
+                <div class="p-8 md:p-10 rounded-3xl bg-[#0a0a1a]/80 border border-white/10 backdrop-blur-xl relative overflow-hidden group hover:border-[#3b82f6]/50 transition-all duration-300 hover:-translate-y-1 shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 mb-6 rounded-2xl bg-[#3b82f6]/10 border border-[#3b82f6]/30 flex items-center justify-center text-[#3b82f6] group-hover:scale-110 transition-transform">
+                            🏢
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-4 font-[family-name:var(--font-space-grotesk)] leading-tight">100% Adaptables (Mobile-First)</h3>
-                        <p class="text-gray-300 text-base md:text-lg leading-relaxed mb-6">
-                            Tu negocio en cualquier pantalla. El sitio se verá y funcionará perfecto tanto en un teléfono móvil como en una tablet o computadora de escritorio.
+                        <h3 class="text-2xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)]">Sitios Corporativos & Institucionales</h3>
+                        <p class="text-gray-300 text-sm font-light leading-relaxed mb-6">
+                            Proyecta solidez y profesionalismo. Muestra tu catálogo de servicios, historia de la empresa, testimonios y secciones informativas completas.
                         </p>
                     </div>
+                    <ul class="space-y-2.5 text-xs text-gray-300 border-t border-white/10 pt-4">
+                        <li class="flex items-center gap-2"><span class="text-[#3b82f6]">✓</span> Múltiples páginas de servicios</li>
+                        <li class="flex items-center gap-2"><span class="text-[#3b82f6]">✓</span> Blog integrado para posicionamiento SEO</li>
+                        <li class="flex items-center gap-2"><span class="text-[#3b82f6]">✓</span> Diseño adaptado a tu identidad visual</li>
+                    </ul>
+                </div>
+
+                <!-- Solución 4: Desarrollos a Medida -->
+                <div class="p-8 md:p-10 rounded-3xl bg-[#0a0a1a]/80 border border-white/10 backdrop-blur-xl relative overflow-hidden group hover:border-[#4f46e5]/50 transition-all duration-300 hover:-translate-y-1 shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 mb-6 rounded-2xl bg-[#4f46e5]/10 border border-[#4f46e5]/30 flex items-center justify-center text-[#4f46e5] group-hover:scale-110 transition-transform">
+                            ⚡
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)]">Desarrollos Web en Astro & React</h3>
+                        <p class="text-gray-300 text-sm font-light leading-relaxed mb-6">
+                            Para empresas que exigen la máxima velocidad del mercado. Sitios construidos con código limpio, logrando 100/100 en Google PageSpeed Insights.
+                        </p>
+                    </div>
+                    <ul class="space-y-2.5 text-xs text-gray-300 border-t border-white/10 pt-4">
+                        <li class="flex items-center gap-2"><span class="text-[#4f46e5]">✓</span> Rendimiento y velocidad imbatibles</li>
+                        <li class="flex items-center gap-2"><span class="text-[#4f46e5]">✓</span> Máxima seguridad contra ciberataques</li>
+                        <li class="flex items-center gap-2"><span class="text-[#4f46e5]">✓</span> Arquitectura escalable y libre de mantenimiento</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN 3: CTA Final -->
-    <section class="py-24 relative overflow-hidden" style="z-index: 10; background: linear-gradient(to bottom, rgba(5, 5, 17, 0.8), rgba(5, 5, 17, 0.95));">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg h-64 bg-[#00f2ea] rounded-full mix-blend-screen filter blur-[150px] opacity-20 pointer-events-none"></div>
-        <div class="container mx-auto px-4 relative z-10 text-center">
-            <h2 class="text-4xl md:text-5xl lg:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold mb-12 max-w-4xl mx-auto leading-tight">
-                <span class="text-white">Estructura, velocidad y funcionalidad</span> <br class="hidden md:block"/> <span class="text-gradient hover-glow">pensadas para resultados reales.</span>
-            </h2>
-            <div class="flex flex-col items-center justify-center">
-                <a href="https://wa.me/56988169404?text=Hola,%20quisiera%20conversar%20sobre%20la%20estrategia%20para%20crear%20mi%20nueva%20página%20web" target="_blank" class="inline-flex items-center justify-center px-6 md:px-8 py-3.5 md:py-4 bg-gradient-to-r from-[#25D366] to-[#00f2ea] rounded-full text-[#050511] font-extrabold text-sm md:text-base tracking-[0.05em] shadow-lg hover:shadow-[0_0_40px_rgba(0,242,234,0.3)] transition-all duration-300 transform hover:-translate-y-1 uppercase group">
-                    💻 Cotizar mi Nueva Web
-                    <svg class="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+    <!-- SECCIÓN 4: PILARES TÉCNICOS (Por qué SEMTIC) -->
+    <section class="py-20 relative" style="z-index: 10;">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold text-white mb-4">
+                    Estándares de Calidad <span class="text-gradient">Innegociables</span>
+                </h2>
+                <p class="text-gray-300 text-base md:text-lg max-w-2xl mx-auto font-light">
+                    Cada línea de código que escribimos está optimizada para dar la mejor experiencia.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Pilar 1 -->
+                <div class="p-8 rounded-3xl bg-[#0a0a1a]/60 border border-white/10 backdrop-blur-md relative hover:border-[#00f2ea]/40 transition-all">
+                    <div class="w-12 h-12 mb-6 rounded-xl bg-white/5 flex items-center justify-center text-[#00f2ea] border border-white/10">
+                        ⚡
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)]">Carga Ultrarrápida</h3>
+                    <p class="text-xs text-gray-300 font-light leading-relaxed">
+                        Compresión de imágenes de última generación (WebP/AVIF) y optimización de recursos para que el sitio abra al instante.
+                    </p>
+                </div>
+
+                <!-- Pilar 2 -->
+                <div class="p-8 rounded-3xl bg-[#0a0a1a]/60 border border-white/10 backdrop-blur-md relative hover:border-[#2dd4bf]/40 transition-all">
+                    <div class="w-12 h-12 mb-6 rounded-xl bg-white/5 flex items-center justify-center text-[#2dd4bf] border border-white/10">
+                        📱
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)]">Mobile-First Real</h3>
+                    <p class="text-xs text-gray-300 font-light leading-relaxed">
+                        Más del 80% del tráfico llega por celulares. Diseñamos pensando primero en pantallas pequeñas y táctiles.
+                    </p>
+                </div>
+
+                <!-- Pilar 3 -->
+                <div class="p-8 rounded-3xl bg-[#0a0a1a]/60 border border-white/10 backdrop-blur-md relative hover:border-[#3b82f6]/40 transition-all">
+                    <div class="w-12 h-12 mb-6 rounded-xl bg-white/5 flex items-center justify-center text-[#3b82f6] border border-white/10">
+                        🔍
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)]">SEO Técnico Nativo</h3>
+                    <p class="text-xs text-gray-300 font-light leading-relaxed">
+                        Etiquetas H1/H2, meta descripciones, Open Graph y datos estructurados Schema.org listos para indexar en Google.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 5: BANNER BLOG -->
+    <section class="py-10 relative" style="z-index: 10;">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="p-8 md:p-10 rounded-3xl bg-gradient-to-r from-[#0a0a20] via-[#0d123b] to-[#0a0a20] border border-[#00f2ea]/40 backdrop-blur-xl relative overflow-hidden shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="max-w-2xl">
+                    <span class="px-3 py-1 rounded-full text-xs font-semibold bg-[#00f2ea]/10 border border-[#00f2ea]/30 text-[#00f2ea] mb-3 inline-block">
+                        📖 Conoce sobre Arquitectura Web
+                    </span>
+                    <h3 class="text-xl md:text-2xl font-bold text-white mb-2 font-[family-name:var(--font-space-grotesk)]">
+                        Por qué la Velocidad de Carga en Astro y Tailwind CSS es Vital
+                    </h3>
+                    <p class="text-gray-300 text-sm font-light leading-relaxed">
+                        Descubre cómo la arquitectura web moderna sin JS pesado logra puntajes de 100/100 y aumenta las conversiones.
+                    </p>
+                </div>
+                <a href="/blog" class="px-6 py-3.5 rounded-full bg-[#00f2ea] text-[#050511] font-semibold text-sm hover:bg-[#2dd4bf] hover:shadow-[0_0_20px_rgba(0,242,234,0.5)] transition-all whitespace-nowrap">
+                    Ir al Blog →
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 6: CTA FINAL -->
+    <section class="py-24 relative overflow-hidden" style="z-index: 10;">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="p-10 md:p-14 rounded-3xl bg-gradient-to-r from-[#0a0a20] via-[#0e103b] to-[#0a0a20] border border-[#00f2ea]/40 backdrop-blur-xl text-center relative overflow-hidden shadow-2xl">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-[#00f2ea] to-transparent"></div>
+                <h2 class="text-3xl md:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold mb-6 text-white leading-tight">
+                    ¿Listo para renovar tu presencia digital con una <br/><span class="text-gradient">Web que realmente venda</span>?
+                </h2>
+                <p class="text-gray-300 text-base md:text-lg max-w-2xl mx-auto mb-8 font-light leading-relaxed">
+                    Conversemos sobre tu proyecto. Te asesoramos sin compromiso y te entregamos un presupuesto detallado.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="https://wa.me/56988169404?text=Hola,%20quiero%20cotizar%20mi%20nueva%20página%20web%20con%20Semtic" target="_blank" class="px-8 py-4 rounded-full bg-gradient-to-r from-[#25D366] to-[#00f2ea] text-[#050511] font-extrabold text-sm uppercase tracking-wide hover:shadow-[0_0_30px_rgba(0,242,234,0.5)] transition-all transform hover:-translate-y-1 flex items-center gap-2">
+                        💻 Cotizar mi Nueva Web
+                    </a>
+                    <a href="/contacto" class="px-8 py-4 rounded-full border border-[#00f2ea] text-[#00f2ea] font-semibold text-sm hover:bg-[#00f2ea] hover:text-[#050511] transition-all">
+                        Enviar Mensaje
+                    </a>
+                </div>
             </div>
         </div>
     </section>
