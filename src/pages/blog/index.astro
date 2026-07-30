@@ -1,0 +1,202 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/global.css";
+
+const posts = [
+    {
+        slug: "fotografia-video-aereo-dron",
+        title: "Fotografía y Grabación Aérea con Drones en Chile: Guía Definitiva 2026 para Empresas y Proyectos",
+        description: "Descubre cómo las tomas aéreas en 4K y 360° revolucionan el marketing inmobiliario, la producción audiovisual y las inspecciones técnicas en Santiago, Valparaíso y todo Chile.",
+        category: "Servicios con Dron",
+        date: "30 de Julio, 2026",
+        readTime: "7 min de lectura",
+        image: "/cards-img/Producción Audiovisual & Marketing.webp",
+        featured: true,
+        author: "Equipo SEMTIC",
+        authorRole: "Especialistas en Tecnología Aérea"
+    },
+    {
+        slug: "#",
+        title: "Estrategias de SEO Local en Chile: Cómo Posicionar tu Negocio en Valparaíso y Santiago",
+        description: "Optimiza tu presencia digital para captar clientes en tu zona geográfica mediante fichas optimizadas, estructuración SEO y backlinks locales.",
+        category: "Marketing Digital",
+        date: "22 de Julio, 2026",
+        readTime: "5 min de lectura",
+        image: "/cards-img/Estrategia Digital & Performance.webp",
+        featured: false,
+        author: "Equipo SEMTIC",
+        authorRole: "Consultores SEO"
+    },
+    {
+        slug: "#",
+        title: "Desarrollo Web con Astro y Tailwind CSS: Por qué la Velocidad de Carga es Vital para Convertir Clientes",
+        description: "La arquitectura moderna sin JS innecesario logra tiempos de carga menores a 1 segundo y puntuaciones de 100/100 en Google PageSpeed Insights.",
+        category: "Desarrollo Web",
+        date: "15 de Julio, 2026",
+        readTime: "6 min de lectura",
+        image: "/cards-img/Desarrollo de Páginas Web.webp",
+        featured: false,
+        author: "Equipo SEMTIC",
+        authorRole: "Desarrollo Frontend"
+    }
+];
+
+const categories = ["Todos", "Servicios con Dron", "Marketing Digital", "Desarrollo Web"];
+---
+
+<Layout
+    title="Blog de Tecnología, Drones y Marketing Digital | SEMTIC Chile"
+    description="Explora nuestros artículos sobre producción audiovisual aérea con drones 4K/360°, desarrollo de páginas web ultrarrápidas y estrategias de marketing digital."
+    image="https://semtic.cl/og-image.png"
+>
+    <!-- Hero Section del Blog -->
+    <section class="relative pt-32 pb-16 overflow-hidden" style="z-index: 10;">
+        <!-- Resplandores neón -->
+        <div class="absolute top-1/4 left-1/3 w-96 h-96 bg-[#00f2ea] rounded-full mix-blend-screen filter blur-[140px] opacity-15 animate-pulse"></div>
+        <div class="absolute bottom-10 right-1/4 w-96 h-96 bg-[#3b82f6] rounded-full mix-blend-screen filter blur-[140px] opacity-15 animate-pulse" style="animation-delay: 2s;"></div>
+
+        <div class="container mx-auto px-4 max-w-6xl text-center hero-container">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-[#2dd4bf]/30 backdrop-blur-md mb-6">
+                <span class="w-2 h-2 rounded-full bg-[#2dd4bf] animate-ping"></span>
+                <span class="text-xs uppercase tracking-widest text-[#2dd4bf] font-semibold">Blog & Insights SEMTIC</span>
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-[family-name:var(--font-space-grotesk)] font-bold mb-6 leading-tight">
+                Innovación, Perspectiva Aérea & <span class="text-gradient">Estrategia Digital</span>
+            </h1>
+            
+            <p class="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto font-light leading-relaxed mb-10">
+                Aprende cómo potenciar la visibilidad de tu marca, dominar nuevas tecnologías y aprovechar la fotografía y video aéreo con drones en Chile.
+            </p>
+
+            <!-- Categorías de Filtro -->
+            <div class="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto">
+                {categories.map((cat, index) => (
+                    <button class={`px-5 py-2 rounded-full text-xs md:text-sm font-medium transition-all duration-300 border ${index === 0 ? 'bg-[#2dd4bf] text-[#050511] border-[#2dd4bf] font-semibold shadow-[0_0_15px_rgba(45,212,191,0.4)]' : 'bg-white/5 text-gray-300 border-white/10 hover:border-[#2dd4bf]/50 hover:text-white'}`}>
+                        {cat}
+                    </button>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- Post Destacado (Hero Post) -->
+    <section class="py-8 relative" style="z-index: 10;">
+        <div class="container mx-auto px-4 max-w-6xl">
+            {posts.filter(p => p.featured).map(featuredPost => (
+                <article class="group relative rounded-3xl bg-[#0a0a1a]/80 border border-[#3b82f6]/30 backdrop-blur-xl overflow-hidden hover:border-[#00f2ea]/60 transition-all duration-500 shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
+                        <div class="lg:col-span-6 p-8 md:p-12 flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex items-center gap-3 mb-4">
+                                    <span class="px-3 py-1 rounded-full text-xs font-semibold bg-[#3b82f6]/20 border border-[#3b82f6]/40 text-[#3b82f6]">
+                                        {featuredPost.category}
+                                    </span>
+                                    <span class="text-xs text-gray-400 font-light">• {featuredPost.date}</span>
+                                    <span class="text-xs text-[#2dd4bf] font-medium">• {featuredPost.readTime}</span>
+                                </div>
+                                <h2 class="text-2xl md:text-4xl font-bold text-white mb-4 font-[family-name:var(--font-space-grotesk)] group-hover:text-[#00f2ea] transition-colors leading-tight">
+                                    <a href={`/blog/${featuredPost.slug}`}>
+                                        {featuredPost.title}
+                                    </a>
+                                </h2>
+                                <p class="text-gray-300 text-base leading-relaxed mb-6 font-light">
+                                    {featuredPost.description}
+                                </p>
+                            </div>
+
+                            <div class="flex items-center justify-between pt-6 border-t border-white/10">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-[#3b82f6] to-[#2dd4bf] flex items-center justify-center font-bold text-white text-xs">
+                                        ST
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-semibold text-white">{featuredPost.author}</p>
+                                        <p class="text-xs text-gray-400">{featuredPost.authorRole}</p>
+                                    </div>
+                                </div>
+
+                                <a href={`/blog/${featuredPost.slug}`} class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#2dd4bf] text-[#050511] font-semibold text-sm hover:bg-[#00f2ea] hover:shadow-[0_0_20px_rgba(0,242,234,0.6)] transition-all">
+                                    Leer artículo
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-6 h-64 lg:h-full relative overflow-hidden bg-gradient-to-br from-[#0a0a20] to-[#050314] flex items-center justify-center p-8">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-[#3b82f6]/20 via-transparent to-[#2dd4bf]/20 opacity-70 group-hover:scale-105 transition-transform duration-700"></div>
+                            <img 
+                                src={featuredPost.image} 
+                                alt={featuredPost.title} 
+                                class="max-h-72 object-contain relative z-10 filter drop-shadow-[0_0_25px_rgba(59,130,246,0.4)] group-hover:scale-110 transition-transform duration-500" 
+                            />
+                        </div>
+                    </div>
+                </article>
+            ))}
+        </div>
+    </section>
+
+    <!-- Grid de Artículos Secundarios -->
+    <section class="py-16 relative" style="z-index: 10;">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-2xl md:text-3xl font-[family-name:var(--font-space-grotesk)] font-bold mb-10 text-white flex items-center gap-3">
+                <span>Más Publicaciones</span>
+                <span class="h-px bg-white/10 flex-grow"></span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {posts.filter(p => !p.featured).map(post => (
+                    <article class="group relative rounded-3xl bg-[#0a0a1a]/60 border border-white/10 backdrop-blur-md overflow-hidden hover:border-[#2dd4bf]/40 transition-all duration-500 flex flex-col justify-between p-8 hover:-translate-y-1">
+                        <div>
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-[#2dd4bf]">
+                                    {post.category}
+                                </span>
+                                <span class="text-xs text-gray-400">• {post.date}</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)] group-hover:text-[#2dd4bf] transition-colors leading-tight">
+                                {post.title}
+                            </h3>
+                            <p class="text-gray-300 text-sm leading-relaxed mb-6 font-light">
+                                {post.description}
+                            </p>
+                        </div>
+
+                        <div class="flex items-center justify-between pt-4 border-t border-white/5">
+                            <span class="text-xs text-gray-400">{post.readTime}</span>
+                            <span class="text-xs font-semibold text-[#2dd4bf] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                                Próximamente →
+                            </span>
+                        </div>
+                    </article>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final del Blog -->
+    <section class="py-20 relative" style="z-index: 10;">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="p-10 md:p-14 rounded-3xl bg-gradient-to-r from-[#0a0a20] via-[#0f0c31] to-[#0a0a20] border border-[#2dd4bf]/30 backdrop-blur-xl text-center relative overflow-hidden shadow-2xl">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-1 bg-gradient-to-r from-transparent via-[#2dd4bf] to-transparent"></div>
+                
+                <h2 class="text-3xl md:text-4xl font-[family-name:var(--font-space-grotesk)] font-bold mb-4 text-white">
+                    ¿Necesitas un servicio con <span class="text-gradient">Dron Profesional o Desarrollo Web</span>?
+                </h2>
+                <p class="text-gray-300 text-base md:text-lg max-w-2xl mx-auto mb-8 font-light">
+                    Cotiza tomas aéreas 4K, inspecciones técnicas o la renovación digital de tu empresa en Santiago, Valparaíso y todo Chile.
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="/drone" class="px-8 py-3.5 rounded-full bg-[#3b82f6] text-white font-semibold text-sm hover:bg-[#2563eb] hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] transition-all">
+                        Ver Servicios de Dron 360°
+                    </a>
+                    <a href="/contacto" class="px-8 py-3.5 rounded-full border border-[#2dd4bf] text-[#2dd4bf] font-semibold text-sm hover:bg-[#2dd4bf] hover:text-[#050511] transition-all">
+                        Solicitar Cotización Gratuita
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>

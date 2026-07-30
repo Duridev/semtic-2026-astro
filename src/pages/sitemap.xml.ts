@@ -44,6 +44,18 @@ const pages = [
         changefreq: 'monthly'
     },
     {
+        url: '/blog',
+        lastmod: new Date().toISOString().split('T')[0],
+        priority: 0.9,
+        changefreq: 'weekly'
+    },
+    {
+        url: '/blog/fotografia-video-aereo-dron',
+        lastmod: new Date().toISOString().split('T')[0],
+        priority: 0.9,
+        changefreq: 'weekly'
+    },
+    {
         url: '/faq',
         lastmod: new Date().toISOString().split('T')[0],
         priority: 0.7,
