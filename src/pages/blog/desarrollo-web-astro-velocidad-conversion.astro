@@ -1,0 +1,247 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/global.css";
+
+const articleData = {
+    title: "Desarrollo Web con Astro y Tailwind CSS: Por qué la Velocidad de Carga es Vital para Convertir Clientes",
+    description: "Analizamos por qué los sitios web ultralivianos construidos en Astro multiplican la tasa de conversión, posicionan mejor en Google y reducen los costos de anuncios.",
+    slug: "desarrollo-web-astro-velocidad-conversion",
+    publishDate: "2026-07-15",
+    dateFormatted: "15 de Julio, 2026",
+    readTime: "6 min de lectura",
+    category: "Desarrollo Web",
+    author: "SEMTIC Agencia Digital",
+    authorTitle: "Especialistas en Desarrollo Frontend & Perfomance",
+    canonicalUrl: "https://semtic.cl/blog/desarrollo-web-astro-velocidad-conversion",
+    ogImage: "https://semtic.cl/og-servicios.png"
+};
+
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": articleData.title,
+    "description": articleData.description,
+    "image": articleData.ogImage,
+    "datePublished": articleData.publishDate,
+    "dateModified": articleData.publishDate,
+    "author": {
+        "@type": "Organization",
+        "name": articleData.author,
+        "url": "https://semtic.cl"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "SEMTIC Agencia Digital",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://semtic.cl/logo-semtic.png"
+        }
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": articleData.canonicalUrl
+    }
+};
+---
+
+<Layout
+    title={`${articleData.title} | SEMTIC Blog`}
+    description={articleData.description}
+    image={articleData.ogImage}
+    ogType="article"
+>
+    <!-- Script de Schema.org para SEO -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+    <!-- Barra de progreso de lectura -->
+    <div id="read-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-[#00f2ea] via-[#3b82f6] to-[#2dd4bf] z-[120] transition-all duration-150 w-0"></div>
+
+    <!-- Container Principal del Artículo -->
+    <article class="pt-32 pb-24 relative overflow-hidden" style="z-index: 10;">
+        <!-- Fondo de luces neón -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#00f2ea]/10 rounded-full filter blur-[150px] pointer-events-none"></div>
+        <div class="absolute top-1/3 right-10 w-96 h-96 bg-[#3b82f6]/10 rounded-full filter blur-[130px] pointer-events-none"></div>
+
+        <div class="container mx-auto px-4 max-w-5xl">
+            <!-- Breadcrumbs -->
+            <nav class="flex items-center gap-2 text-xs text-gray-400 mb-8 font-light" aria-label="Breadcrumb">
+                <a href="/" class="hover:text-[#00f2ea] transition-colors">Inicio</a>
+                <span>/</span>
+                <a href="/blog" class="hover:text-[#00f2ea] transition-colors">Blog</a>
+                <span>/</span>
+                <span class="text-gray-200 truncate max-w-xs md:max-w-md font-normal">Desarrollo Web con Astro y Velocidad</span>
+            </nav>
+
+            <!-- Encabezado del Artículo -->
+            <header class="mb-12">
+                <div class="flex flex-wrap items-center gap-3 mb-6">
+                    <span class="px-3.5 py-1 rounded-full text-xs font-semibold bg-[#00f2ea]/20 border border-[#00f2ea]/40 text-[#00f2ea]">
+                        {articleData.category}
+                    </span>
+                    <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center gap-1.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                        Performance 100/100 Google PageSpeed
+                    </span>
+                    <span class="text-xs text-gray-400 font-light">• {articleData.dateFormatted}</span>
+                    <span class="text-xs text-[#00f2ea] font-medium">• {articleData.readTime}</span>
+                </div>
+
+                <h1 class="text-3xl md:text-5xl lg:text-6xl font-[family-name:var(--font-space-grotesk)] font-bold text-white mb-6 leading-tight">
+                    Desarrollo Web con Astro: <span class="text-gradient">Por qué la Velocidad es Vital para Convertir Clientes</span>
+                </h1>
+
+                <p class="text-gray-300 text-lg md:text-xl font-light leading-relaxed mb-8 max-w-4xl">
+                    Cada segundo de demora en tu sitio web reduce la tasa de conversión en un 20%. Descubre la arquitectura moderna sin JS pesado que impulsa a las empresas más exitosas en Chile.
+                </p>
+
+                <!-- Tarjeta de Autor -->
+                <div class="flex flex-wrap items-center justify-between gap-4 p-4 md:p-6 rounded-2xl bg-[#0a0a1a]/70 border border-white/10 backdrop-blur-md">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#00f2ea] to-[#3b82f6] flex items-center justify-center text-[#050511] font-bold text-sm">
+                            ST
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-white">{articleData.author}</p>
+                            <p class="text-xs text-gray-400 font-light">{articleData.authorTitle}</p>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/56988169404?text=Hola%20Semtic!%20Leí%20su%20artículo%20de%20Astro%20y%20quiero%20cotizar%20un%20sitio%20web%20ultrarrápido." target="_blank" class="px-5 py-2.5 rounded-full bg-[#00f2ea] text-[#050511] font-bold text-xs uppercase tracking-wide hover:bg-[#2dd4bf] hover:shadow-[0_0_20px_rgba(0,242,234,0.5)] transition-all">
+                        🚀 Cotizar Sitio Ultrarrápido
+                    </a>
+                </div>
+            </header>
+
+            <!-- Grid del Contenido Principal -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Columna de Contenido (8 Cols) -->
+                <main class="lg:col-span-8 space-y-10 text-gray-300 font-light leading-relaxed text-base md:text-lg">
+                    
+                    <!-- Introducción -->
+                    <div class="p-8 rounded-3xl bg-[#0a0a1a]/80 border border-white/10 backdrop-blur-xl">
+                        <h2 class="text-xl md:text-2xl font-bold text-white mb-4 font-[family-name:var(--font-space-grotesk)]">
+                            El problema silencioso de las webs tradicionales
+                        </h2>
+                        <p class="mb-4">
+                            Muchas empresas invierten miles de dólares en campañas de publicidad en Instagram o Google Ads, pero envían a los visitantes a páginas lentas creadas con plataformas saturadas de complementos pesados.
+                        </p>
+                        <p>
+                            Si tu página demora más de 3 segundos en mostrar su contenido en un smartphone con conexión 4G, <strong>más del 50% de las personas abandona antes de leer tu oferta</strong>.
+                        </p>
+                    </div>
+
+                    <!-- Punto 1 -->
+                    <section class="space-y-4">
+                        <h2 class="text-2xl md:text-3xl font-bold text-white font-[family-name:var(--font-space-grotesk)] text-gradient">
+                            1. ¿Qué es Astro Framework y por qué supera a los sistemas antiguos?
+                        </h2>
+                        <p>
+                            Astro es un framework moderno diseñado específicamente para contenido de velocidad máxima. A diferencia de otros sistemas que envían toneladas de código JavaScript innecesario al navegador del cliente, Astro utiliza la técnica de <strong>"Islas de Interactividad" (Islands Architecture)</strong>.
+                        </p>
+                        <ul class="space-y-3 pl-4 border-l-2 border-[#00f2ea]">
+                            <li><strong class="text-white">Cero JavaScript de Relleno:</strong> La página se entrega en HTML y CSS puro precargado desde el servidor.</li>
+                            <li><strong class="text-white">Carga Instantánea (Puntuación 100/100):</strong> Cumple al 100% con los requerimientos de Google Core Web Vitals (LCP, INP, CLS).</li>
+                            <li><strong class="text-white">Experiencia de Usuario Fluida:</strong> Los menús y botones responden inmediatamente en cualquier celular o computador.</li>
+                        </ul>
+                    </section>
+
+                    <!-- Banner Intermedio de Conversión -->
+                    <div class="p-8 rounded-3xl bg-gradient-to-r from-[#0a0a20] via-[#0d123b] to-[#0a0a20] border border-[#00f2ea]/40 backdrop-blur-xl relative overflow-hidden shadow-2xl my-8">
+                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-[#00f2ea]/10 border border-[#00f2ea]/30 text-[#00f2ea] mb-3 inline-block">
+                            ⚡ Prueba de Velocidad Gratis
+                        </span>
+                        <h3 class="text-xl md:text-2xl font-bold text-white mb-2 font-[family-name:var(--font-space-grotesk)]">
+                            ¿Sabes qué nota obtiene tu página web actual en Google PageSpeed?
+                        </h3>
+                        <p class="text-gray-300 text-sm mb-6 font-light">
+                            Te enviamos un informe de rendimiento y velocidad de tu sitio actual con recomendaciones concretas para triplicar tus ventas.
+                        </p>
+                        <a href="https://wa.me/56988169404?text=Hola!%20Quiero%20evaluar%20la%20velocidad%20y%20rendimiento%20de%20mi%20sitio%20web" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#00f2ea] text-[#050511] font-extrabold text-sm hover:bg-[#2dd4bf] transition-all">
+                            Solicitar Test por WhatsApp →
+                        </a>
+                    </div>
+
+                    <!-- Punto 2 -->
+                    <section class="space-y-4">
+                        <h2 class="text-2xl md:text-3xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">
+                            2. Beneficios Directos en Tus Campañas Publicitarias (Google & Meta Ads)
+                        </h2>
+                        <p>
+                            Una página rápida no solo enamora a tus usuarios, sino también a los algoritmos publicitarios:
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="p-6 rounded-2xl bg-[#0a0a1a]/60 border border-white/10">
+                                <h4 class="text-white font-bold mb-2 text-base">Menor Costo por Clic (CPC)</h4>
+                                <p class="text-xs text-gray-300 font-light">Google premia las páginas veloces con mayor Nivel de Calidad (Quality Score), haciendo que tus anuncios paguen menos por cada visitante.</p>
+                            </div>
+                            <div class="p-6 rounded-2xl bg-[#0a0a1a]/60 border border-white/10">
+                                <h4 class="text-white font-bold mb-2 text-base">Mayor Retención en Móviles</h4>
+                                <p class="text-xs text-gray-300 font-light">Al cargar en milisegundos, el usuario entra directo a tu botón de cotización en WhatsApp sin arrepentirse en el camino.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Punto 3 -->
+                    <section class="space-y-4">
+                        <h2 class="text-2xl md:text-3xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">
+                            3. Diseño Moderno con Tailwind CSS y Estética Glassmorphism
+                        </h2>
+                        <p>
+                            En SEMTIC no usamos plantillas genéricas. Diseñamos con Tailwind CSS para lograr interfaces personalizadas de alta gama con efectos glassmorphism, resplandores neón y paletas de colores exclusivas que transmiten máxima autoridad.
+                        </p>
+                    </section>
+
+                    <!-- Conclusión y CTA -->
+                    <div class="p-10 rounded-3xl bg-gradient-to-r from-[#0a0a20] via-[#0e103b] to-[#0a0a20] border border-[#00f2ea]/40 backdrop-blur-xl text-center shadow-2xl">
+                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 font-[family-name:var(--font-space-grotesk)]">
+                            ¿Quieres una Web que Cargue en Milisegundos y Venda Más?
+                        </h3>
+                        <p class="text-gray-300 text-sm md:text-base mb-8 font-light">
+                            Conoce nuestro servicio de <a href="/desarrollo-paginas-web" class="text-[#00f2ea] underline font-semibold">Desarrollo de Páginas Web Premium</a> y escala la presencia de tu marca en Chile.
+                        </p>
+                        <a href="https://wa.me/56988169404?text=Hola,%20quisiera%20cotizar%20el%20desarrollo%20de%20mi%20sitio%20web%20con%20Astro" target="_blank" class="px-8 py-4 rounded-full bg-gradient-to-r from-[#00f2ea] to-[#3b82f6] text-[#050511] font-extrabold text-sm uppercase tracking-wide hover:shadow-[0_0_30px_rgba(0,242,234,0.6)] transition-all inline-block">
+                            🚀 Cotizar Mi Proyecto Web
+                        </a>
+                    </div>
+
+                </main>
+
+                <!-- Columna Lateral (Sidebar / 4 Cols) -->
+                <aside class="lg:col-span-4 space-y-8">
+                    <!-- Caja de Asesoría Directa -->
+                    <div class="p-6 rounded-3xl bg-[#0a0a1a]/90 border border-[#00f2ea]/40 backdrop-blur-xl sticky top-28 shadow-xl">
+                        <span class="px-3 py-1 rounded-full text-[10px] font-bold bg-[#00f2ea]/10 border border-[#00f2ea]/30 text-[#00f2ea] uppercase tracking-wider mb-4 inline-block">
+                            Desarrollo Web SEMTIC
+                        </span>
+                        <h3 class="text-xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)]">
+                            ¿Tu sitio web actual es lento o no genera ventas?
+                        </h3>
+                        <p class="text-gray-300 text-xs font-light leading-relaxed mb-6">
+                            Migramos tu plataforma a una arquitectura de ultra-velocidad optimizada para móviles y motores de búsqueda.
+                        </p>
+                        <a href="https://wa.me/56988169404?text=Hola!%20Quiero%20renovar%20mi%20sitio%20web%20para%20que%20sea%20ultrarrápido" target="_blank" class="w-full py-3.5 rounded-full bg-gradient-to-r from-[#25D366] to-[#00f2ea] text-[#050511] font-extrabold text-xs uppercase tracking-wide transition-all hover:shadow-[0_0_20px_rgba(0,242,234,0.5)] flex items-center justify-center gap-2">
+                            💬 Hablar por WhatsApp
+                        </a>
+
+                        <div class="mt-6 pt-6 border-t border-white/10 space-y-3 text-xs text-gray-400">
+                            <a href="/desarrollo-paginas-web" class="block hover:text-[#00f2ea] transition-colors">👉 Servicio Desarrollo Web</a>
+                            <a href="/publicidad-google-meta-ads" class="block hover:text-[#00f2ea] transition-colors">👉 Publicidad Google & Meta Ads</a>
+                            <a href="/drone" class="block hover:text-[#00f2ea] transition-colors">👉 Producción de Video con Dron</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </article>
+
+    <!-- Script de Barra de Lectura -->
+    <script>
+        document.addEventListener('scroll', () => {
+            const progressBar = document.getElementById('read-progress');
+            if (!progressBar) return;
+            const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (window.scrollY / totalHeight) * 100;
+            progressBar.style.width = `${progress}%`;
+        });
+    </script>
+</Layout>
