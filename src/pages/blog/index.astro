@@ -56,9 +56,9 @@ const categories = ["Todos", "Servicios con Dron", "Marketing Digital", "Desarro
         <div class="absolute bottom-10 right-1/4 w-96 h-96 bg-[#3b82f6] rounded-full mix-blend-screen filter blur-[140px] opacity-15 animate-pulse" style="animation-delay: 2s;"></div>
 
         <div class="container mx-auto px-4 max-w-6xl text-center hero-container">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-[#2dd4bf]/30 backdrop-blur-md mb-6">
-                <span class="w-2 h-2 rounded-full bg-[#2dd4bf] animate-ping"></span>
-                <span class="text-xs uppercase tracking-widest text-[#2dd4bf] font-semibold">Blog & Insights SEMTIC</span>
+            <div class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white/5 border border-[#2dd4bf]/40 backdrop-blur-md mb-6">
+                <span class="w-2.5 h-2.5 rounded-full bg-[#2dd4bf] animate-ping"></span>
+                <span class="text-sm uppercase tracking-widest text-[#2dd4bf] font-bold">Blog & Insights SEMTIC</span>
             </div>
             
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-[family-name:var(--font-space-grotesk)] font-bold mb-6 leading-tight text-white">
@@ -72,7 +72,7 @@ const categories = ["Todos", "Servicios con Dron", "Marketing Digital", "Desarro
             <!-- Categorías de Filtro -->
             <div class="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto">
                 {categories.map((cat, index) => (
-                    <button class={`px-5 py-2 rounded-full text-xs md:text-sm font-medium transition-all duration-300 border ${index === 0 ? 'bg-[#2dd4bf] text-[#050511] border-[#2dd4bf] font-semibold shadow-[0_0_15px_rgba(45,212,191,0.4)]' : 'bg-white/5 text-gray-300 border-white/10 hover:border-[#2dd4bf]/50 hover:text-white'}`}>
+                    <button class={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${index === 0 ? 'bg-[#2dd4bf] text-[#050511] border-[#2dd4bf] font-bold shadow-[0_0_15px_rgba(45,212,191,0.4)]' : 'bg-white/5 text-gray-300 border-white/10 hover:border-[#2dd4bf]/50 hover:text-white'}`}>
                         {cat}
                     </button>
                 ))}
@@ -84,23 +84,23 @@ const categories = ["Todos", "Servicios con Dron", "Marketing Digital", "Desarro
     <section class="py-8 relative" style="z-index: 10;">
         <div class="container mx-auto px-4 max-w-6xl">
             {posts.filter(p => p.featured).map(featuredPost => (
-                <article class="group relative rounded-3xl bg-[#0a0a1a]/80 border border-[#3b82f6]/30 backdrop-blur-xl overflow-hidden hover:border-[#00f2ea]/60 transition-all duration-500 shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
+                <article class="group relative rounded-3xl bg-[#0a0a1a]/80 border border-[#3b82f6]/40 backdrop-blur-xl overflow-hidden hover:border-[#00f2ea]/60 transition-all duration-500 shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
                     <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
                         <div class="lg:col-span-6 p-8 md:p-12 flex flex-col justify-between h-full">
                             <div>
                                 <div class="flex items-center gap-3 mb-4">
-                                    <span class="px-3 py-1 rounded-full text-xs font-semibold bg-[#3b82f6]/20 border border-[#3b82f6]/40 text-[#3b82f6]">
+                                    <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-[#3b82f6]/20 border border-[#3b82f6]/40 text-[#3b82f6]">
                                         {featuredPost.category}
                                     </span>
-                                    <span class="text-xs text-gray-400 font-light">• {featuredPost.date}</span>
-                                    <span class="text-xs text-[#2dd4bf] font-medium">• {featuredPost.readTime}</span>
+                                    <span class="text-sm text-gray-400 font-light">• {featuredPost.date}</span>
+                                    <span class="text-sm text-[#2dd4bf] font-medium">• {featuredPost.readTime}</span>
                                 </div>
                                 <h2 class="text-2xl md:text-4xl font-bold text-white mb-4 font-[family-name:var(--font-space-grotesk)] group-hover:text-[#00f2ea] transition-colors leading-tight">
                                     <a href={`/blog/${featuredPost.slug}`}>
                                         {featuredPost.title}
                                     </a>
                                 </h2>
-                                <p class="text-gray-300 text-base leading-relaxed mb-6 font-light">
+                                <p class="text-gray-300 text-base md:text-lg leading-relaxed mb-6 font-light">
                                     {featuredPost.description}
                                 </p>
                             </div>
@@ -150,24 +150,24 @@ const categories = ["Todos", "Servicios con Dron", "Marketing Digital", "Desarro
                     <article class="group relative rounded-3xl bg-[#0a0a1a]/80 border border-white/10 backdrop-blur-md overflow-hidden hover:border-[#2dd4bf]/60 transition-all duration-500 flex flex-col justify-between p-8 hover:-translate-y-1.5 shadow-xl">
                         <div>
                             <div class="flex items-center gap-3 mb-4">
-                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-[#2dd4bf]/10 border border-[#2dd4bf]/30 text-[#2dd4bf]">
+                                <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-[#2dd4bf]/10 border border-[#2dd4bf]/30 text-[#2dd4bf]">
                                     {post.category}
                                 </span>
-                                <span class="text-xs text-gray-400">• {post.date}</span>
+                                <span class="text-sm text-gray-400">• {post.date}</span>
                             </div>
                             <h3 class="text-xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)] group-hover:text-[#00f2ea] transition-colors leading-tight">
                                 <a href={`/blog/${post.slug}`}>
                                     {post.title}
                                 </a>
                             </h3>
-                            <p class="text-gray-300 text-sm leading-relaxed mb-6 font-light">
+                            <p class="text-gray-300 text-base leading-relaxed mb-6 font-light">
                                 {post.description}
                             </p>
                         </div>
 
                         <div class="flex items-center justify-between pt-4 border-t border-white/10">
-                            <span class="text-xs text-gray-400">{post.readTime}</span>
-                            <a href={`/blog/${post.slug}`} class="text-xs font-bold text-[#2dd4bf] group-hover:text-[#00f2ea] group-hover:translate-x-1 transition-all inline-flex items-center gap-1">
+                            <span class="text-sm text-gray-400">{post.readTime}</span>
+                            <a href={`/blog/${post.slug}`} class="text-sm font-bold text-[#2dd4bf] group-hover:text-[#00f2ea] group-hover:translate-x-1 transition-all inline-flex items-center gap-1">
                                 Leer artículo →
                             </a>
                         </div>
