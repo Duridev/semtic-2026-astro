@@ -4,153 +4,207 @@ import '../styles/global.css';
 ---
 
 <Layout 
-    title="Publicidad en Google y Meta Ads | SEMTIC" 
-    description="Gestionamos tus campañas de publicidad digital en Google Ads, Facebook e Instagram para maximizar tu retorno de inversión."
+    title="Publicidad en Google y Meta Ads en Chile | SEMTIC" 
+    description="Gestionamos tus campañas de publicidad digital en Google Ads, Facebook e Instagram para maximizar tu retorno de inversión en Santiago, Valparaíso y todo Chile."
     image="https://semtic.cl/og-servicios.png">
 
     <!-- SECCIÓN 1: HERO -->
-    <section class="relative min-h-[60vh] flex items-center justify-center pt-32 pb-20 overflow-hidden" style="z-index: 10;">
-        <div class="absolute top-1/4 left-1/4 w-64 md:w-96 h-64 md:h-96 bg-[#39ff14] rounded-full mix-blend-screen filter blur-[128px] opacity-20 animate-pulse"></div>
-        <div class="absolute bottom-1/4 right-1/4 w-64 md:w-96 h-64 md:h-96 bg-[#00f2ea] rounded-full mix-blend-screen filter blur-[128px] opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+    <section class="relative min-h-[70vh] flex items-center justify-center pt-32 pb-20 overflow-hidden" style="z-index: 10;">
+        <!-- Luces y resplandores neón -->
+        <div class="absolute top-1/4 left-1/4 w-80 md:w-96 h-80 md:h-96 bg-[#39ff14] rounded-full mix-blend-screen filter blur-[140px] opacity-25 animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-80 md:w-96 h-80 md:h-96 bg-[#00f2ea] rounded-full mix-blend-screen filter blur-[140px] opacity-25 animate-pulse" style="animation-delay: 2s;"></div>
+        <div class="absolute top-1/3 right-10 w-64 h-64 bg-[#1877F2] rounded-full mix-blend-screen filter blur-[120px] opacity-15"></div>
 
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto hero-container">
-            <h1 class="text-5xl md:text-6xl lg:text-7xl font-[family-name:var(--font-space-grotesk)] font-bold mb-6 leading-tight">
-                Campañas de Google y Meta Ads <br class="hidden lg:block"/><span class="text-gradient">Optimizadas para Multiplicar tus Ventas.</span>
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto hero-container">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-[#39ff14]/40 backdrop-blur-md mb-6">
+                <span class="w-2 h-2 rounded-full bg-[#39ff14] animate-ping"></span>
+                <span class="text-xs uppercase tracking-widest text-[#39ff14] font-bold">Publicidad Digital de Alto Retorno (ROI)</span>
+            </div>
+
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-[family-name:var(--font-space-grotesk)] font-bold mb-6 leading-tight text-white">
+                Campañas de Google & Meta Ads <br class="hidden lg:block"/>
+                <span class="text-gradient">Optimizadas para Multiplicar tus Ventas</span>
             </h1>
+
             <p class="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto mb-10 font-light leading-relaxed">
-                Ponemos tu marca frente a las personas exactas en el momento preciso en que están listas para comprar.
+                Ponemos tu marca frente a las personas exactas en el momento preciso en que están listas para cotizar y comprar. Gestión profesional de presupuestos publicitarios para negocios en Santiago, Valparaíso, Viña del Mar y todo Chile.
             </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="https://wa.me/56988169404?text=Hola%20Semtic!%20Me%20interesa%20lanzar%20campañas%20de%20Google%20y%20Meta%20Ads" target="_blank" class="px-8 py-4 bg-gradient-to-r from-[#39ff14] via-[#00f2ea] to-[#3b82f6] rounded-full text-[#050511] font-extrabold text-sm tracking-wide hover:shadow-[0_0_30px_rgba(57,255,20,0.6)] transition-all duration-300 transform hover:-translate-y-1 uppercase flex items-center gap-2">
+                    🎯 Lanzar Mis Campañas Ads
+                </a>
+                <a href="#canales" class="px-8 py-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-white font-semibold text-sm hover:bg-white/10 hover:border-[#39ff14]/50 transition-all duration-300">
+                    Ver Estrategia Ads ↓
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- SECCIÓN 2: EL "DOLOR" DEL CLIENTE (Bloque de impacto) -->
-    <section class="py-10 md:py-20 relative" style="z-index: 10;">
-        <div class="container mx-auto px-4">
-            <div class="max-w-5xl mx-auto p-10 md:p-16 rounded-[2.5rem] bg-[#0a0a1a]/80 border border-white/5 backdrop-blur-xl text-center relative overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-[#39ff14] to-transparent opacity-50"></div>
-                <h2 class="text-sm md:text-base font-bold mb-6 text-[#39ff14] tracking-[0.25em] uppercase">¿Cansado de tirar tu dinero a la basura?</h2>
-                <p class="text-lg md:text-2xl text-gray-300 leading-relaxed font-light">
-                    Configurar un anuncio es fácil; hacer que sea rentable es el verdadero desafío. Si has intentado usar el botón 'Promocionar' y no has visto resultados, <span class="text-[#39ff14] font-medium">necesitas un equipo de especialistas.</span> Nosotros gestionamos tu presupuesto publicitario como si fuera nuestro.
+    <!-- SECCIÓN 2: EL PROBLEMA DEL BOTÓN "PROMOCIONAR" -->
+    <section class="py-16 relative" style="z-index: 10;">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="p-10 md:p-14 rounded-3xl bg-[#0a0a1a]/80 border border-white/10 backdrop-blur-xl text-center relative overflow-hidden shadow-2xl">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-[#39ff14] to-transparent"></div>
+                <h2 class="text-xs md:text-sm font-bold mb-4 text-[#39ff14] tracking-[0.25em] uppercase font-[family-name:var(--font-space-grotesk)]">¿Cansado de gastar dinero sin ver resultados?</h2>
+                <p class="text-lg md:text-2xl text-gray-200 leading-relaxed font-light">
+                    Presionar el botón azul 'Promocionar' en Instagram es fácil; <span class="text-[#39ff14] font-medium">hacer que un anuncio sea verdaderamente rentable exige estrategia.</span> En SEMTIC gestionamos tu presupuesto publicitario con enfoque científico: segmentación avanzada, pruebas de anuncios y embudos de conversión.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN 3: NUESTRA SOLUCIÓN (Grid de 3 Tarjetas) -->
-    <section class="py-20 relative" style="z-index: 10; background: linear-gradient(to bottom, rgba(5, 5, 17, 0.3), rgba(5, 5, 17, 0.6));">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
-                <!-- Tarjeta 1 - Google Ads -->
-                <div class="group relative p-8 md:p-10 rounded-3xl bg-[#0a0a1a]/50 border border-white/5 backdrop-blur-md hover:border-[#39ff14]/40 transition-all duration-500 hover:-translate-y-2 shadow-xl hover:shadow-[0_10px_40px_-15px_rgba(57,255,20,0.3)]">
-                    <div class="absolute inset-0 bg-gradient-to-br from-[#39ff14]/10 to-transparent opacity-0 group-hover:opacity-100 rounded-3xl transition-opacity duration-500"></div>
-                    <div class="relative z-10 flex flex-col h-full">
-                        <div class="w-16 h-16 mb-8 rounded-2xl bg-gradient-to-br from-[#39ff14]/20 to-transparent flex items-center justify-center text-[#39ff14] border border-[#39ff14]/20 group-hover:bg-[#39ff14]/30 transition-colors">
-                            <svg class="w-8 h-8 drop-shadow-[0_0_12px_rgba(57,255,20,0.5)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+    <!-- SECCIÓN 3: CANALES DE CONVERSIÓN (Google vs Meta Ads) -->
+    <section id="canales" class="py-20 relative bg-gradient-to-b from-transparent via-[#0a0a20]/60 to-transparent" style="z-index: 10;">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-16">
+                <span class="px-3.5 py-1 rounded-full text-xs font-semibold bg-[#39ff14]/10 text-[#39ff14] border border-[#39ff14]/30 mb-3 inline-block">
+                    📊 Canales Publicitarios Dominantes
+                </span>
+                <h2 class="text-3xl md:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold text-white mb-4">
+                    La Combinación Perfecta de <span class="text-gradient">Google & Meta Ads</span>
+                </h2>
+                <p class="text-gray-300 text-base md:text-lg max-w-2xl mx-auto font-light">
+                    Aprovechamos la intención directa de búsqueda en Google y la interrupción visual en redes sociales.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Tarjeta Google Ads -->
+                <div class="p-8 md:p-10 rounded-3xl bg-[#0a0a1a]/80 border border-white/10 backdrop-blur-xl relative overflow-hidden group hover:border-[#39ff14]/50 transition-all duration-300 hover:-translate-y-1 shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 mb-6 rounded-2xl bg-[#39ff14]/10 border border-[#39ff14]/30 flex items-center justify-center text-[#39ff14] group-hover:scale-110 transition-transform">
+                            🔍
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-4 font-[family-name:var(--font-space-grotesk)] leading-tight">Google Ads <br/><span class="text-lg font-normal text-gray-400">(Intención de Búsqueda)</span></h3>
-                        <p class="text-gray-300 text-base md:text-lg leading-relaxed mb-6">
-                            Captamos a los clientes que ya están buscando en Google exactamente lo que tú vendes.
+                        <h3 class="text-2xl font-bold text-white mb-2 font-[family-name:var(--font-space-grotesk)]">Google Ads (Intención de Búsqueda)</h3>
+                        <p class="text-xs text-[#39ff14] font-semibold uppercase tracking-wider mb-4">Captación de Demanda Alta</p>
+                        <p class="text-gray-300 text-sm font-light leading-relaxed mb-6">
+                            Aparece en la parte superior de Google cuando las personas están buscando activamente tus productos o servicios en su ciudad o región.
                         </p>
                     </div>
+                    <ul class="space-y-3 text-xs text-gray-300 border-t border-white/10 pt-4">
+                        <li class="flex items-center gap-2"><span class="text-[#39ff14]">✓</span> Anuncios de Búsqueda (Search Ads) para palabras claves comprar</li>
+                        <li class="flex items-center gap-2"><span class="text-[#39ff14]">✓</span> Campañas locales en Google Maps y búsqueda geo-localizada</li>
+                        <li class="flex items-center gap-2"><span class="text-[#39ff14]">✓</span> Pago solo por clic de usuarios interesados</li>
+                    </ul>
                 </div>
 
-                <!-- Tarjeta 2 - Meta Ads -->
-                <div class="group relative p-8 md:p-10 rounded-3xl bg-[#0a0a1a]/50 border border-white/5 backdrop-blur-md hover:border-[#1877F2]/40 transition-all duration-500 hover:-translate-y-2 shadow-xl hover:shadow-[0_10px_40px_-15px_rgba(24,119,242,0.3)]">
-                    <div class="absolute inset-0 bg-gradient-to-br from-[#1877F2]/10 to-transparent opacity-0 group-hover:opacity-100 rounded-3xl transition-opacity duration-500"></div>
-                    <div class="relative z-10 flex flex-col h-full">
-                        <div class="w-16 h-16 mb-8 rounded-2xl bg-gradient-to-br from-[#1877F2]/20 to-transparent flex items-center justify-center text-[#1877F2] border border-[#1877F2]/20 group-hover:bg-[#1877F2]/30 transition-colors">
-                            <svg class="w-8 h-8 drop-shadow-[0_0_12px_rgba(24,119,242,0.5)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path></svg>
+                <!-- Tarjeta Meta Ads -->
+                <div class="p-8 md:p-10 rounded-3xl bg-[#0a0a1a]/80 border border-white/10 backdrop-blur-xl relative overflow-hidden group hover:border-[#1877F2]/50 transition-all duration-300 hover:-translate-y-1 shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 mb-6 rounded-2xl bg-[#1877F2]/10 border border-[#1877F2]/30 flex items-center justify-center text-[#1877F2] group-hover:scale-110 transition-transform">
+                            📱
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-4 font-[family-name:var(--font-space-grotesk)] leading-tight">Meta Ads <br/><span class="text-lg font-normal text-gray-400">(Interrupción Estratégica)</span></h3>
-                        <p class="text-gray-300 text-base md:text-lg leading-relaxed mb-6">
-                            Creamos anuncios en Facebook e Instagram que detienen el scroll y generan interés inmediato.
+                        <h3 class="text-2xl font-bold text-white mb-2 font-[family-name:var(--font-space-grotesk)]">Meta Ads (Facebook & Instagram)</h3>
+                        <p class="text-xs text-[#1877F2] font-semibold uppercase tracking-wider mb-4">Generación de Deseo & Remarketing</p>
+                        <p class="text-gray-300 text-sm font-light leading-relaxed mb-6">
+                            Anuncios visuales impactantes en Instagram Reels, Stories y Feed que capturan la atención e invitan a iniciar conversación por WhatsApp.
                         </p>
                     </div>
-                </div>
-
-                <!-- Tarjeta 3 - Optimización -->
-                <div class="group relative p-8 md:p-10 rounded-3xl bg-[#0a0a1a]/50 border border-white/5 backdrop-blur-md hover:border-[#00f2ea]/40 transition-all duration-500 hover:-translate-y-2 shadow-xl hover:shadow-[0_10px_40px_-15px_rgba(0,242,234,0.3)]">
-                    <div class="absolute inset-0 bg-gradient-to-br from-[#00f2ea]/10 to-transparent opacity-0 group-hover:opacity-100 rounded-3xl transition-opacity duration-500"></div>
-                    <div class="relative z-10 flex flex-col h-full">
-                        <div class="w-16 h-16 mb-8 rounded-2xl bg-gradient-to-br from-[#00f2ea]/20 to-transparent flex items-center justify-center text-[#00f2ea] border border-[#00f2ea]/20 group-hover:bg-[#00f2ea]/30 transition-colors">
-                            <svg class="w-8 h-8 drop-shadow-[0_0_12px_rgba(0,242,234,0.5)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-4 font-[family-name:var(--font-space-grotesk)] leading-tight">Optimización <br/><span class="text-lg font-normal text-gray-400 block mt-2">Continua</span></h3>
-                        <p class="text-gray-300 text-base md:text-lg leading-relaxed mb-6">
-                            Monitoreamos y ajustamos a diario para bajar tu costo por adquisición (CPA) y maximizar tu retorno de inversión (ROI).
-                        </p>
-                    </div>
+                    <ul class="space-y-3 text-xs text-gray-300 border-t border-white/10 pt-4">
+                        <li class="flex items-center gap-2"><span class="text-[#00f2ea]">✓</span> Segmentación por intereses, comportamiento y ubicación</li>
+                        <li class="flex items-center gap-2"><span class="text-[#00f2ea]">✓</span> Anuncios dinámicos en formato Reel y Carrusel</li>
+                        <li class="flex items-center gap-2"><span class="text-[#00f2ea]">✓</span> Retargeting para recuperar visitas que no compraron</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN 4: QUÉ INCLUYE NUESTRO SERVICIO -->
+    <!-- SECCIÓN 4: QUÉ INCLUYE NUESTRA GESTIÓN -->
     <section class="py-20 relative" style="z-index: 10;">
-        <div class="container mx-auto px-4">
-            <div class="max-w-5xl mx-auto p-10 md:p-14 rounded-[2.5rem] bg-[#0a0a1a]/60 border border-white/5 backdrop-blur-md relative overflow-hidden group hover:border-[#00f2ea]/30 transition-all duration-300 shadow-[0_15px_40px_rgba(0,0,0,0.5)]">
-                <div class="absolute bottom-0 right-0 w-64 h-64 bg-[#00f2ea] rounded-full mix-blend-screen filter blur-[150px] opacity-20 pointer-events-none transition-opacity duration-500 group-hover:opacity-40"></div>
-                
-                <div class="flex flex-col md:flex-row gap-12 items-center relative z-10">
-                    <div class="md:w-1/3 text-center md:text-left">
-                        <div class="w-20 h-20 mx-auto md:mx-0 mb-6 rounded-3xl bg-gradient-to-br from-[#00f2ea]/20 to-transparent flex items-center justify-center text-[#00f2ea] border border-[#00f2ea]/20 shadow-[0_0_15px_rgba(0,242,234,0.2)]">
-                            <svg class="w-10 h-10 drop-shadow-[0_0_12px_rgba(0,242,234,0.5)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                        </div>
-                        <h2 class="text-3xl md:text-4xl font-[family-name:var(--font-space-grotesk)] font-bold mb-4 text-white leading-tight">Gestión Integral de Campañas</h2>
-                        <p class="text-gray-400 font-light">
-                            Dejamos de lado las conjeturas. Nuestro equipo aplica una metodología estricta para garantizar que cada centavo invertido te acerque a la meta.
-                        </p>
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold text-white mb-4">
+                    ¿Qué Incluye Nuestra <span class="text-gradient">Gestión Publicitaria</span>?
+                </h2>
+                <p class="text-gray-300 text-base md:text-lg max-w-2xl mx-auto font-light">
+                    Nos encargamos de todo el proceso técnico y creativo para que tú te enfoques en atender las ventas.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Pilar 1 -->
+                <div class="p-8 rounded-3xl bg-[#0a0a1a]/60 border border-white/10 backdrop-blur-md relative hover:border-[#39ff14]/40 transition-all">
+                    <div class="w-12 h-12 mb-6 rounded-xl bg-white/5 flex items-center justify-center text-[#39ff14] border border-white/10">
+                        ⚙️
                     </div>
-                    
-                    <div class="md:w-2/3 w-full">
-                        <ul class="space-y-4">
-                            <li class="flex items-start gap-4 p-4 rounded-2xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/5">
-                                <span class="text-[#00f2ea] mt-1 text-xl flex-shrink-0 drop-shadow-[0_0_8px_rgba(0,242,234,0.8)]">✔</span> 
-                                <span class="text-gray-300 text-lg">Configuración y estructura profesional de campañas.</span>
-                            </li>
-                            <li class="flex items-start gap-4 p-4 rounded-2xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/5">
-                                <span class="text-[#00f2ea] mt-1 text-xl flex-shrink-0 drop-shadow-[0_0_8px_rgba(0,242,234,0.8)]">✔</span> 
-                                <span class="text-gray-300 text-lg">Segmentación avanzada de audiencias.</span>
-                            </li>
-                            <li class="flex items-start gap-4 p-4 rounded-2xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/5">
-                                <span class="text-[#00f2ea] mt-1 text-xl flex-shrink-0 drop-shadow-[0_0_8px_rgba(0,242,234,0.8)]">✔</span> 
-                                <span class="text-gray-300 text-lg">Creación de piezas publicitarias persuasivas.</span>
-                            </li>
-                            <li class="flex items-start gap-4 p-4 rounded-2xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/5">
-                                <span class="text-[#00f2ea] mt-1 text-xl flex-shrink-0 drop-shadow-[0_0_8px_rgba(0,242,234,0.8)]">✔</span> 
-                                <span class="text-gray-300 text-lg">Pruebas A/B de anuncios para encontrar lo que mejor funciona.</span>
-                            </li>
-                            <li class="flex items-start gap-4 p-4 rounded-2xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/5">
-                                <span class="text-[#00f2ea] mt-1 text-xl flex-shrink-0 drop-shadow-[0_0_8px_rgba(0,242,234,0.8)]">✔</span> 
-                                <span class="text-gray-300 text-lg">Optimización continua de rendimiento.</span>
-                            </li>
-                            <li class="flex items-start gap-4 p-4 rounded-2xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/5">
-                                <span class="text-[#00f2ea] mt-1 text-xl flex-shrink-0 drop-shadow-[0_0_8px_rgba(0,242,234,0.8)]">✔</span> 
-                                <span class="text-gray-300 text-lg">Seguimiento de métricas clave y reportes de resultados.</span>
-                            </li>
-                        </ul>
+                    <h3 class="text-xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)]">Estructuración & Píxel</h3>
+                    <p class="text-xs text-gray-300 font-light leading-relaxed">
+                        Instalación del Píxel de Meta y Google Tag Manager para medir eventos clave como clics en WhatsApp y envíos de formularios.
+                    </p>
+                </div>
+
+                <!-- Pilar 2 -->
+                <div class="p-8 rounded-3xl bg-[#0a0a1a]/60 border border-white/10 backdrop-blur-md relative hover:border-[#00f2ea]/40 transition-all">
+                    <div class="w-12 h-12 mb-6 rounded-xl bg-white/5 flex items-center justify-center text-[#00f2ea] border border-white/10">
+                        🎨
                     </div>
+                    <h3 class="text-xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)]">Creativos & Copywriting</h3>
+                    <p class="text-xs text-gray-300 font-light leading-relaxed">
+                        Diseño de imágenes y videos publicitarios acompañados de textos persuasivos que incentivan el llamado a la acción.
+                    </p>
                 </div>
-                
-                <div class="mt-10 pt-6 border-t border-white/10 text-center relative z-10 w-full">
-                    <p class="text-gray-500 text-sm italic">* La inversión publicitaria en las plataformas es independiente del valor de nuestro servicio de gestión.</p>
+
+                <!-- Pilar 3 -->
+                <div class="p-8 rounded-3xl bg-[#0a0a1a]/60 border border-white/10 backdrop-blur-md relative hover:border-[#3b82f6]/40 transition-all">
+                    <div class="w-12 h-12 mb-6 rounded-xl bg-white/5 flex items-center justify-center text-[#3b82f6] border border-white/10">
+                        📈
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)]">Optimización Diaria</h3>
+                    <p class="text-xs text-gray-300 font-light leading-relaxed">
+                        Ajustes constantes en pujas, exclusión de audiencias no rentables y redistribución de presupuesto hacia los anuncios ganadores.
+                    </p>
                 </div>
+            </div>
+
+            <div class="mt-12 text-center text-xs text-gray-400 italic">
+                * Nota: La inversión publicitaria pagada a las plataformas (Google/Meta) se administra de forma transparente e independiente a la tarifa de gestión.
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN 5: CALL TO ACTION FINAL -->
-    <section class="py-24 relative overflow-hidden" style="z-index: 10; background: linear-gradient(to bottom, rgba(5, 5, 17, 0.8), rgba(5, 5, 17, 0.95));">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg h-64 bg-[#00f2ea] rounded-full mix-blend-screen filter blur-[150px] opacity-20 pointer-events-none"></div>
-        <div class="container mx-auto px-4 relative z-10 text-center">
-            <h2 class="text-4xl md:text-5xl lg:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold mb-12 max-w-4xl mx-auto leading-tight">
-                <span class="text-white">Estás a un clic de dejar de gastar y</span> <br class="hidden md:block"/> <span class="text-gradient hover-glow">empezar a invertir.</span>
-            </h2>
-            <div class="flex flex-col items-center justify-center">
-                <a href="https://wa.me/56988169404?text=Hola,%20necesito%20ayuda%20gestionando%20mis%20campañas%20de%20Google%20y%20Meta%20Ads" target="_blank" class="inline-flex items-center justify-center px-6 md:px-8 py-3.5 md:py-4 bg-gradient-to-r from-[#25D366] to-[#00f2ea] rounded-full text-[#050511] font-extrabold text-sm md:text-base tracking-[0.05em] shadow-lg hover:shadow-[0_0_40px_rgba(0,242,234,0.3)] transition-all duration-300 transform hover:-translate-y-1 uppercase group">
-                    📈 Quiero Empezar a Generar Leads
-                    <svg class="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+    <!-- SECCIÓN 5: BANNER BLOG -->
+    <section class="py-10 relative" style="z-index: 10;">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="p-8 md:p-10 rounded-3xl bg-gradient-to-r from-[#0a0a20] via-[#0d123b] to-[#0a0a20] border border-[#39ff14]/40 backdrop-blur-xl relative overflow-hidden shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="max-w-2xl">
+                    <span class="px-3 py-1 rounded-full text-xs font-semibold bg-[#39ff14]/10 border border-[#39ff14]/30 text-[#39ff14] mb-3 inline-block">
+                        📖 Contenido del Blog SEMTIC
+                    </span>
+                    <h3 class="text-xl md:text-2xl font-bold text-white mb-2 font-[family-name:var(--font-space-grotesk)]">
+                        Estrategias de SEO y Publicidad Pagada para Negocios en Chile
+                    </h3>
+                    <p class="text-gray-300 text-sm font-light leading-relaxed">
+                        Aprende cómo posicionar tu empresa en Valparaíso y Santiago combinando campañas de Ads con estrategias SEO a largo plazo.
+                    </p>
+                </div>
+                <a href="/blog" class="px-6 py-3.5 rounded-full bg-[#39ff14] text-[#050511] font-semibold text-sm hover:bg-[#00f2ea] hover:shadow-[0_0_20px_rgba(57,255,20,0.5)] transition-all whitespace-nowrap">
+                    Leer Artículos →
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 6: CTA FINAL -->
+    <section class="py-24 relative overflow-hidden" style="z-index: 10;">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="p-10 md:p-14 rounded-3xl bg-gradient-to-r from-[#0a0a20] via-[#0e103b] to-[#0a0a20] border border-[#39ff14]/40 backdrop-blur-xl text-center relative overflow-hidden shadow-2xl">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-[#39ff14] to-transparent"></div>
+                <h2 class="text-3xl md:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold mb-6 text-white leading-tight">
+                    Estás a un clic de dejar de gastar y <br/><span class="text-gradient">empezar a rentabilizar tus anuncios</span>
+                </h2>
+                <p class="text-gray-300 text-base md:text-lg max-w-2xl mx-auto mb-8 font-light leading-relaxed">
+                    Conversemos sobre tu negocio. Realizamos un diagnóstico inicial y te proponemos la mejor estrategia para Google & Meta Ads.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="https://wa.me/56988169404?text=Hola,%20quiero%20cotizar%20la%20gestión%20de%20mis%20campañas%20de%20Google%20y%20Meta%20Ads" target="_blank" class="px-8 py-4 rounded-full bg-gradient-to-r from-[#25D366] to-[#39ff14] text-[#050511] font-extrabold text-sm uppercase tracking-wide hover:shadow-[0_0_30px_rgba(57,255,20,0.5)] transition-all transform hover:-translate-y-1 flex items-center gap-2">
+                        🎯 Lanzar Mis Campañas Ads
+                    </a>
+                    <a href="/contacto" class="px-8 py-4 rounded-full border border-[#39ff14] text-[#39ff14] font-semibold text-sm hover:bg-[#39ff14] hover:text-[#050511] transition-all">
+                        Enviar Mensaje
+                    </a>
+                </div>
             </div>
         </div>
     </section>
