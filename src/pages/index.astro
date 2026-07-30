@@ -319,6 +319,93 @@ import '../styles/global.css';
     </section>
 
 
+    <!-- Últimos Artículos del Blog -->
+    <section class="py-24 relative overflow-hidden" style="z-index: 10; background: linear-gradient(to bottom, rgba(5, 5, 17, 0.5), rgba(10, 10, 26, 0.8));">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-[#2dd4bf]/30 backdrop-blur-md mb-4">
+                        <span class="w-2 h-2 rounded-full bg-[#2dd4bf] animate-ping"></span>
+                        <span class="text-xs uppercase tracking-widest text-[#2dd4bf] font-semibold">Blog & Tendencias</span>
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold text-white">
+                        Últimas Novedades del <span class="text-gradient">Blog</span>
+                    </h2>
+                </div>
+                <a href="/blog" class="mt-4 md:mt-0 inline-flex items-center gap-2 text-sm font-semibold text-[#2dd4bf] hover:text-[#00f2ea] transition-colors">
+                    Ver todos los artículos →
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Artículo Drones -->
+                <article class="group relative rounded-3xl bg-[#0a0a1a]/70 border border-[#3b82f6]/30 backdrop-blur-xl overflow-hidden hover:border-[#00f2ea]/60 transition-all duration-500 hover:-translate-y-1.5 shadow-xl flex flex-col justify-between p-7">
+                    <div>
+                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-[#3b82f6]/20 text-[#3b82f6] border border-[#3b82f6]/30 mb-4 inline-block">
+                            Servicios con Dron
+                        </span>
+                        <h3 class="text-xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)] group-hover:text-[#00f2ea] transition-colors leading-tight">
+                            <a href="/blog/fotografia-video-aereo-dron">
+                                Fotografía y Grabación Aérea con Drones en Chile: Guía Definitiva 2026
+                            </a>
+                        </h3>
+                        <p class="text-gray-300 text-sm font-light leading-relaxed mb-6">
+                            Descubre cómo las tomas 4K/360° revolucionan el marketing inmobiliario, la publicidad e inspecciones técnicas.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+                        <span class="text-xs text-gray-400">7 min de lectura</span>
+                        <a href="/blog/fotografia-video-aereo-dron" class="text-xs font-bold text-[#2dd4bf] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                            Leer artículo →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="group relative rounded-3xl bg-[#0a0a1a]/50 border border-white/10 backdrop-blur-xl overflow-hidden hover:border-[#2dd4bf]/40 transition-all duration-500 hover:-translate-y-1.5 flex flex-col justify-between p-7">
+                    <div>
+                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/5 text-[#2dd4bf] border border-white/10 mb-4 inline-block">
+                            Marketing Digital
+                        </span>
+                        <h3 class="text-xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)] group-hover:text-[#2dd4bf] transition-colors leading-tight">
+                            Estrategias de SEO Local en Chile para Negocios
+                        </h3>
+                        <p class="text-gray-300 text-sm font-light leading-relaxed mb-6">
+                            Cómo dominar los primeros resultados de Google en Valparaíso, Santiago y regiones para atraer clientes locales.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+                        <span class="text-xs text-gray-400">5 min de lectura</span>
+                        <a href="/blog" class="text-xs font-bold text-[#2dd4bf] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                            Ver más →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="group relative rounded-3xl bg-[#0a0a1a]/50 border border-white/10 backdrop-blur-xl overflow-hidden hover:border-[#00f2ea]/40 transition-all duration-500 hover:-translate-y-1.5 flex flex-col justify-between p-7">
+                    <div>
+                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/5 text-[#00f2ea] border border-white/10 mb-4 inline-block">
+                            Desarrollo Web
+                        </span>
+                        <h3 class="text-xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)] group-hover:text-[#00f2ea] transition-colors leading-tight">
+                            Desarrollo Web Ultrarrápido con Astro y Tailwind CSS
+                        </h3>
+                        <p class="text-gray-300 text-sm font-light leading-relaxed mb-6">
+                            Por qué los sitios web livianos y sin exceso de código aumentan conversiones y mejoran el posicionamiento.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+                        <span class="text-xs text-gray-400">6 min de lectura</span>
+                        <a href="/blog" class="text-xs font-bold text-[#00f2ea] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                            Ver más →
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
     <!-- Contacto / CTA -->
     <section id="contacto" class="py-24 relative overflow-hidden" style="z-index: 10; background: linear-gradient(to bottom, rgba(5, 5, 17, 0.8), rgba(5, 5, 17, 0.95));">
         <div class="absolute inset-0 bg-[#4f46e5]/5" style="z-index: -1;"></div>
