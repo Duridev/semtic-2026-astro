@@ -46,7 +46,7 @@ const categories = ["Todos", "Servicios con Dron", "Marketing Digital", "Desarro
 
 <Layout
     title="Blog de Tecnología, Drones y Marketing Digital | SEMTIC Chile"
-    description="Explora nuestros artículos sobre producción audiovisual aérea con drones 4K/360°, desarrollo de páginas web ultrarrápidas y estrategias de marketing digital."
+    description="Explora nuestros artículos sobre producción audiovisual aérea con drones 4K/360°, desarrollo de páginas web ultrarrápidas y estrategias de marketing digital en Chile."
     image="https://semtic.cl/og-image.png"
 >
     <!-- Hero Section del Blog -->
@@ -61,7 +61,7 @@ const categories = ["Todos", "Servicios con Dron", "Marketing Digital", "Desarro
                 <span class="text-xs uppercase tracking-widest text-[#2dd4bf] font-semibold">Blog & Insights SEMTIC</span>
             </div>
             
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-[family-name:var(--font-space-grotesk)] font-bold mb-6 leading-tight">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-[family-name:var(--font-space-grotesk)] font-bold mb-6 leading-tight text-white">
                 Innovación, Perspectiva Aérea & <span class="text-gradient">Estrategia Digital</span>
             </h1>
             
@@ -137,7 +137,7 @@ const categories = ["Todos", "Servicios con Dron", "Marketing Digital", "Desarro
         </div>
     </section>
 
-    <!-- Grid de Artículos Secundarios -->
+    <!-- Grid de Artículos Secundarios Actualizados -->
     <section class="py-16 relative" style="z-index: 10;">
         <div class="container mx-auto px-4 max-w-6xl">
             <h2 class="text-2xl md:text-3xl font-[family-name:var(--font-space-grotesk)] font-bold mb-10 text-white flex items-center gap-3">
@@ -147,27 +147,29 @@ const categories = ["Todos", "Servicios con Dron", "Marketing Digital", "Desarro
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {posts.filter(p => !p.featured).map(post => (
-                    <article class="group relative rounded-3xl bg-[#0a0a1a]/60 border border-white/10 backdrop-blur-md overflow-hidden hover:border-[#2dd4bf]/40 transition-all duration-500 flex flex-col justify-between p-8 hover:-translate-y-1">
+                    <article class="group relative rounded-3xl bg-[#0a0a1a]/80 border border-white/10 backdrop-blur-md overflow-hidden hover:border-[#2dd4bf]/60 transition-all duration-500 flex flex-col justify-between p-8 hover:-translate-y-1.5 shadow-xl">
                         <div>
                             <div class="flex items-center gap-3 mb-4">
-                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-[#2dd4bf]">
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-[#2dd4bf]/10 border border-[#2dd4bf]/30 text-[#2dd4bf]">
                                     {post.category}
                                 </span>
                                 <span class="text-xs text-gray-400">• {post.date}</span>
                             </div>
-                            <h3 class="text-xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)] group-hover:text-[#2dd4bf] transition-colors leading-tight">
-                                {post.title}
+                            <h3 class="text-xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)] group-hover:text-[#00f2ea] transition-colors leading-tight">
+                                <a href={`/blog/${post.slug}`}>
+                                    {post.title}
+                                </a>
                             </h3>
                             <p class="text-gray-300 text-sm leading-relaxed mb-6 font-light">
                                 {post.description}
                             </p>
                         </div>
 
-                        <div class="flex items-center justify-between pt-4 border-t border-white/5">
+                        <div class="flex items-center justify-between pt-4 border-t border-white/10">
                             <span class="text-xs text-gray-400">{post.readTime}</span>
-                            <span class="text-xs font-semibold text-[#2dd4bf] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
-                                Próximamente →
-                            </span>
+                            <a href={`/blog/${post.slug}`} class="text-xs font-bold text-[#2dd4bf] group-hover:text-[#00f2ea] group-hover:translate-x-1 transition-all inline-flex items-center gap-1">
+                                Leer artículo →
+                            </a>
                         </div>
                     </article>
                 ))}
