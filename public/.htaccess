@@ -1,0 +1,87 @@
+# ==============================================================================
+# ARCHIVO DE CONFIGURACIÓN APACHE (.htaccess) PARA SEMTIC.CL (ASTRO STATIC)
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Configuración del Archivo Índice y Desactivación Segura de Directorios
+# ------------------------------------------------------------------------------
+DirectoryIndex index.html
+AddDefaultCharset UTF-8
+
+# Evitar 403 si el servidor restringe la directiva Options
+<IfModule mod_autoindex.c>
+    Options -Indexes
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 2. Página de Error 404 Personalizada de Astro
+# ------------------------------------------------------------------------------
+ErrorDocument 404 /404.html
+
+# ------------------------------------------------------------------------------
+# 3. Redirección HTTPS (Motor de Reescritura Seguro)
+# ------------------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Forzar navegación segura mediante HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 4. Compresión GZIP / DEFLATE
+# ------------------------------------------------------------------------------
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+    AddOutputFilterByType DEFLATE application/javascript application/x-javascript application/json
+    AddOutputFilterByType DEFLATE application/xml application/xhtml+xml application/rss+xml
+    AddOutputFilterByType DEFLATE image/svg+xml image/x-icon
+    AddOutputFilterByType DEFLATE font/ttf font/opentype font/woff font/woff2
+    AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 5. Caché del Navegador
+# ------------------------------------------------------------------------------
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+
+    # HTML y respuestas dinámicas
+    ExpiresByType text/html "access plus 1 hour"
+    ExpiresByType application/json "access plus 0 seconds"
+    ExpiresByType application/xml "access plus 0 seconds"
+    ExpiresByType text/xml "access plus 0 seconds"
+
+    # Recursos Estáticos (Imágenes, Fuentes, CSS, JS)
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType text/javascript "access plus 1 year"
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(css|js|webp|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|otf)$">
+        Header set Cache-Control "max-age=31536000, public, immutable"
+    </FilesMatch>
+
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "max-age=3600, public, must-revalidate"
+    </FilesMatch>
+
+    # Cabeceras de Seguridad Básicas
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
