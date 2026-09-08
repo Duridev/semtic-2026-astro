@@ -55,7 +55,7 @@ const categories = [
 <Layout
     title="Blog de Tecnología, Drones y Marketing Digital | SEMTIC Chile"
     description="Explora nuestros artículos sobre producción audiovisual aérea con drones 4K/360°, desarrollo de páginas web ultrarrápidas y estrategias de marketing digital en Chile."
-    image="https://semtic.cl/og-image.png"
+    image="https://semtic.cl/social-img.webp"
 >
     <!-- Hero Section del Blog -->
     <section class="relative pt-32 pb-16 overflow-hidden" style="z-index: 10;">
@@ -101,11 +101,12 @@ const categories = [
             </p>
 
             <!-- Categorías de Filtro -->
-            <div class="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto">
+            <div id="category-filters" class="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto">
                 {
                     categories.map((cat, index) => (
                         <button
-                            class={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${index === 0 ? "bg-[#2dd4bf] text-[#050511] border-[#2dd4bf] font-bold shadow-[0_0_15px_rgba(45,212,191,0.4)]" : "bg-white/5 text-gray-300 border-white/10 hover:border-[#2dd4bf]/50 hover:text-white"}`}
+                            data-filter={cat}
+                            class={`filter-btn px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${index === 0 ? "active bg-[#2dd4bf] text-[#050511] border-[#2dd4bf] font-bold shadow-[0_0_15px_rgba(45,212,191,0.4)]" : "bg-white/5 text-gray-300 border-white/10 hover:border-[#2dd4bf]/50 hover:text-white"}`}
                         >
                             {cat}
                         </button>
@@ -122,7 +123,7 @@ const categories = [
                 posts
                     .filter((p) => p.featured)
                     .map((featuredPost) => (
-                        <article class="group relative rounded-3xl bg-[#0a0a1a]/80 border border-[#3b82f6]/40 backdrop-blur-xl overflow-hidden hover:border-[#00f2ea]/60 transition-all duration-500 shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
+                        <article data-category={featuredPost.category} class="blog-card group relative rounded-3xl bg-[#0a0a1a]/80 border border-[#3b82f6]/40 backdrop-blur-xl overflow-hidden hover:border-[#00f2ea]/60 transition-all duration-500 shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
                             <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
                                 <div class="lg:col-span-6 p-8 md:p-12 flex flex-col justify-between h-full">
                                     <div>
@@ -216,7 +217,7 @@ const categories = [
                     posts
                         .filter((p) => !p.featured)
                         .map((post) => (
-                            <article class="group relative rounded-3xl bg-[#0a0a1a]/80 border border-white/10 backdrop-blur-md overflow-hidden hover:border-[#2dd4bf]/60 transition-all duration-500 flex flex-col justify-between p-8 hover:-translate-y-1.5 shadow-xl">
+                            <article data-category={post.category} class="blog-card group relative rounded-3xl bg-[#0a0a1a]/80 border border-white/10 backdrop-blur-md overflow-hidden hover:border-[#2dd4bf]/60 transition-all duration-500 flex flex-col justify-between p-8 hover:-translate-y-1.5 shadow-xl">
                                 <div>
                                     <div class="flex items-center gap-3 mb-4">
                                         <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-[#2dd4bf]/10 border border-[#2dd4bf]/30 text-[#2dd4bf]">
@@ -297,4 +298,37 @@ const categories = [
             </div>
         </div>
     </section>
+
+    <!-- Script de Filtro Interactivo por Categoría -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+            const blogCards = document.querySelectorAll<HTMLElement>('.blog-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const selectedCategory = btn.getAttribute('data-filter') || 'Todos';
+
+                    // Update button styling
+                    filterBtns.forEach(b => {
+                        b.classList.remove('bg-[#2dd4bf]', 'text-[#050511]', 'border-[#2dd4bf]', 'font-bold', 'shadow-[0_0_15px_rgba(45,212,191,0.4)]');
+                        b.classList.add('bg-white/5', 'text-gray-300', 'border-white/10');
+                    });
+                    btn.classList.remove('bg-white/5', 'text-gray-300', 'border-white/10');
+                    btn.classList.add('bg-[#2dd4bf]', 'text-[#050511]', 'border-[#2dd4bf]', 'font-bold', 'shadow-[0_0_15px_rgba(45,212,191,0.4)]');
+
+                    // Filter cards
+                    blogCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        if (selectedCategory === 'Todos' || cardCategory === selectedCategory) {
+                            card.style.display = '';
+                            card.style.opacity = '1';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </Layout>
