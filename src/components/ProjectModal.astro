@@ -1,0 +1,345 @@
+---
+import { projectsData } from '../data/projects';
+---
+
+<!-- MODAL INTERACTIVO DE DETALLES DE PROYECTO -->
+<div 
+  id="project-modal-backdrop"
+  class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 md:p-6 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300 ease-out"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-project-title"
+>
+  <div 
+    id="project-modal-card"
+    class="relative w-full max-w-4xl max-h-[92vh] flex flex-col bg-[#0a0a1e]/95 border border-white/15 rounded-2xl md:rounded-3xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9),0_0_40px_rgba(0,242,234,0.15)] backdrop-blur-2xl overflow-hidden transform scale-95 translate-y-3 transition-all duration-300 ease-out"
+  >
+    <!-- Header de la Modal -->
+    <div class="px-5 py-4 sm:px-6 sm:py-5 border-b border-white/10 flex items-center justify-between bg-white/[0.02]">
+      <div class="flex items-center gap-3">
+        <span 
+          id="modal-project-badge" 
+          class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#00f2ea]/10 border border-[#00f2ea]/30 text-[#00f2ea]"
+        >
+          Proyecto SEMTIC
+        </span>
+        <span class="text-xs text-gray-400 hidden sm:inline">• Detalle del Caso de Éxito</span>
+      </div>
+
+      <!-- Botón de Cerrar Cuadrado Moderno -->
+      <button 
+        type="button" 
+        id="modal-close-btn"
+        class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 border border-white/15 hover:border-white/30 text-gray-300 hover:text-white flex items-center justify-center transition-all duration-200 cursor-pointer active:scale-95 group"
+        aria-label="Cerrar modal"
+      >
+        <svg class="w-5 h-5 transition-transform duration-200 group-hover:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Contenido con Scroll Suave -->
+    <div class="p-5 sm:p-6 md:p-8 overflow-y-auto space-y-6 sm:space-y-8 custom-scrollbar">
+      
+      <!-- Simulación de Navegador Web con la Imagen -->
+      <div class="rounded-2xl overflow-hidden border border-white/15 bg-[#050511] shadow-2xl">
+        <!-- Barra de navegador simulada -->
+        <div class="px-4 py-2.5 bg-[#0e0e24] border-b border-white/10 flex items-center gap-3">
+          <div class="flex items-center gap-1.5">
+            <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+          </div>
+          <div class="flex-1 max-w-sm mx-auto px-3 py-1 rounded-md bg-black/40 border border-white/10 text-xs text-gray-400 font-mono truncate flex items-center gap-2">
+            <svg class="w-3.5 h-3.5 text-[#00f2ea] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+            <span id="modal-browser-url">https://semtic.cl</span>
+          </div>
+        </div>
+
+        <!-- Imagen del Proyecto -->
+        <div class="relative aspect-video w-full overflow-hidden bg-black/40">
+          <img 
+            id="modal-project-img" 
+            src="/trademaq-hero.webp" 
+            alt="Captura del sitio web" 
+            class="w-full h-full object-cover" 
+          />
+        </div>
+      </div>
+
+      <!-- Títulos, Encabezado y Tecnologías -->
+      <div class="space-y-3">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <h2 
+              id="modal-project-title" 
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white font-[family-name:var(--font-space-grotesk)]"
+            >
+              Nombre del Proyecto
+            </h2>
+            <p 
+              id="modal-project-subtitle" 
+              class="text-[#00f2ea] text-sm sm:text-base font-medium mt-1"
+            >
+              Subtítulo o categoría
+            </p>
+          </div>
+
+          <!-- Badges de Tecnologías / Stack aplicadas -->
+          <div id="modal-project-tags" class="flex flex-wrap gap-2 items-center">
+            <!-- Badges renderizados dinámicamente -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Grilla de Información Detallada (Para quién fue creado y particularidad) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+        
+        <!-- Tarjeta 1: ¿Para quién fue creado? -->
+        <div class="p-5 sm:p-6 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-sm relative overflow-hidden group hover:border-[#00f2ea]/40 transition-colors">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-xl bg-[#00f2ea]/10 border border-[#00f2ea]/30 text-[#00f2ea] flex items-center justify-center shrink-0">
+              <!-- Ícono de Usuario / Audiencia -->
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white font-[family-name:var(--font-space-grotesk)]">
+              ¿Para quién fue creado?
+            </h3>
+          </div>
+          <p 
+            id="modal-project-audience" 
+            class="text-gray-300 text-sm sm:text-base leading-relaxed font-light"
+          >
+            Descripción del cliente objetivo, rubro y necesidades comerciales específicas.
+          </p>
+        </div>
+
+        <!-- Tarjeta 2: ¿Cuál es su particularidad? -->
+        <div class="p-5 sm:p-6 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-sm relative overflow-hidden group hover:border-[#3b82f6]/40 transition-colors">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-xl bg-[#3b82f6]/10 border border-[#3b82f6]/30 text-[#60a5fa] flex items-center justify-center shrink-0">
+              <!-- Ícono de Rayo / Particularidad -->
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white font-[family-name:var(--font-space-grotesk)]">
+              Particularidad & Desafío
+            </h3>
+          </div>
+          <p 
+            id="modal-project-particularity" 
+            class="text-gray-300 text-sm sm:text-base leading-relaxed font-light"
+          >
+            Detalles técnicos clave, arquitectura de velocidad y soluciones a la medida implementadas por SEMTIC.
+          </p>
+        </div>
+      </div>
+
+      <!-- Sección de Características Destacadas -->
+      <div class="p-5 sm:p-6 rounded-2xl bg-white/[0.02] border border-white/10">
+        <h4 class="text-sm uppercase tracking-wider font-bold text-gray-400 mb-4 flex items-center gap-2">
+          <svg class="w-4 h-4 text-[#2dd4bf]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+          Aspectos Destacados de la Solución
+        </h4>
+        <ul id="modal-project-highlights" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+          <!-- Renderizado dinámico vía script -->
+        </ul>
+      </div>
+
+      <!-- Información Complementaria -->
+      <div id="modal-project-additional-container" class="p-4 rounded-xl bg-[#00f2ea]/5 border border-[#00f2ea]/20">
+        <p id="modal-project-additional" class="text-sm text-gray-300 leading-relaxed font-light italic">
+          Información adicional sobre resultados o impacto del proyecto.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Footer con Botones de Acción -->
+    <div class="px-5 py-4 sm:px-6 sm:py-5 border-t border-white/10 bg-[#070716] flex flex-col sm:flex-row items-center justify-between gap-4">
+      <button 
+        type="button" 
+        id="modal-close-footer-btn"
+        class="w-full sm:w-auto px-5 py-2.5 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white font-semibold text-sm transition-all cursor-pointer"
+      >
+        Cerrar ventana
+      </button>
+
+      <a 
+        id="modal-project-link" 
+        href="#" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-[#2dd4bf] via-[#00f2ea] to-[#3b82f6] text-[#050511] font-bold text-sm hover:shadow-[0_0_25px_rgba(0,242,234,0.5)] transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center gap-2 cursor-pointer"
+      >
+        <span>Visitar Sitio Web Oficial</span>
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+          <polyline points="15 3 21 3 21 9"/>
+          <line x1="10" y1="14" x2="21" y2="3"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<!-- Script del Modal -->
+<script define:vars={{ projectsData }}>
+  (function () {
+    const backdrop = document.getElementById('project-modal-backdrop');
+    const card = document.getElementById('project-modal-card');
+    const closeBtn = document.getElementById('modal-close-btn');
+    const closeFooterBtn = document.getElementById('modal-close-footer-btn');
+
+    // Elementos dinámicos del modal
+    const badgeEl = document.getElementById('modal-project-badge');
+    const browserUrlEl = document.getElementById('modal-browser-url');
+    const imgEl = document.getElementById('modal-project-img');
+    const titleEl = document.getElementById('modal-project-title');
+    const subtitleEl = document.getElementById('modal-project-subtitle');
+    const tagsEl = document.getElementById('modal-project-tags');
+    const audienceEl = document.getElementById('modal-project-audience');
+    const particularityEl = document.getElementById('modal-project-particularity');
+    const highlightsEl = document.getElementById('modal-project-highlights');
+    const additionalContainer = document.getElementById('modal-project-additional-container');
+    const additionalEl = document.getElementById('modal-project-additional');
+    const linkEl = document.getElementById('modal-project-link');
+
+    function openModal(projectId) {
+      const project = projectsData.find((p) => p.id === projectId);
+      if (!project) return;
+
+      // Asignar datos
+      if (badgeEl) badgeEl.textContent = project.category;
+      if (browserUrlEl) browserUrlEl.textContent = project.url;
+      if (imgEl) {
+        imgEl.src = project.image;
+        imgEl.alt = `${project.title} - ${project.subtitle}`;
+      }
+      if (titleEl) titleEl.textContent = project.title;
+      if (subtitleEl) subtitleEl.textContent = project.subtitle;
+
+      if (tagsEl) {
+        tagsEl.innerHTML = '';
+        project.tags.forEach((tag) => {
+          const span = document.createElement('span');
+          span.className = `px-3 py-1 border rounded-full text-xs font-semibold ${project.accentBgClass}`;
+          span.textContent = tag;
+          tagsEl.appendChild(span);
+        });
+      }
+
+      if (audienceEl) audienceEl.textContent = project.targetAudience;
+      if (particularityEl) particularityEl.textContent = project.particularity;
+
+      if (highlightsEl) {
+        highlightsEl.innerHTML = '';
+        project.highlights.forEach((item) => {
+          const li = document.createElement('li');
+          li.className = 'flex items-start gap-2 text-xs sm:text-sm text-gray-300';
+          li.innerHTML = `
+            <span class="w-1.5 h-1.5 rounded-full bg-[#00f2ea] mt-2 shrink-0"></span>
+            <span>${item}</span>
+          `;
+          highlightsEl.appendChild(li);
+        });
+      }
+
+      if (additionalContainer && additionalEl) {
+        if (project.additionalInfo) {
+          additionalContainer.classList.remove('hidden');
+          additionalEl.textContent = project.additionalInfo;
+        } else {
+          additionalContainer.classList.add('hidden');
+        }
+      }
+
+      if (linkEl) {
+        linkEl.href = project.url;
+      }
+
+      // Mostrar modal con animación fluida
+      if (backdrop && card) {
+        backdrop.classList.remove('opacity-0', 'pointer-events-none');
+        backdrop.classList.add('opacity-100', 'pointer-events-auto');
+        card.classList.remove('scale-95', 'translate-y-3');
+        card.classList.add('scale-100', 'translate-y-0');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeModal() {
+      if (backdrop && card) {
+        backdrop.classList.add('opacity-0', 'pointer-events-none');
+        backdrop.classList.remove('opacity-100', 'pointer-events-auto');
+        card.classList.add('scale-95', 'translate-y-3');
+        card.classList.remove('scale-100', 'translate-y-0');
+        document.body.style.overflow = '';
+      }
+    }
+
+    // Delegación de eventos para abrir modal
+    document.addEventListener('click', (e) => {
+      const target = e.target;
+      const trigger = target.closest('[data-open-modal]');
+      if (trigger) {
+        e.preventDefault();
+        const projectId = trigger.getAttribute('data-open-modal');
+        if (projectId) {
+          openModal(projectId);
+        }
+      }
+    });
+
+    // Cerrar con botón
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (closeFooterBtn) closeFooterBtn.addEventListener('click', closeModal);
+
+    // Cerrar al hacer clic en el backdrop fuera de la tarjeta
+    if (backdrop) {
+      backdrop.addEventListener('click', (e) => {
+        if (e.target === backdrop) {
+          closeModal();
+        }
+      });
+    }
+
+    // Cerrar con tecla Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && backdrop && !backdrop.classList.contains('pointer-events-none')) {
+        closeModal();
+      }
+    });
+  })();
+</script>
+
+<style>
+  /* Custom scrollbar para el interior del modal */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(5, 5, 17, 0.5);
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(0, 242, 234, 0.3);
+    border-radius: 3px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 242, 234, 0.6);
+  }
+</style>
