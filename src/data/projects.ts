@@ -19,27 +19,27 @@ export interface ProjectItem {
 
 export const projectsData: ProjectItem[] = [
   {
-    id: "trademaq",
-    title: "TradeMaq",
-    subtitle: "Corretaje Industrial & Maquinaria Pesada",
-    category: "Plataforma Web & Catálogo Dinámico",
-    image: "/trademaq-hero.webp",
-    url: "https://dancing-begonia-f2bffb.netlify.app/",
+    id: "tmquinta",
+    title: "TM Quinta",
+    subtitle: "Transportes, Maquinarias y Movimientos de Tierra",
+    category: "Plataforma Web & Venta de Áridos",
+    image: "/tmquinta-hero.webp",
+    url: "https://tmquinta.cl",
     accentColor: "#00f2ea",
     accentBorderClass: "hover:border-[#00f2ea]/60",
     accentTextClass: "text-[#00f2ea]",
     accentBgClass: "bg-[#00f2ea]/10 border-[#00f2ea]/30 text-[#00f2ea]",
-    shortDesc: "Plataforma de corretaje industrial especializada en maquinaria pesada con catálogo dinámico y cotización directa.",
-    tags: ["Web Premium", "Catálogo Dinámico", "Cotización Directa", "Mobile First"],
-    targetAudience: "Empresas, contratistas, empresas de transporte y proveedores del sector industrial, construcción y minería en Chile que necesitan comprar, vender o tasar maquinaria pesada de forma ágil y confiable.",
-    particularity: "Desarrollo web a medida con arquitectura ultrarrápida, optimizada para cargar inmediatamente en faenas mineras o de construcción con baja cobertura móvil. Dispone de catálogo clasificado por categorías y cotizador en un clic vinculado a WhatsApp.",
+    shortDesc: "Plataforma de servicios de transporte, movimiento de tierras, arriendo de maquinaria, retiro de escombros y venta de áridos en la V Región.",
+    tags: ["Maquinaria Pesada", "Áridos & Maicillo", "Movimiento de Tierras", "Cotización WhatsApp"],
+    targetAudience: "Empresas constructoras, contratistas, parceleros y particulares en toda la Región de Valparaíso (Gran Valparaíso, Marga Marga, Quillota, Aconcagua y San Antonio) que necesitan arriendo de maquinaria pesada, venta de áridos o fletes con respuesta inmediata.",
+    particularity: "Desarrollo web enfocado en la conversión rápida y experiencia móvil para usuarios en obra. Dispone de catálogo de servicios segmentado (retroexcavadora, minicargador, camión 3/4, tolvas 16m³ y despacho de áridos) con cotización One-Click directa a WhatsApp y optimización para búsquedas locales de urgencia.",
     highlights: [
-      "Catálogo dinámico con filtros ágiles por categoría y tipo de equipo",
-      "Cotizaciones instantáneas 'One-Click' enlazadas a ejecutivos vía WhatsApp",
-      "Arquitectura Jamstack de máxima velocidad y seguridad",
-      "Diseño adaptable 100% responsive optimizado para faenas en terreno"
+      "Catálogo completo de maquinaria pesada, fletes y tolvas de 16m³",
+      "Cotización One-Click directa a WhatsApp segmentada por servicio",
+      "Arquitectura ultra rápida adaptada para faenas y obras en terreno",
+      "Estrategia de SEO Local y cobertura en comunas de la V Región"
     ],
-    additionalInfo: "Diseñado para maximizar la tasa de conversión en consultas comerciales de alto valor, eliminando fricciones y facilitando el cierre de negocios."
+    additionalInfo: "Optimizada para transformar visitas y búsquedas locales en conversaciones directas por WhatsApp y llamadas de cotización en tiempo récord."
   },
   {
     id: "rebbel",
