@@ -41,6 +41,7 @@ export const projectsData: ProjectItem[] = [
     ],
     additionalInfo: "Optimizada para transformar visitas y búsquedas locales en conversaciones directas por WhatsApp y llamadas de cotización en tiempo récord."
   },
+  /*
   {
     id: "rebbel",
     title: "Rebbel Arquitectura",
@@ -63,6 +64,30 @@ export const projectsData: ProjectItem[] = [
       "Canal de contacto directo para agendar visitas técnicas y reuniones"
     ],
     additionalInfo: "Construido para proyectar el talento y la identidad arquitectónica del estudio, atrayendo clientes calificados para obras residenciales y corporativas."
+  },
+  */
+  {
+    id: "fugasdetect",
+    title: "Fugas Detect",
+    subtitle: "Detección No Invasiva de Fugas & Gasfitería Integral",
+    category: "Plataforma Web en Astro & SEO de Conversión",
+    image: "/fugasdetect.webp",
+    url: "https://fugasdetect.cl",
+    accentColor: "#38bdf8",
+    accentBorderClass: "hover:border-[#38bdf8]/60",
+    accentTextClass: "text-[#38bdf8]",
+    accentBgClass: "bg-[#38bdf8]/10 border-[#38bdf8]/30 text-[#38bdf8]",
+    shortDesc: "Plataforma web de máxima velocidad desarrollada en Astro para detección de filtraciones con geófono, termografía y gasfitería con captación directa a WhatsApp.",
+    tags: ["Astro", "Detección No Invasiva", "SEO Local V Región", "Conversión WhatsApp"],
+    targetAudience: "Propietarios de viviendas, parcelas, administradores de edificios y empresas en la Región de Valparaíso (Viña del Mar, Valparaíso, Concón, Quilpué, Villa Alemana, Limache y Quillota) que sufren filtraciones ocultas, alzas anormales en su cuenta de agua o problemas de gasfitería y calefón.",
+    particularity: "Desarrollo web ultraligero y de alto rendimiento construido en Astro. Diseñado para responder a situaciones de urgencia doméstica con arquitectura mobile-first, optimización SEO Local en toda la Región de Valparaíso ('fugas de agua', 'gasfitería de urgencia'), botón de cotización directa a WhatsApp y blog técnico educativo para posicionamiento orgánico.",
+    highlights: [
+      "Desarrollo en Astro con velocidad de carga instantánea y máximo puntaje en Core Web Vitals",
+      "Embudos de cotización directa a WhatsApp segmentados por tipo de servicio y urgencia",
+      "Estrategia de SEO Local geolocalizada en comunas del Gran Valparaíso y Marga Marga",
+      "Integración de blog técnico para captación orgánica y alta tasa de retención"
+    ],
+    additionalInfo: "Diseñado para transformar búsquedas de urgencia en contactos inmediatos, destacando su tecnología no destructiva y más de 48 reseñas 5 estrellas en Google."
   },
   {
     id: "agrosilver",
