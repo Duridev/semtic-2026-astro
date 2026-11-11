@@ -136,21 +136,29 @@ const caseStudies = [
 const faqs = [
   {
     question: "¿Por qué un sitio en Astro y no una plantilla común?",
+    image: "/servicios-img/faq-astro-speed.jpg",
+    imageAlt: "Velocidad extrema en Astro y mejor Nivel de Calidad en Google Ads",
     answer:
       "Las plantillas tradicionales (como constructores pesados en WordPress) cargan decenas de scripts y plugins que ralentizan la web a 4 o 6 segundos. En Google Ads, cada segundo extra de espera hace que pierdas hasta un 20% de los clics por los que ya pagaste. Astro genera HTML estático puro sin JavaScript innecesario: tu página abre al instante, Google premia tu anuncio con un mejor Nivel de Calidad (Quality Score) y pagas menos por cada clic."
   },
   {
     question: "¿Cuánto tiempo tarda en estar lista la web?",
+    image: "/servicios-img/faq-delivery-time.jpg",
+    imageAlt: "Tiempos de entrega ágiles de 7 a 15 días hábiles",
     answer:
       "Nuestro proceso es ágil y sin burocracia: una Landing Page comercial de alta conversión está lista y publicada entre 7 y 15 días hábiles, dependiendo de la extensión y del material inicial. Desde la primera semana verás avances reales en un enlace de previsualización."
   },
   {
     question: "¿Qué necesito para empezar a recibir prospectos?",
+    image: "/servicios-img/faq-steps-leads.jpg",
+    imageAlt: "Proceso en 3 pasos para empezar a recibir prospectos comerciales",
     answer:
       "Solo tres pasos simples: 1) Una reunión breve (15-20 min) para definir tu servicio principal, zona geográfica y oferta comercial; 2) Construimos y publicamos tu landing page optimizada con analítica configurada; 3) Activamos tus campañas de búsqueda en Google Ads para que comiences a recibir consultas directas en tu WhatsApp y correo."
   },
   {
     question: "¿Tengo que pagar mantención obligatoria?",
+    image: "/servicios-img/faq-no-lockin.jpg",
+    imageAlt: "Flexibilidad total sin mantención obligatoria ni cobros ocultos",
     answer:
       "No. Tienes flexibilidad total y cero cobros ocultos. Al desarrollar en Astro, tu web no sufre de plugins desactualizados ni caídas constantes, por lo que no estás atado a mensualidades obligatorias por mantención web. Si decides contratar la gestión continua de tus campañas publicitarias o mejoras evolutivas, lo haces con total libertad mes a mes."
   }
@@ -761,8 +769,19 @@ const currentYear = new Date().getFullYear();
                     </svg>
                   </span>
                 </summary>
-                <div class="px-6 pb-6 pt-1 text-slate-300 text-sm sm:text-base leading-relaxed border-t border-white/5">
-                  {faq.answer}
+                <div class="px-6 pb-6 pt-4 border-t border-white/5 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5">
+                  <img
+                    src={faq.image}
+                    alt={faq.imageAlt}
+                    width="96"
+                    height="96"
+                    class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl object-cover shrink-0 border border-cyan-400/30 bg-slate-950 shadow-md shadow-cyan-500/10"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                    {faq.answer}
+                  </p>
                 </div>
               </details>
             ))}
