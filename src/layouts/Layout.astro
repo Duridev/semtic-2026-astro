@@ -10,7 +10,7 @@ interface Props {
 
 const {
     title,
-    description = "SEMTIC - Agencia de Desarrollo Web y Marketing Digital en Chile. Creamos sitios web de alta velocidad, posicionamiento SEO, gestión de Google & Meta Ads y servicios con dron.",
+    description = "SEMTIC - Agencia de Marketing Digital, Diseño de Landing Pages y Campañas Publicitarias en Google Ads y Meta Ads en la Región de Valparaíso y Región Metropolitana de Santiago.",
     image = "https://semtic.cl/social-img.webp",
     ogType = "website",
 } = Astro.props;
@@ -28,8 +28,11 @@ const ogImageUrl = image.startsWith("http") ? image : new URL(image, siteUrl).to
         <meta name="description" content={description} />
         <meta
             name="keywords"
-            content="agencia digital, desarrollo web, diseño web, e-commerce, marketing digital, SEO, SEM, redes sociales, agencia de marketing, Limache, Marga Marga, Olmué, Villa Alemana, Quilpué, Quillota, Viña del Mar, Valparaíso, Santiago, Chile"
+            content="landing page, diseño de landing page, google ads, agencia google ads, meta ads, agencia meta ads, campaña publicitaria, campañas publicitarias, agencia de marketing digital, desarrollo web astro, diseño web, posicionamiento SEO, Región de Valparaíso, Viña del Mar, Valparaíso, Concón, Quilpué, Villa Alemana, Limache, Quillota, Región Metropolitana, Santiago, Providencia, Las Condes, Chile"
         />
+        <meta name="geo.region" content="CL-VS" />
+        <meta name="geo.region" content="CL-RM" />
+        <meta name="geo.placename" content="Valparaíso, Viña del Mar, Santiago, Región Metropolitana, Chile" />
         <meta name="author" content="SEMTIC Agencia Digital" />
         <meta name="robots" content="index, follow" />
         <meta

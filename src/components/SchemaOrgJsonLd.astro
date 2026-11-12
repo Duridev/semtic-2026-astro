@@ -1,18 +1,32 @@
 ---
-// Schema.org JSON-LD structured data for SEO
+interface FAQItem {
+    question: string;
+    answer: string;
+}
+
+interface Props {
+    customFaqs?: FAQItem[];
+}
+
+const { customFaqs } = Astro.props;
+
+// Schema.org JSON-LD structured data for SEO (Valparaíso & Región Metropolitana de Santiago)
 const organizationSchema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "ProfessionalService", "MarketingAgency"],
+    "@id": "https://semtic.cl/#organization",
     name: "SEMTIC Agencia Digital",
+    alternateName: "Agencia SEMTIC - Landing Pages, Google Ads y Meta Ads",
     url: "https://semtic.cl",
     logo: "https://semtic.cl/logo-semtic.png",
+    image: "https://semtic.cl/social-img.webp",
     description:
-        "Agencia digital especializada en desarrollo web, e-commerce, SEO y marketing digital en la Región de Valparaíso",
+        "Agencia digital especialista en diseño de Landing Pages de alta conversión, desarrollo web en Astro y gestión de campañas publicitarias en Google Ads y Meta Ads en la Región de Valparaíso y Región Metropolitana de Santiago.",
     address: {
         "@type": "PostalAddress",
         streetAddress: "Echaurren 97",
         addressLocality: "Limache",
-        addressRegion: "Valparaíso",
+        addressRegion: "Región de Valparaíso",
         postalCode: "2280000",
         addressCountry: "CL",
     },
@@ -22,14 +36,21 @@ const organizationSchema = {
         longitude: -71.2667,
     },
     areaServed: [
-        "Limache",
-        "Olmué",
-        "Villa Alemana",
-        "Quillota",
-        "Quilpué",
-        "Viña del Mar",
-        "Valparaíso",
-        "Marga Marga",
+        { "@type": "AdministrativeArea", name: "Región de Valparaíso" },
+        { "@type": "AdministrativeArea", name: "Región Metropolitana de Santiago" },
+        { "@type": "City", name: "Santiago" },
+        { "@type": "City", name: "Providencia" },
+        { "@type": "City", name: "Las Condes" },
+        { "@type": "City", name: "Vitacura" },
+        { "@type": "City", name: "Ñuñoa" },
+        { "@type": "City", name: "Viña del Mar" },
+        { "@type": "City", name: "Valparaíso" },
+        { "@type": "City", name: "Concón" },
+        { "@type": "City", name: "Quilpué" },
+        { "@type": "City", name: "Villa Alemana" },
+        { "@type": "City", name: "Limache" },
+        { "@type": "City", name: "Quillota" },
+        { "@type": "City", name: "Marga Marga" }
     ],
     sameAs: [
         "https://www.facebook.com/semtic.consultora",
@@ -41,116 +62,118 @@ const organizationSchema = {
     contactPoint: {
         "@type": "ContactPoint",
         telephone: "+56988169404",
-        contactType: "Customer Service",
-        areaServed: "CL",
+        email: "somos@semtic.cl",
+        contactType: "sales",
+        areaServed: ["CL-VS", "CL-RM", "CL"],
         availableLanguage: "es",
     },
     priceRange: "$$",
     knowsAbout: [
-        "Diseño Web Local",
-        "Desarrollo Web en Valparaíso",
-        "Agencia de Marketing Digital",
-        "E-commerce",
-        "Posicionamiento SEO",
-        "Campañas Publicitarias",
+        "Landing Page",
+        "Diseño de Landing Pages de Alta Conversión",
+        "Google Ads",
+        "Agencia Google Ads",
+        "Meta Ads",
+        "Agencia Meta Ads",
+        "Campaña Publicitaria Digital",
+        "Agencia de Marketing Digital en Valparaíso y Santiago",
+        "Desarrollo Web en Astro",
+        "Posicionamiento SEO Local"
     ],
 };
 
 const servicesSchema = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "SEMTIC Agencia Digital",
-    url: "https://semtic.cl",
+    "@type": "Service",
+    serviceType: "Diseño de Landing Page y Campañas Publicitarias en Google Ads y Meta Ads",
+    provider: {
+        "@type": "Organization",
+        name: "SEMTIC Agencia Digital",
+        url: "https://semtic.cl",
+    },
+    areaServed: [
+        "Región de Valparaíso",
+        "Región Metropolitana de Santiago",
+        "Santiago",
+        "Viña del Mar",
+        "Valparaíso"
+    ],
     hasOfferCatalog: {
         "@type": "OfferCatalog",
-        name: "Digital Services",
+        name: "Servicios de Adquisición Comercial y Marketing Digital",
         itemListElement: [
             {
                 "@type": "Offer",
                 itemOffered: {
                     "@type": "Service",
-                    name: "Diseño y Desarrollo Web",
+                    name: "Diseño de Landing Pages y Desarrollo Web en Astro",
                     description:
-                        "Creamos sitios web modernos, rápidos y optimizados para SEO que convierten visitas en clientes",
+                        "Creación de Landing Pages ultrarrápidas y sitios web orientados a generar prospectos y cotizaciones por WhatsApp en Santiago y Región de Valparaíso.",
                 },
             },
             {
                 "@type": "Offer",
                 itemOffered: {
                     "@type": "Service",
-                    name: "E-commerce",
+                    name: "Agencia Google Ads (Campañas de Búsqueda y SEM)",
                     description:
-                        "Plataformas de tienda online para aumentar ventas digitales",
+                        "Gestión profesional de campañas publicitarias en Google Ads enfocadas en palabras clave con alta intención de compra.",
                 },
             },
             {
                 "@type": "Offer",
                 itemOffered: {
                     "@type": "Service",
-                    name: "Posicionamiento SEO",
+                    name: "Agencia Meta Ads (Publicidad en Instagram y Facebook)",
                     description:
-                        "Optimización para que aparezcas mejor en Google y generes más leads",
+                        "Campañas publicitarias de captación de leads y remarketing en Meta Ads para pymes y empresas de servicios.",
                 },
             },
             {
                 "@type": "Offer",
                 itemOffered: {
                     "@type": "Service",
-                    name: "Gestión de Redes Sociales",
+                    name: "Posicionamiento SEO Local",
                     description:
-                        "Gestionamos tus redes sociales para convertir seguidores en clientes",
-                },
-            },
-            {
-                "@type": "Offer",
-                itemOffered: {
-                    "@type": "Service",
-                    name: "Campañas Digitales",
-                    description:
-                        "Campañas en Google Ads y redes sociales con resultados medibles",
+                        "Optimización SEO técnica y local para posicionar empresas en Google en la Región Metropolitana y Región de Valparaíso.",
                 },
             },
         ],
     },
 };
 
+const defaultFaqs: FAQItem[] = [
+    {
+        question: "¿Cuánto demora tener mi Landing Page o página web lista?",
+        answer: "Una Landing Page comercial de alta conversión está lista entre 7 y 15 días hábiles; un e-commerce o sitio corporativo completo, entre 15 y 30 días.",
+    },
+    {
+        question: "¿Cómo funcionan las campañas publicitarias en Google Ads y Meta Ads?",
+        answer: "Estructuramos campañas segmentadas en la Región de Valparaíso y Región Metropolitana de Santiago apuntando a usuarios con intención real de compra, conectando los anuncios a una Landing Page rápida con contacto directo a WhatsApp.",
+    },
+    {
+        question: "¿Qué incluye el diseño de una Landing Page en SEMTIC?",
+        answer: "Incluye desarrollo ultrarrápido en Astro, diseño mobile-first, redacción comercial persuasiva, botones de conversión directa a WhatsApp y configuración de analítica (Google Tag Manager y GA4).",
+    },
+    {
+        question: "¿Atienden empresas en Santiago y en la Región de Valparaíso?",
+        answer: "Sí, trabajamos de forma directa con empresas, profesionales y pymes tanto en la Región Metropolitana de Santiago como en toda la Región de Valparaíso (Viña del Mar, Valparaíso, Concón, Quilpué, Limache y Quillota).",
+    },
+];
+
+const activeFaqs = customFaqs && customFaqs.length > 0 ? customFaqs : defaultFaqs;
+
 const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-        {
-            "@type": "Question",
-            name: "¿Cuánto demora tener mi página web lista?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "Una web estándar toma entre 7 y 15 días; un e-commerce, entre 15 y 45 días. Antes de partir hacemos un diagnóstico gratis para definir tiempos estimados.",
-            },
+    mainEntity: activeFaqs.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer,
         },
-        {
-            "@type": "Question",
-            name: "¿Qué incluye el diseño de mi página web?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "Incluye diseño profesional, desarrollo completo, versión mobile, integración con WhatsApp, formularios, optimización básica SEO, seguridad, configuración de hosting y soporte inicial.",
-            },
-        },
-        {
-            "@type": "Question",
-            name: "¿Qué es SEO y por qué lo necesito?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "SEO es la optimización para buscadores. Te ayuda a que tu negocio aparezca mejor en Google sin pagar por clic. Esto significa más visitas, más consultas y más ventas.",
-            },
-        },
-        {
-            "@type": "Question",
-            name: "¿Qué es Google Ads o SEM?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "Google Ads es publicidad pagada en Google que muestra tu negocio a personas que buscan exactamente lo que ofreces. Resultados rápidos, clientes reales y campañas ajustadas a tu presupuesto.",
-            },
-        },
-    ],
+    })),
 };
 ---
 

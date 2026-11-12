@@ -10,7 +10,7 @@ const pages = [
     {
         url: '/servicios',
         lastmod: new Date().toISOString().split('T')[0],
-        priority: 0.9,
+        priority: 1.0,
         changefreq: 'weekly'
     },
     {
@@ -45,6 +45,18 @@ const pages = [
     },
     {
         url: '/blog',
+        lastmod: new Date().toISOString().split('T')[0],
+        priority: 0.9,
+        changefreq: 'weekly'
+    },
+    {
+        url: '/blog/desarrollo-web-astro-velocidad-conversion',
+        lastmod: new Date().toISOString().split('T')[0],
+        priority: 0.9,
+        changefreq: 'weekly'
+    },
+    {
+        url: '/blog/estrategias-seo-local-chile',
         lastmod: new Date().toISOString().split('T')[0],
         priority: 0.9,
         changefreq: 'weekly'
