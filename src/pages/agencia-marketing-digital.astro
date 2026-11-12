@@ -1,6 +1,97 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
+
+const methodologySteps = [
+    {
+        number: "01",
+        badge: "Fase 01 • Investigación",
+        title: "Diagnóstico & Público Objetivo",
+        image: "/mktn-img/paso-01-diagnostico.jpg",
+        imageAlt: "Diagnóstico comercial y análisis de público objetivo en Google y redes sociales",
+        description:
+            "Auditamos tu situación actual, analizamos a tus competidores directos y definimos el perfil exacto del cliente que busca contratar tus servicios en Valparaíso, Santiago o todo Chile.",
+        deliverable: "Mapa de palabras clave y audiencia",
+        borderHover: "hover:border-[#00f2ea]/60",
+        accentText: "text-[#00f2ea]",
+        accentBg: "bg-[#00f2ea]/10 border-[#00f2ea]/30"
+    },
+    {
+        number: "02",
+        badge: "Fase 02 • Infraestructura",
+        title: "Construcción del Funnel & Landing",
+        image: "/mktn-img/paso-02-funnel.jpg",
+        imageAlt: "Construcción de embudo de ventas y Landing Page ultrarrápida",
+        description:
+            "Diseñamos tu Landing Page de alta velocidad en Astro, redactamos textos persuasivos orientados a la acción y configuramos la medición de conversiones (Tag Manager, GA4 y Píxel).",
+        deliverable: "Landing Page + Analítica activa",
+        borderHover: "hover:border-[#2dd4bf]/60",
+        accentText: "text-[#2dd4bf]",
+        accentBg: "bg-[#2dd4bf]/10 border-[#2dd4bf]/30"
+    },
+    {
+        number: "03",
+        badge: "Fase 03 • Tráfico Calificado",
+        title: "Lanzamiento de Google & Meta Ads",
+        image: "/mktn-img/paso-03-ads.jpg",
+        imageAlt: "Lanzamiento de campañas publicitarias en Google Ads y Meta Ads",
+        description:
+            "Activamos campañas hipersegmentadas de búsqueda en Google Ads (intención directa de compra) y anuncios visuales en Meta Ads (Instagram y Facebook) dirigidos a tu WhatsApp comercial.",
+        deliverable: "Campañas Search & Social en vivo",
+        borderHover: "hover:border-[#3b82f6]/60",
+        accentText: "text-[#60a5fa]",
+        accentBg: "bg-[#3b82f6]/10 border-[#3b82f6]/30"
+    },
+    {
+        number: "04",
+        badge: "Fase 04 • Crecimiento",
+        title: "Escalamiento & Optimización ROI",
+        image: "/mktn-img/paso-04-roi.jpg",
+        imageAlt: "Escalamiento de ventas y optimización del retorno de inversión publicitaria",
+        description:
+            "Monitoreamos el rendimiento real semana a semana, filtramos clics irrelevantes, reducimos tu costo por cotización (CPA) y escalamos los anuncios que generan más ventas.",
+        deliverable: "Optimización continua y reportes claros",
+        borderHover: "hover:border-[#818cf8]/60",
+        accentText: "text-[#818cf8]",
+        accentBg: "bg-[#4f46e5]/15 border-[#4f46e5]/40"
+    }
+];
+
+const marketingPillars = [
+    {
+        tag: "Intención de Compra",
+        title: "Captación en Google Ads & SEO Local",
+        description:
+            "Posicionamos tu negocio justo cuando un cliente busca contratar tus servicios en Google o Google Maps dentro de tu comuna o región.",
+        bullets: [
+            "Campañas de Búsqueda con palabras clave transaccionales",
+            "Posicionamiento orgánico SEO Técnico y Google Business Profile",
+            "Exclusión de términos negativos para cuidar tu presupuesto"
+        ]
+    },
+    {
+        tag: "Demanda & Remarketing",
+        title: "Campañas Visuales en Meta Ads",
+        description:
+            "Impactamos a tu cliente ideal en Instagram y Facebook con anuncios persuasivos que inician conversaciones comerciales directo en tu WhatsApp.",
+        bullets: [
+            "Segmentación geográfica y por intereses comerciales",
+            "Retargeting para recuperar visitas que aún no han cotizado",
+            "Creatividades y copys enfocados en resolver dolores reales"
+        ]
+    },
+    {
+        tag: "Conversión & Velocidad",
+        title: "Landing Pages que Convierten Clics",
+        description:
+            "De nada sirve pagar por anuncios si tu página tarda 6 segundos en abrir. Dirigimos el tráfico a páginas ultrarrápidas diseñadas para vender.",
+        bullets: [
+            "Carga en menos de 1 segundo con tecnología Astro",
+            "Integración directa con WhatsApp comercial y llamadas",
+            "Trazabilidad completa de cada contacto generado"
+        ]
+    }
+];
 ---
 
 <Layout 
@@ -9,16 +100,18 @@ import '../styles/global.css';
     image="https://semtic.cl/social-img.webp">
 
     <!-- SECCIÓN 1: HERO -->
-    <section class="relative min-h-[70vh] flex items-center justify-center pt-32 pb-20 overflow-hidden" style="z-index: 10;">
+    <section class="relative min-h-[75vh] flex items-center justify-center pt-32 pb-20 overflow-hidden" style="z-index: 10;">
         <!-- Luces y destellos neón -->
         <div class="absolute top-1/4 left-1/4 w-80 md:w-96 h-80 md:h-96 bg-[#4f46e5] rounded-full mix-blend-screen filter blur-[140px] opacity-25 animate-pulse"></div>
         <div class="absolute bottom-1/4 right-1/4 w-80 md:w-96 h-80 md:h-96 bg-[#00f2ea] rounded-full mix-blend-screen filter blur-[140px] opacity-25 animate-pulse" style="animation-delay: 2s;"></div>
         <div class="absolute top-1/2 right-10 w-64 h-64 bg-[#2dd4bf] rounded-full mix-blend-screen filter blur-[120px] opacity-15"></div>
 
         <div class="relative z-10 text-center px-4 max-w-5xl mx-auto hero-container">
-            <div class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white/5 border border-[#4f46e5]/40 backdrop-blur-md mb-6">
+            <div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-white/5 border border-[#2dd4bf]/40 backdrop-blur-md mb-6 shadow-lg">
                 <span class="w-2.5 h-2.5 rounded-full bg-[#00f2ea] animate-ping"></span>
-                <span class="text-sm uppercase tracking-widest text-[#00f2ea] font-bold">Marketing de Performance & Conversión</span>
+                <span class="text-xs sm:text-sm uppercase tracking-widest text-[#00f2ea] font-bold">
+                    Agencia de Performance • Google Ads • Meta Ads • Landing Pages
+                </span>
             </div>
 
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-[family-name:var(--font-space-grotesk)] font-bold mb-6 leading-tight text-white">
@@ -27,145 +120,311 @@ import '../styles/global.css';
             </h1>
 
             <p class="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto mb-10 font-light leading-relaxed">
-                Dejamos atrás las métricas de vanidad. Diseñamos embudos de venta, campañas en Meta & Google Ads y estrategias de contenido pensadas para generar prospectos calificados en Limache, Viña del Mar, Valparaíso, Santiago y todo Chile.
+                Dejamos atrás las métricas de vanidad. Combinamos <strong class="text-white font-medium">campañas publicitarias en Google Ads y Meta Ads</strong>, <strong class="text-white font-medium">Landing Pages ultrarrápidas</strong> y <strong class="text-white font-medium">SEO Local</strong> para generar cotizaciones diarias en la <span class="text-[#2dd4bf] font-normal">Región de Valparaíso y Región Metropolitana de Santiago</span>.
             </p>
 
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="https://wa.me/56988169404?text=Hola%20Semtic!%20Me%20interesa%20recibir%20un%20diagnóstico%20de%20Marketing%20Digital" target="_blank" class="px-8 py-4 bg-gradient-to-r from-[#2dd4bf] via-[#3b82f6] to-[#4f46e5] rounded-full text-[#050511] font-extrabold text-base tracking-wide hover:shadow-[0_0_30px_rgba(45,212,191,0.6)] transition-all duration-300 transform hover:-translate-y-1 uppercase flex items-center gap-2">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
+                <a href="https://wa.me/56988169404?text=Hola%20Semtic!%20Me%20interesa%20recibir%20un%20diagnóstico%20de%20Marketing%20Digital" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-[#2dd4bf] via-[#3b82f6] to-[#4f46e5] rounded-full text-[#050511] font-extrabold text-base tracking-wide hover:shadow-[0_0_30px_rgba(45,212,191,0.6)] transition-all duration-300 transform hover:-translate-y-1 uppercase flex items-center justify-center gap-2">
                     🚀 Solicitar Diagnóstico Gratuito
                 </a>
-                <a href="#metodologia" class="px-8 py-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-white font-semibold text-base hover:bg-white/10 hover:border-[#00f2ea]/50 transition-all duration-300">
-                    Conocer Metodología ↓
+                <a href="#comparativa" class="w-full sm:w-auto px-8 py-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-white font-semibold text-base hover:bg-white/10 hover:border-[#00f2ea]/50 transition-all duration-300 text-center">
+                    Ver Diferencia SEMTIC ↓
                 </a>
+            </div>
+
+            <!-- Micro-credenciales al estilo de /servicios -->
+            <div class="pt-6 border-t border-white/10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs sm:text-sm text-gray-300">
+                <div class="flex items-center gap-2">
+                    <span class="text-[#00f2ea] font-bold">✓</span>
+                    <span>Enfoque 100% en generación de cotizaciones</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-[#2dd4bf] font-bold">✓</span>
+                    <span>Medición de conversiones (GA4 + Tag Manager)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-[#818cf8] font-bold">✓</span>
+                    <span>Trato directo con especialistas sin burocracia</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN 3: EL PROBLEMA vs NUESTRA SOLUCIÓN -->
-    <section class="py-20 relative" style="z-index: 10;">
+    <!-- SECCIÓN 2: EL PROBLEMA vs NUESTRA SOLUCIÓN (INSPIRADA EN /SERVICIOS CON IMÁGENES 3D GLASSMORPHISM) -->
+    <section id="comparativa" class="py-20 relative scroll-mt-28 border-y border-white/10 bg-[#070716]/70" style="z-index: 10;">
         <div class="container mx-auto px-4 max-w-6xl">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold text-white mb-4">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-[#00f2ea]/10 text-[#00f2ea] border border-[#00f2ea]/30 mb-3 inline-block uppercase tracking-wider">
+                    Métricas de Vanidad vs. Retorno Comercial
+                </span>
+                <h2 class="text-3xl md:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold text-white mb-4 leading-tight">
                     ¿Por qué el marketing tradicional <span class="text-gradient">ya no funciona</span>?
                 </h2>
-                <p class="text-gray-300 text-base md:text-lg max-w-2xl mx-auto font-light">
-                    Compara cómo trabajan la mayoría de las agencias versus el enfoque científico de SEMTIC.
+                <p class="text-gray-300 text-base md:text-lg font-light">
+                    Compara cómo trabajan las agencias convencionales frente al sistema de adquisición comercial de SEMTIC, diseñado para que tu inversión se transforme en llamadas y mensajes de WhatsApp.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <!-- Enfoque Tradicional -->
-                <div class="p-8 md:p-10 rounded-3xl bg-red-950/10 border border-red-500/20 backdrop-blur-md relative overflow-hidden">
-                    <div class="flex items-center gap-3 mb-6">
-                        <span class="w-8 h-8 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center font-bold text-sm">✕</span>
-                        <h3 class="text-xl md:text-2xl font-bold text-red-200 font-[family-name:var(--font-space-grotesk)]">Agencias Tradicionales</h3>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+                <!-- Columna 1: Agencias Tradicionales -->
+                <div class="p-7 sm:p-9 rounded-3xl bg-[#0a0a1a]/75 border border-rose-500/25 backdrop-blur-xl flex flex-col justify-between relative overflow-hidden group shadow-xl">
+                    <div>
+                        <!-- Imagen ilustrativa 3D: Agencias Tradicionales -->
+                        <div class="relative h-52 sm:h-60 w-full rounded-2xl overflow-hidden mb-6 border border-rose-500/25 bg-[#050511]">
+                            <img
+                                src="/mktn-img/agencias-tradicionales.jpg"
+                                alt="Agencias tradicionales enfocadas en likes y métricas de vanidad con embudo roto"
+                                width="640"
+                                height="360"
+                                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a1a] via-[#0a0a1a]/20 to-transparent"></div>
+                            <div class="absolute top-3.5 left-3.5 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#050511]/90 border border-rose-500/40 text-rose-300 text-xs font-semibold uppercase tracking-wider backdrop-blur-md">
+                                <span class="text-rose-400 font-bold">✕</span>
+                                El Problema Frecuente
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="w-8 h-8 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center font-bold text-sm shrink-0">✕</span>
+                            <h3 class="text-xl sm:text-2xl font-bold text-rose-100 font-[family-name:var(--font-space-grotesk)]">
+                                Agencias Tradicionales
+                            </h3>
+                        </div>
+
+                        <p class="text-gray-300 text-sm sm:text-base mb-6 leading-relaxed font-light">
+                            Planes mensuales basados en subir publicaciones genéricas a redes sociales sin estrategia de captación ni medición de ventas reales.
+                        </p>
+
+                        <ul class="space-y-4 text-sm sm:text-base text-gray-300 font-light">
+                            <li class="flex items-start gap-3">
+                                <span class="mt-1 w-5 h-5 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center shrink-0 text-xs font-bold">✕</span>
+                                <span><strong class="text-white font-semibold">Métricas de vanidad:</strong> Enfoque en “likes”, alcance y seguidores que nunca solicitan una cotización.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="mt-1 w-5 h-5 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center shrink-0 text-xs font-bold">✕</span>
+                                <span><strong class="text-white font-semibold">Publicaciones sin embudo comercial:</strong> Diseños bonitos pero sin llamado a la acción ni estructura de cierre.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="mt-1 w-5 h-5 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center shrink-0 text-xs font-bold">✕</span>
+                                <span><strong class="text-white font-semibold">Tráfico enviado a páginas lentas:</strong> Anuncios conectados a sitios pesados donde el usuario abandona antes de que cargue.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="mt-1 w-5 h-5 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center shrink-0 text-xs font-bold">✕</span>
+                                <span><strong class="text-white font-semibold">Informes confusos:</strong> Reportes llenos de tecnicismos para justificar por qué no están llegando clientes.</span>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="space-y-4 text-sm md:text-base text-gray-300 font-light">
-                        <li class="flex items-start gap-3">
-                            <span class="text-red-400 font-bold">✕</span>
-                            <span>Enfoque en métricas de vanidad ("likes", reproducciones y seguidores que no compran).</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-red-400 font-bold">✕</span>
-                            <span>Publicaciones bonitas pero sin estrategia de conversión ni llamado a la acción.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-red-400 font-bold">✕</span>
-                            <span>Informes técnicos incomprensibles llenos de jerga para ocultar la falta de ventas.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-red-400 font-bold">✕</span>
-                            <span>Cero integración entre redes sociales, campañas pagadas y tu página web.</span>
-                        </li>
-                    </ul>
+
+                    <div class="mt-8 pt-4 border-t border-rose-500/20 flex items-center justify-between text-xs text-gray-400">
+                        <span>Resultado habitual: <strong class="text-rose-400">Presupuesto estancado</strong></span>
+                        <span>Sin trazabilidad comercial</span>
+                    </div>
                 </div>
 
-                <!-- Enfoque SEMTIC -->
-                <div class="p-8 md:p-10 rounded-3xl bg-[#0a0a1a]/80 border border-[#2dd4bf]/40 backdrop-blur-xl relative overflow-hidden shadow-2xl">
-                    <div class="absolute top-0 right-0 px-4 py-1.5 bg-[#2dd4bf] text-[#050511] font-bold text-xs rounded-bl-2xl uppercase">
-                        El Método SEMTIC
+                <!-- Columna 2: Estrategia SEMTIC Performance -->
+                <div class="p-7 sm:p-9 rounded-3xl bg-[#0a0a1a]/90 border border-[#2dd4bf]/45 backdrop-blur-xl shadow-2xl shadow-[#00f2ea]/10 flex flex-col justify-between relative overflow-hidden group">
+                    <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-[#2dd4bf] via-[#00f2ea] to-[#4f46e5]"></div>
+                    <div>
+                        <!-- Imagen ilustrativa 3D: Estrategia SEMTIC Performance -->
+                        <div class="relative h-52 sm:h-60 w-full rounded-2xl overflow-hidden mb-6 border border-[#2dd4bf]/35 bg-[#050511]">
+                            <img
+                                src="/mktn-img/estrategia-semtic.jpg"
+                                alt="Estrategia SEMTIC Performance con embudo de conversión y crecimiento de ventas"
+                                width="640"
+                                height="360"
+                                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a1a] via-[#0a0a1a]/15 to-transparent"></div>
+                            <div class="absolute top-3.5 left-3.5 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#050511]/90 border border-[#2dd4bf]/50 text-[#2dd4bf] text-xs font-semibold uppercase tracking-wider backdrop-blur-md">
+                                <span>⚡</span>
+                                El Método SEMTIC
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="w-8 h-8 rounded-full bg-[#2dd4bf]/20 text-[#2dd4bf] flex items-center justify-center font-bold text-sm shrink-0">✓</span>
+                            <h3 class="text-xl sm:text-2xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">
+                                Estrategia SEMTIC Performance
+                            </h3>
+                        </div>
+
+                        <p class="text-gray-200 text-sm sm:text-base mb-6 leading-relaxed font-light">
+                            Ingeniería de conversión combinada con campañas publicitarias de alta intención para conectar tu empresa con clientes listos para comprar.
+                        </p>
+
+                        <ul class="space-y-4 text-sm sm:text-base text-gray-200 font-light">
+                            <li class="flex items-start gap-3">
+                                <span class="mt-1 w-5 h-5 rounded-full bg-[#2dd4bf]/20 text-[#2dd4bf] flex items-center justify-center shrink-0 text-xs font-bold">✓</span>
+                                <span><strong class="text-white font-semibold">Enfoque en Ventas Reales:</strong> Medimos prospectos calificados, llamadas telefónicas y cotizaciones en tu WhatsApp.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="mt-1 w-5 h-5 rounded-full bg-[#2dd4bf]/20 text-[#2dd4bf] flex items-center justify-center shrink-0 text-xs font-bold">✓</span>
+                                <span><strong class="text-white font-semibold">Embudos &amp; Landing Pages en Astro:</strong> Tus anuncios aterrizan en páginas que cargan en menos de 1 segundo y multiplican la conversión.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="mt-1 w-5 h-5 rounded-full bg-[#2dd4bf]/20 text-[#2dd4bf] flex items-center justify-center shrink-0 text-xs font-bold">✓</span>
+                                <span><strong class="text-white font-semibold">Optimización Continua de Ads:</strong> Pruebas A/B y filtrado de palabras clave para reducir tu costo por cliente adquirido (CPA).</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="mt-1 w-5 h-5 rounded-full bg-[#2dd4bf]/20 text-[#2dd4bf] flex items-center justify-center shrink-0 text-xs font-bold">✓</span>
+                                <span><strong class="text-white font-semibold">Sinergia Total Multicanal:</strong> Google Ads + Meta Ads + SEO Local trabajando como un solo motor comercial.</span>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="flex items-center gap-3 mb-6">
-                        <span class="w-8 h-8 rounded-full bg-[#2dd4bf]/20 text-[#2dd4bf] flex items-center justify-center font-bold text-sm">✓</span>
-                        <h3 class="text-xl md:text-2xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">Estrategia SEMTIC Performance</h3>
+
+                    <div class="mt-8 pt-4 border-t border-[#2dd4bf]/25 flex items-center justify-between text-xs text-[#2dd4bf] font-medium">
+                        <span>Resultado: <strong class="text-emerald-400">Flujo constante de prospectos</strong></span>
+                        <span>ROI 100% medible</span>
                     </div>
-                    <ul class="space-y-4 text-sm md:text-base text-gray-200">
-                        <li class="flex items-start gap-3">
-                            <span class="text-[#2dd4bf] font-bold">✓</span>
-                            <span><strong>Enfoque en Ventas:</strong> Medimos prospectos reales, llamadas recibidas y cotizaciones.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-[#2dd4bf] font-bold">✓</span>
-                            <span><strong>Embudos Automatizados:</strong> Diseñamos el camino exacto para convertir visitantes en clientes.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-[#2dd4bf] font-bold">✓</span>
-                            <span><strong>Optimizaciones Diarias:</strong> Pruebas A/B en anuncios para reducir tu costo por cliente.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-[#2dd4bf] font-bold">✓</span>
-                            <span><strong>Sinergia Total:</strong> Meta Ads + Google Ads + Landing Pages ultrarrápidas.</span>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN 4: METODOLOGÍA DE 4 PASOS -->
-    <section id="metodologia" class="py-20 relative bg-gradient-to-b from-transparent via-[#0a0a20]/80 to-transparent" style="z-index: 10;">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <div class="text-center mb-16">
-                <span class="px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold bg-[#4f46e5]/20 text-[#818cf8] border border-[#4f46e5]/40 mb-3 inline-block">
-                    ⚡ Proceso Transparente
+    <!-- SECCIÓN 3: METODOLOGÍA DE 4 PASOS CON IMÁGENES 3D GLASSMORPHISM -->
+    <section id="metodologia" class="py-24 relative bg-gradient-to-b from-transparent via-[#0a0a20]/80 to-transparent scroll-mt-28" style="z-index: 10;">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold bg-[#4f46e5]/20 text-[#818cf8] border border-[#4f46e5]/40 mb-3 inline-block uppercase tracking-wider">
+                    ⚡ Proceso Transparente &amp; Medible
                 </span>
                 <h2 class="text-3xl md:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold text-white mb-4">
                     Nuestra Metodología de <span class="text-gradient">4 Pasos al Éxito</span>
                 </h2>
+                <p class="text-gray-300 text-base md:text-lg font-light">
+                    Un sistema estructurado paso a paso para pasar de depender del “boca a boca” a contar con un canal predecible de captación de clientes.
+                </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Paso 1 -->
-                <div class="p-8 rounded-3xl bg-[#0a0a1a]/60 border border-white/10 backdrop-blur-md relative hover:border-[#00f2ea]/40 transition-all group">
-                    <span class="text-4xl font-extrabold text-white/20 font-[family-name:var(--font-space-grotesk)] group-hover:text-[#00f2ea]/60 transition-colors block mb-4">01</span>
-                    <h3 class="text-xl font-bold text-white mb-2">Diagnóstico & Público</h3>
-                    <p class="text-sm md:text-base text-gray-300 font-light leading-relaxed">
-                        Analizamos tu competencia y definimos el perfil exacto de tu cliente ideal en tu zona objetivo.
-                    </p>
-                </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
+                {methodologySteps.map((step) => (
+                    <article class={`p-6 sm:p-7 rounded-3xl bg-[#0a0a1a]/80 border border-white/10 backdrop-blur-xl relative ${step.borderHover} transition-all duration-300 hover:-translate-y-1.5 group flex flex-col justify-between shadow-xl`}>
+                        <div>
+                            <!-- Encabezado de la tarjeta: Badge de Fase + Número -->
+                            <div class="flex items-center justify-between gap-2 mb-4">
+                                <span class={`px-3 py-1 rounded-full text-xs font-semibold border ${step.accentBg} ${step.accentText}`}>
+                                    {step.badge}
+                                </span>
+                                <span class="text-2xl font-extrabold text-white/25 font-[family-name:var(--font-space-grotesk)] group-hover:text-white/70 transition-colors">
+                                    {step.number}
+                                </span>
+                            </div>
 
-                <!-- Paso 2 -->
-                <div class="p-8 rounded-3xl bg-[#0a0a1a]/60 border border-white/10 backdrop-blur-md relative hover:border-[#2dd4bf]/40 transition-all group">
-                    <span class="text-4xl font-extrabold text-white/20 font-[family-name:var(--font-space-grotesk)] group-hover:text-[#2dd4bf]/60 transition-colors block mb-4">02</span>
-                    <h3 class="text-xl font-bold text-white mb-2">Construcción del Funnel</h3>
-                    <p class="text-sm md:text-base text-gray-300 font-light leading-relaxed">
-                        Diseñamos las piezas gráficas, redactamos copys persuasivos y preparamos las páginas de destino.
-                    </p>
-                </div>
+                            <!-- Imagen 3D Glassmorphism del Paso -->
+                            <div class="relative h-44 w-full rounded-2xl overflow-hidden mb-5 border border-white/10 bg-[#050511] shadow-inner">
+                                <img
+                                    src={step.image}
+                                    alt={step.imageAlt}
+                                    width="400"
+                                    height="300"
+                                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                                <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a1a]/80 via-transparent to-transparent"></div>
+                            </div>
 
-                <!-- Paso 3 -->
-                <div class="p-8 rounded-3xl bg-[#0a0a1a]/60 border border-white/10 backdrop-blur-md relative hover:border-[#3b82f6]/40 transition-all group">
-                    <span class="text-4xl font-extrabold text-white/20 font-[family-name:var(--font-space-grotesk)] group-hover:text-[#3b82f6]/60 transition-colors block mb-4">03</span>
-                    <h3 class="text-xl font-bold text-white mb-2">Lanzamiento de Ads</h3>
-                    <p class="text-sm md:text-base text-gray-300 font-light leading-relaxed">
-                        Activamos tus campañas hipersegmentadas en Google Search, Instagram Reels y Facebook Feed.
-                    </p>
-                </div>
+                            <h3 class="text-xl font-bold text-white mb-2.5 font-[family-name:var(--font-space-grotesk)] leading-snug">
+                                {step.title}
+                            </h3>
 
-                <!-- Paso 4 -->
-                <div class="p-8 rounded-3xl bg-[#0a0a1a]/60 border border-white/10 backdrop-blur-md relative hover:border-[#4f46e5]/40 transition-all group">
-                    <span class="text-4xl font-extrabold text-white/20 font-[family-name:var(--font-space-grotesk)] group-hover:text-[#4f46e5]/60 transition-colors block mb-4">04</span>
-                    <h3 class="text-xl font-bold text-white mb-2">Escalamiento & ROI</h3>
-                    <p class="text-sm md:text-base text-gray-300 font-light leading-relaxed">
-                        Monitoreamos a diario para reducir tu costo por adquisición y potenciar los anuncios que más venden.
-                    </p>
+                            <p class="text-sm sm:text-base text-gray-300 font-light leading-relaxed mb-6">
+                                {step.description}
+                            </p>
+                        </div>
+
+                        <!-- Entregable clave del paso -->
+                        <div class="pt-4 border-t border-white/10 flex items-center gap-2 text-xs text-gray-300">
+                            <span class={`w-2 h-2 rounded-full shrink-0 ${step.accentText} bg-current`}></span>
+                            <span><strong class="text-white">Clave:</strong> {step.deliverable}</span>
+                        </div>
+                    </article>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: ECOSISTEMA DE ADQUISICIÓN & COBERTURA REGIONAL (MEJORA DE CONTENIDO Y SEO) -->
+    <section class="py-20 relative border-t border-white/10 bg-[#070716]/50" style="z-index: 10;">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-[#2dd4bf]/10 text-[#2dd4bf] border border-[#2dd4bf]/30 mb-3 inline-block uppercase tracking-wider">
+                    🎯 Soluciones Conectadas
+                </span>
+                <h2 class="text-3xl md:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold text-white mb-4">
+                    Los 3 Pilares de tu <span class="text-gradient">Crecimiento Comercial</span>
+                </h2>
+                <p class="text-gray-300 text-base md:text-lg font-light">
+                    Integramos búsqueda en Google, redes sociales y páginas de aterrizaje veloces para cubrir todo el recorrido de compra de tu cliente.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
+                {marketingPillars.map((pilar) => (
+                    <div class="p-7 sm:p-8 rounded-3xl bg-[#0a0a1a]/80 border border-white/10 hover:border-[#00f2ea]/40 backdrop-blur-xl transition-all duration-300 flex flex-col justify-between shadow-lg">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-[#00f2ea]/10 text-[#00f2ea] border border-[#00f2ea]/25 mb-4">
+                                {pilar.tag}
+                            </span>
+                            <h3 class="text-xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)]">
+                                {pilar.title}
+                            </h3>
+                            <p class="text-gray-300 text-sm sm:text-base font-light leading-relaxed mb-6">
+                                {pilar.description}
+                            </p>
+                        </div>
+                        <ul class="space-y-2.5 pt-4 border-t border-white/10 text-xs sm:text-sm text-gray-300 font-light">
+                            {pilar.bullets.map((bullet) => (
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[#2dd4bf] font-bold">✓</span>
+                                    <span>{bullet}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
+            </div>
+
+            <!-- Bloque de Cobertura Local: Valparaíso y Región Metropolitana -->
+            <div class="p-7 sm:p-9 rounded-3xl bg-gradient-to-r from-[#0a0a1a] via-[#0e1330] to-[#0a0a1a] border border-white/10 backdrop-blur-xl">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-5">
+                        <span class="text-xs font-bold uppercase tracking-widest text-[#00f2ea] block mb-2">
+                            Presencia Regional Estratégica
+                        </span>
+                        <h3 class="text-2xl sm:text-3xl font-bold text-white font-[family-name:var(--font-space-grotesk)] mb-3">
+                            Especialistas en la Región de Valparaíso y Santiago
+                        </h3>
+                        <p class="text-gray-300 text-sm sm:text-base font-light leading-relaxed">
+                            Segmentamos tus campañas publicitarias con precisión comunal y regional para atraer clientes reales en tu zona de operación.
+                        </p>
+                    </div>
+                    <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-5 rounded-2xl bg-[#050511]/80 border border-[#00f2ea]/25">
+                            <h4 class="text-[#00f2ea] font-bold text-sm sm:text-base mb-1.5">📍 Región de Valparaíso</h4>
+                            <p class="text-gray-300 text-xs sm:text-sm font-light leading-relaxed">
+                                Viña del Mar, Valparaíso, Concón, Quilpué, Villa Alemana, Limache, Quillota y alrededores.
+                            </p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-[#050511]/80 border border-[#2dd4bf]/25">
+                            <h4 class="text-[#2dd4bf] font-bold text-sm sm:text-base mb-1.5">📍 Región Metropolitana (Santiago)</h4>
+                            <p class="text-gray-300 text-xs sm:text-sm font-light leading-relaxed">
+                                Santiago Centro, Providencia, Las Condes, Vitacura, Ñuñoa, La Florida, Maipú y toda la RM.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- SECCIÓN 5: BANNER BLOG -->
-    <section class="py-10 relative" style="z-index: 10;">
+    <section class="py-12 relative" style="z-index: 10;">
         <div class="container mx-auto px-4 max-w-5xl">
             <div class="p-8 md:p-10 rounded-3xl bg-gradient-to-r from-[#0a0a20] via-[#0d123b] to-[#0a0a20] border border-[#2dd4bf]/40 backdrop-blur-xl relative overflow-hidden shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
                 <div class="max-w-2xl">
@@ -195,14 +454,14 @@ import '../styles/global.css';
                     ¿Listo para multiplicar tus prospectos y <span class="text-gradient">ventas este año</span>?
                 </h2>
                 <p class="text-gray-300 text-base md:text-lg max-w-2xl mx-auto mb-8 font-light leading-relaxed">
-                    Conversemos sobre tu negocio. Realizamos un diagnóstico inicial sin costo para diseñar tu plan estratégico de marketing.
+                    Conversemos directamente por WhatsApp sobre tu negocio. Realizamos un diagnóstico inicial sin costo para diseñar tu estrategia de Landing Page + Google y Meta Ads.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4">
-                    <a href="https://wa.me/56988169404?text=Hola,%20quisiera%20recibir%20asesoría%20de%20Marketing%20Digital" target="_blank" class="px-8 py-4 rounded-full bg-gradient-to-r from-[#2dd4bf] via-[#3b82f6] to-[#4f46e5] text-[#050511] font-extrabold text-base uppercase tracking-wide hover:shadow-[0_0_30px_rgba(45,212,191,0.6)] transition-all transform hover:-translate-y-1 flex items-center gap-2">
-                        🚀 Solicitar Diagnóstico Gratuito
+                    <a href="https://wa.me/56988169404?text=Hola,%20quisiera%20recibir%20asesoría%20de%20Marketing%20Digital" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-full bg-gradient-to-r from-[#2dd4bf] via-[#3b82f6] to-[#4f46e5] text-[#050511] font-extrabold text-base uppercase tracking-wide hover:shadow-[0_0_30px_rgba(45,212,191,0.6)] transition-all transform hover:-translate-y-1 flex items-center gap-2">
+                        🚀 Solicitar Diagnóstico por WhatsApp
                     </a>
-                    <a href="/contacto" class="px-8 py-4 rounded-full border border-[#2dd4bf] text-[#2dd4bf] font-semibold text-base hover:bg-[#2dd4bf] hover:text-[#050511] transition-all">
-                        Ver Canales de Contacto
+                    <a href="/servicios" class="px-8 py-4 rounded-full border border-[#2dd4bf] text-[#2dd4bf] font-semibold text-base hover:bg-[#2dd4bf] hover:text-[#050511] transition-all">
+                        Ver Pack Landing + Ads
                     </a>
                 </div>
             </div>
