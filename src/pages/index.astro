@@ -394,24 +394,24 @@ const interactiveComparisons = [
         </div>
     </section>
 
-    <!-- SECCIÓN 4: SIMULADOR INTERACTIVO DE TRANSFORMACIÓN (ANTES VS. CON SEMTIC) -->
+    <!-- SECCIÓN 4: COMPARADOR INTERACTIVO POR PESTAÑAS (ANTES VS. CON SEMTIC) -->
     <section class="py-24 relative" style="z-index: 10;">
-        <div class="container mx-auto px-4 max-w-7xl">
+        <div class="container mx-auto px-4 max-w-5xl">
             <div class="text-center mb-12 max-w-3xl mx-auto">
                 <span class="px-4 py-1.5 rounded-full text-xs uppercase tracking-widest font-bold bg-[#2dd4bf]/10 text-[#2dd4bf] border border-[#2dd4bf]/30 mb-3 inline-flex items-center gap-2">
                     <span class="w-2 h-2 rounded-full bg-[#2dd4bf] animate-ping"></span>
-                    Comparador Interactivo en Tiempo Real
+                    Ventaja Competitiva Real
                 </span>
                 <h2 class="text-3xl md:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold text-white mb-4">
                     Del Marketing Tradicional a la <span class="text-gradient">Ingeniería SEMTIC</span>
                 </h2>
                 <p class="text-gray-300 text-base md:text-lg font-light">
-                    Desliza el escáner visual o selecciona cada dimensión técnica para comparar cómo operan las agencias convencionales frente a nuestro ecosistema de alto rendimiento.
+                    Selecciona cada dimensión para comparar cómo operan las agencias convencionales frente a nuestro ecosistema de alto rendimiento.
                 </p>
             </div>
 
             <!-- Contenedor Principal tipo Consola Glassmorphism -->
-            <div class="rounded-3xl bg-[#08091a]/90 border border-white/15 backdrop-blur-2xl p-5 sm:p-8 lg:p-10 shadow-[0_25px_70px_rgba(0,0,0,0.65)] relative overflow-hidden">
+            <div class="rounded-3xl bg-[#08091a]/90 border border-white/15 backdrop-blur-2xl p-6 sm:p-8 lg:p-10 shadow-[0_25px_70px_rgba(0,0,0,0.65)] relative overflow-hidden">
                 <div class="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-0.5 bg-gradient-to-r from-transparent via-[#00f2ea] to-transparent"></div>
 
                 <!-- Botones de Dimensiones (4 Tabs Interactivos) -->
@@ -431,154 +431,49 @@ const interactiveComparisons = [
                     ))}
                 </div>
 
-                <!-- Grilla Interactiva: Escáner Before/After (Izquierda) + Panel de Telemetría (Derecha) -->
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-                    
-                    <!-- Columna Izquierda (5 cols): Escáner Visual Interactivo Before / After -->
-                    <div class="lg:col-span-5 flex flex-col justify-between rounded-2xl bg-[#050511] border border-white/15 p-4 sm:p-5 shadow-inner">
-                        <div>
-                            <div class="flex items-center justify-between text-xs mb-3">
-                                <span class="px-2.5 py-1 rounded-md bg-red-500/15 border border-red-500/35 text-red-300 font-bold uppercase tracking-wider text-[10px]">
-                                    Enfoque Antiguo
-                                </span>
-                                <span class="text-gray-400 text-[11px] font-medium">⇄ Desliza el escáner</span>
-                                <span class="px-2.5 py-1 rounded-md bg-[#00f2ea]/15 border border-[#00f2ea]/40 text-[#00f2ea] font-bold uppercase tracking-wider text-[10px]">
-                                    Ecosistema SEMTIC
-                                </span>
+                <!-- Paneles Dinámicos por Pestaña -->
+                <div>
+                    {interactiveComparisons.map((item, idx) => (
+                        <div
+                            data-comp-panel={item.id}
+                            class={`comp-panel flex-col space-y-6 ${idx === 0 ? "flex" : "hidden"}`}
+                        >
+                            <!-- Cabecera del Panel con Miniatura 3D -->
+                            <div class="flex flex-col sm:flex-row sm:items-center gap-4 pb-5 border-b border-white/10">
+                                <div class="w-16 h-16 rounded-2xl overflow-hidden border border-[#00f2ea]/40 shrink-0 bg-[#050511] shadow-[0_0_20px_rgba(0,242,234,0.2)]">
+                                    <img src={item.thumb} alt={item.title} class="w-full h-full object-cover" loading="lazy" />
+                                </div>
+                                <div>
+                                    <span class="text-[11px] font-bold uppercase tracking-widest text-[#00f2ea] block mb-1">
+                                        {item.badge}
+                                    </span>
+                                    <h3 class="text-xl sm:text-2xl font-bold text-white font-[family-name:var(--font-space-grotesk)] leading-snug">
+                                        {item.title}
+                                    </h3>
+                                </div>
                             </div>
 
-                            <!-- Visor Before/After con Cortina Deslizante -->
-                            <div id="ba-slider-stage" class="relative h-64 sm:h-72 w-full rounded-xl overflow-hidden border border-white/15 select-none bg-[#050511]">
-                                <!-- Imagen Fondo (100% SEMTIC) -->
-                                <img
-                                    src="/mktn-img/estrategia-semtic.jpg"
-                                    alt="Ecosistema SEMTIC de Alta Conversión"
-                                    class="absolute inset-0 w-full h-full object-cover"
-                                    loading="lazy"
-                                />
-                                <div class="absolute bottom-3 right-3 px-2.5 py-1 rounded-lg bg-[#050511]/90 border border-[#2dd4bf]/40 text-[#2dd4bf] text-[10px] font-bold uppercase tracking-wider z-10 pointer-events-none">
-                                    ✓ Flujo SEMTIC (ROI)
-                                </div>
+                            <p class="text-gray-300 text-sm sm:text-base font-light leading-relaxed">
+                                {item.desc}
+                            </p>
 
-                                <!-- Imagen Superpuesta Recortada (Agencia Tradicional) -->
-                                <div
-                                    id="ba-old-overlay"
-                                    class="absolute inset-0 overflow-hidden"
-                                    style="clip-path: inset(0 50% 0 0);"
-                                >
-                                    <img
-                                        src="/mktn-img/agencias-tradicionales.jpg"
-                                        alt="Agencias tradicionales con embudos rotos"
-                                        class="absolute inset-0 w-full h-full object-cover"
-                                        loading="lazy"
-                                    />
-                                    <div class="absolute bottom-3 left-3 px-2.5 py-1 rounded-lg bg-red-950/90 border border-red-500/40 text-red-300 text-[10px] font-bold uppercase tracking-wider pointer-events-none">
-                                        ✕ Fuga de Presupuesto
+                            <!-- Filas de Transformación Antes (✕) -> Con SEMTIC (✓) -->
+                            <div class="space-y-3">
+                                {item.rows.map((row) => (
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 sm:p-5 rounded-2xl bg-white/[0.02] border border-white/10">
+                                        <div class="flex items-start gap-3 text-xs sm:text-sm text-gray-400">
+                                            <span class="w-6 h-6 rounded-lg bg-red-500/15 border border-red-500/30 text-red-400 flex items-center justify-center shrink-0 font-bold mt-0.5">✕</span>
+                                            <span>{row.oldText}</span>
+                                        </div>
+                                        <div class="flex items-start gap-3 text-xs sm:text-sm text-gray-200 sm:border-l sm:border-white/10 sm:pl-4">
+                                            <span class="w-6 h-6 rounded-lg bg-[#2dd4bf]/15 border border-[#2dd4bf]/40 text-[#2dd4bf] flex items-center justify-center shrink-0 font-bold mt-0.5">✓</span>
+                                            <span class="font-medium text-white">{row.newText}</span>
+                                        </div>
                                     </div>
-                                </div>
-
-                                <!-- Línea Divisoria Luminosa -->
-                                <div
-                                    id="ba-divider-line"
-                                    class="absolute top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#00f2ea] via-white to-[#2dd4bf] shadow-[0_0_15px_#00f2ea] pointer-events-none z-20"
-                                    style="left: 50%;"
-                                >
-                                    <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-[#050511] border-2 border-[#00f2ea] shadow-[0_0_20px_rgba(0,242,234,0.8)] flex items-center justify-center text-[#00f2ea]">
-                                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8L22 12L18 16"/><path d="M6 8L2 12L6 16"/></svg>
-                                    </div>
-                                </div>
-
-                                <!-- Input Range Invisible para Control Táctil y Mouse -->
-                                <input
-                                    type="range"
-                                    id="ba-range-input"
-                                    min="5"
-                                    max="95"
-                                    value="50"
-                                    aria-label="Deslizar para comparar agencia tradicional con SEMTIC"
-                                    class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30"
-                                />
+                                ))}
                             </div>
                         </div>
-
-                        <!-- Botones Rápidos de Posición del Escáner -->
-                        <div class="pt-4 mt-4 border-t border-white/10 flex items-center justify-between gap-2">
-                            <button type="button" data-ba-preset="88" class="ba-preset-btn flex-1 py-2 px-3 rounded-xl bg-red-500/10 hover:bg-red-500/20 border border-red-500/25 text-red-300 text-xs font-semibold transition-colors cursor-pointer">
-                                Ver Agencia Tradicional
-                            </button>
-                            <button type="button" data-ba-preset="12" class="ba-preset-btn flex-1 py-2 px-3 rounded-xl bg-[#2dd4bf]/15 hover:bg-[#2dd4bf]/25 border border-[#2dd4bf]/40 text-[#00f2ea] text-xs font-bold transition-colors cursor-pointer">
-                                Ver 100% SEMTIC ⚡
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Columna Derecha (7 cols): Paneles Dinámicos de Telemetría por Dimensión -->
-                    <div class="lg:col-span-7 flex flex-col justify-between">
-                        {interactiveComparisons.map((item, idx) => (
-                            <div
-                                data-comp-panel={item.id}
-                                class={`comp-panel flex-col justify-between h-full space-y-6 ${idx === 0 ? "flex" : "hidden"}`}
-                            >
-                                <!-- Cabecera del Panel con Miniatura 3D -->
-                                <div class="flex flex-col sm:flex-row sm:items-center gap-4 pb-5 border-b border-white/10">
-                                    <div class="w-16 h-16 rounded-2xl overflow-hidden border border-[#00f2ea]/40 shrink-0 bg-[#050511] shadow-[0_0_20px_rgba(0,242,234,0.2)]">
-                                        <img src={item.thumb} alt={item.title} class="w-full h-full object-cover" loading="lazy" />
-                                    </div>
-                                    <div>
-                                        <span class="text-[11px] font-bold uppercase tracking-widest text-[#00f2ea] block mb-1">
-                                            {item.badge}
-                                        </span>
-                                        <h3 class="text-xl sm:text-2xl font-bold text-white font-[family-name:var(--font-space-grotesk)] leading-snug">
-                                            {item.title}
-                                        </h3>
-                                    </div>
-                                </div>
-
-                                <p class="text-gray-300 text-sm sm:text-base font-light leading-relaxed">
-                                    {item.desc}
-                                </p>
-
-                                <!-- Barras Comparativas de Rendimiento -->
-                                <div class="p-4 sm:p-5 rounded-2xl bg-[#050511]/90 border border-white/10 space-y-4">
-                                    <div>
-                                        <div class="flex justify-between text-xs mb-1.5">
-                                            <span class="text-gray-400 font-medium">{item.oldMetricLabel}</span>
-                                            <span class="text-red-400 font-bold">{item.oldMetricValue}</span>
-                                        </div>
-                                        <div class="w-full h-2.5 rounded-full bg-white/5 overflow-hidden">
-                                            <div class="h-full rounded-full bg-gradient-to-r from-red-600 to-red-400" style={`width: ${item.oldBarWidth};`}></div>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <div class="flex justify-between text-xs mb-1.5">
-                                            <span class="text-white font-bold">{item.newMetricLabel}</span>
-                                            <span class="text-[#39ff14] font-bold">{item.newMetricValue}</span>
-                                        </div>
-                                        <div class="w-full h-2.5 rounded-full bg-white/5 overflow-hidden">
-                                            <div class="h-full rounded-full bg-gradient-to-r from-[#2dd4bf] via-[#00f2ea] to-[#39ff14] shadow-[0_0_12px_#00f2ea]" style={`width: ${item.newBarWidth};`}></div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Filas de Transformación Antes -> Después -->
-                                <div class="space-y-3">
-                                    {item.rows.map((row) => (
-                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 p-3.5 rounded-2xl bg-white/[0.02] border border-white/10">
-                                            <div class="flex items-start gap-2.5 text-xs text-gray-400">
-                                                <span class="w-5 h-5 rounded-md bg-red-500/15 border border-red-500/30 text-red-400 flex items-center justify-center shrink-0 font-bold mt-0.5">✕</span>
-                                                <span>{row.oldText}</span>
-                                            </div>
-                                            <div class="flex items-start gap-2.5 text-xs text-gray-200 sm:border-l sm:border-white/10 sm:pl-3">
-                                                <span class="w-5 h-5 rounded-md bg-[#2dd4bf]/15 border border-[#2dd4bf]/40 text-[#2dd4bf] flex items-center justify-center shrink-0 font-bold mt-0.5">✓</span>
-                                                <span class="font-medium text-white">{row.newText}</span>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        ))}
-                    </div>
+                    ))}
                 </div>
             </div>
         </div>
@@ -911,42 +806,9 @@ const interactiveComparisons = [
         </div>
     </section>
 
-    <!-- SCRIPT INTERACTIVO DEL SIMULADOR COMPARATIVO (TABS + SLIDER BEFORE/AFTER) -->
+    <!-- SCRIPT INTERACTIVO DEL COMPARADOR POR PESTAÑAS -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // 1. Control del Escáner Before / After
-            const rangeInput = document.getElementById("ba-range-input") as HTMLInputElement | null;
-            const oldOverlay = document.getElementById("ba-old-overlay") as HTMLElement | null;
-            const dividerLine = document.getElementById("ba-divider-line") as HTMLElement | null;
-            const presetBtns = document.querySelectorAll<HTMLButtonElement>(".ba-preset-btn");
-
-            function updateSlider(val: number) {
-                const clamped = Math.max(5, Math.min(95, val));
-                if (oldOverlay) {
-                    oldOverlay.style.clipPath = `inset(0 ${100 - clamped}% 0 0)`;
-                }
-                if (dividerLine) {
-                    dividerLine.style.left = `${clamped}%`;
-                }
-                if (rangeInput) {
-                    rangeInput.value = String(clamped);
-                }
-            }
-
-            if (rangeInput) {
-                rangeInput.addEventListener("input", () => {
-                    updateSlider(Number(rangeInput.value));
-                });
-            }
-
-            presetBtns.forEach((btn) => {
-                btn.addEventListener("click", () => {
-                    const targetVal = Number(btn.getAttribute("data-ba-preset") || "50");
-                    updateSlider(targetVal);
-                });
-            });
-
-            // 2. Control de las 4 Pestañas de Telemetría
             const tabBtns = document.querySelectorAll<HTMLButtonElement>(".comp-tab-btn");
             const panels = document.querySelectorAll<HTMLElement>(".comp-panel");
 
