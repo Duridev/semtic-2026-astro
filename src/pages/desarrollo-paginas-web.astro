@@ -1,6 +1,106 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
+
+const webSolutions = [
+    {
+        badge: "Captación Inmediata • Google & Meta Ads",
+        title: "Landing Pages de Alta Conversión",
+        image: "/web-img/solucion-landing.jpg",
+        imageAlt: "Diseño de Landing Pages de alta conversión en Astro optimizadas para celulares y Google Ads",
+        description:
+            "Páginas de aterrizaje diseñadas con un único objetivo comercial: transformar cada clic de tus campañas en Google Ads o Meta Ads en cotizaciones reales por WhatsApp y llamadas telefónicas.",
+        features: [
+            "Carga instantánea (< 0.9s) en Astro para mejorar tu Nivel de Calidad en Google Ads",
+            "Arquitectura persuasiva sin enlaces de fuga ni distracciones",
+            "Botones de WhatsApp con mensajes pre-redactados según el servicio",
+            "Configuración de Google Tag Manager y medición de conversiones incluida"
+        ],
+        ctaText: "Cotizar mi Landing Page →",
+        whatsappMsg: "Hola SEMTIC, quiero cotizar una Landing Page de alta conversión para mis campañas.",
+        borderHover: "hover:border-[#2dd4bf]/60",
+        accentText: "text-[#2dd4bf]",
+        accentBadge: "bg-[#2dd4bf]/10 text-[#2dd4bf] border-[#2dd4bf]/30"
+    },
+    {
+        badge: "Autoridad de Marca • Posicionamiento",
+        title: "Sitios Web Corporativos & SEO",
+        image: "/web-img/solucion-corporativa.jpg",
+        imageAlt: "Desarrollo de sitios web corporativos con posicionamiento SEO técnico para empresas",
+        description:
+            "Proyecta solidez y lidera tu sector en Valparaíso, Santiago y todo Chile con una plataforma corporativa moderna, catálogo de servicios estructurado y base técnica optimizada para Google.",
+        features: [
+            "Arquitectura multi-página rápida, clara y 100% responsiva (Mobile-First)",
+            "SEO Técnico nativo, Sitemap XML y marcado de datos estructurados Schema.org",
+            "Secciones de proyectos realizados, certificaciones y prueba social",
+            "Cero dependencia de plantillas lentas o plugins vulnerables"
+        ],
+        ctaText: "Cotizar Web Corporativa →",
+        whatsappMsg: "Hola SEMTIC, quiero cotizar el desarrollo de un Sitio Web Corporativo para mi empresa.",
+        borderHover: "hover:border-[#3b82f6]/60",
+        accentText: "text-[#60a5fa]",
+        accentBadge: "bg-[#3b82f6]/10 text-[#60a5fa] border-[#3b82f6]/30"
+    },
+    {
+        badge: "Ventas Online 24/7 • Pasarelas de Pago",
+        title: "E-Commerce & Tiendas Online",
+        image: "/web-img/solucion-ecommerce.jpg",
+        imageAlt: "Desarrollo de tiendas online y E-Commerce con Webpay y MercadoPago",
+        description:
+            "Vende tus productos las 24 horas con una tienda online fluida, segura y pensada para cerrar compras desde el celular sin pasos innecesarios que frenen al comprador.",
+        features: [
+            "Integración con pasarelas de pago en Chile (Webpay Plus, MercadoPago, Flow)",
+            "Catálogo autoadministrable con control de stock, variantes y categorías",
+            "Proceso de compra (Checkout) simplificado para maximizar ventas móviles",
+            "Preparada para catálogos de Meta Ads y campañas de Google Shopping"
+        ],
+        ctaText: "Cotizar Tienda Online →",
+        whatsappMsg: "Hola SEMTIC, quiero cotizar el desarrollo de una Tienda Online / E-Commerce.",
+        borderHover: "hover:border-[#00f2ea]/60",
+        accentText: "text-[#00f2ea]",
+        accentBadge: "bg-[#00f2ea]/10 text-[#00f2ea] border-[#00f2ea]/30"
+    },
+    {
+        badge: "Ingeniería de Software • Escalabilidad",
+        title: "Sistemas & Plataformas Web a Medida",
+        image: "/web-img/solucion-medida.jpg",
+        imageAlt: "Desarrollo de sistemas web a medida, paneles de gestión e integraciones API",
+        description:
+            "Desarrollamos aplicaciones web personalizadas, cotizadores interactivos, portales de clientes o paneles administrativos con tecnologías modernas (Astro, React, Node y Tailwind).",
+        features: [
+            "Código 100% a medida según las reglas de negocio de tu empresa",
+            "Conexión mediante APIs con CRMs, ERPs, WhatsApp y sistemas internos",
+            "Máxima seguridad, escalabilidad en la nube y rendimiento superior",
+            "Soporte directo con el equipo de ingeniería a cargo del desarrollo"
+        ],
+        ctaText: "Evaluar Sistema a Medida →",
+        whatsappMsg: "Hola SEMTIC, necesito evaluar un desarrollo o sistema web a medida.",
+        borderHover: "hover:border-[#818cf8]/60",
+        accentText: "text-[#818cf8]",
+        accentBadge: "bg-[#4f46e5]/15 text-[#818cf8] border-[#4f46e5]/40"
+    }
+];
+
+const techAdvantages = [
+    {
+        tag: "01 • Velocidad Real",
+        title: "100% Core Web Vitals con Astro",
+        description:
+            "A diferencia de WordPress o constructores pesados, Astro entrega HTML estático limpio sin JavaScript innecesario. Tu web abre al instante incluso con señal móvil inestable."
+    },
+    {
+        tag: "02 • Lista para Vender",
+        title: "Preparada para Google Ads y SEO",
+        description:
+            "Entregamos cada página con metadatos geolocalizados, Schema.org, eventos de conversión en Google Tag Manager y estructura pensada para bajar tu costo por clic."
+    },
+    {
+        tag: "03 • Sin Ataduras",
+        title: "Cero Mantenciones Obligatorias",
+        description:
+            "Tu sitio no se rompe por plugins desactualizados. Eres dueño de tu código y tu dominio, sin cobros mensuales forzosos por mantención técnica."
+    }
+];
 ---
 
 <Layout
@@ -9,16 +109,18 @@ import "../styles/global.css";
     image="https://semtic.cl/social-img.webp"
 >
     <!-- SECCIÓN 1: HERO -->
-    <section class="relative min-h-[70vh] flex items-center justify-center pt-32 pb-20 overflow-hidden" style="z-index: 10;">
+    <section class="relative min-h-[75vh] flex items-center justify-center pt-32 pb-20 overflow-hidden" style="z-index: 10;">
         <!-- Resplandores neón -->
         <div class="absolute top-1/4 left-1/4 w-80 md:w-96 h-80 md:h-96 bg-[#00f2ea] rounded-full mix-blend-screen filter blur-[140px] opacity-25 animate-pulse"></div>
         <div class="absolute bottom-1/4 right-1/4 w-80 md:w-96 h-80 md:h-96 bg-[#4f46e5] rounded-full mix-blend-screen filter blur-[140px] opacity-25 animate-pulse" style="animation-delay: 2s;"></div>
         <div class="absolute top-1/3 right-10 w-64 h-64 bg-[#2dd4bf] rounded-full mix-blend-screen filter blur-[120px] opacity-15"></div>
 
         <div class="relative z-10 text-center px-4 max-w-5xl mx-auto hero-container">
-            <div class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white/5 border border-[#00f2ea]/40 backdrop-blur-md mb-6">
+            <div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-white/5 border border-[#00f2ea]/40 backdrop-blur-md mb-6 shadow-lg">
                 <span class="w-2.5 h-2.5 rounded-full bg-[#00f2ea] animate-ping"></span>
-                <span class="text-sm uppercase tracking-widest text-[#00f2ea] font-bold">Desarrollo Web High-Performance</span>
+                <span class="text-xs sm:text-sm uppercase tracking-widest text-[#00f2ea] font-bold">
+                    Desarrollo Web High-Performance • Astro Tech &amp; Conversión
+                </span>
             </div>
 
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-[family-name:var(--font-space-grotesk)] font-bold mb-6 leading-tight text-white">
@@ -27,131 +129,302 @@ import "../styles/global.css";
             </h1>
 
             <p class="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto mb-10 font-light leading-relaxed">
-                Tu sitio web no debe ser un folleto digital abandonado; debe ser tu mejor canal de ventas disponible las 24 horas. Como agencia desarrollamos Landing Pages en Astro y sitios web de alta conversión en la Región de Valparaíso y Región Metropolitana de Santiago.
+                Tu sitio web no debe ser un folleto digital lento ni abandonado; debe ser tu mejor vendedor las 24 horas. Desarrollamos <strong class="text-white font-medium">Landing Pages para Google Ads</strong>, <strong class="text-white font-medium">sitios corporativos</strong> y <strong class="text-white font-medium">tiendas online</strong> en la <span class="text-[#00f2ea] font-normal">Región de Valparaíso y Región Metropolitana de Santiago</span>.
             </p>
 
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="https://wa.me/56988169404?text=Hola%20Semtic!%20Quiero%20cotizar%20el%20desarrollo%20de%20mi%20página%20web" target="_blank" class="px-8 py-4 bg-gradient-to-r from-[#00f2ea] via-[#2dd4bf] to-[#3b82f6] rounded-full text-[#050511] font-extrabold text-base tracking-wide hover:shadow-[0_0_30px_rgba(0,242,234,0.6)] transition-all duration-300 transform hover:-translate-y-1 uppercase flex items-center gap-2">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
+                <a href="https://wa.me/56988169404?text=Hola%20Semtic!%20Quiero%20cotizar%20el%20desarrollo%20de%20mi%20página%20web" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-[#00f2ea] via-[#2dd4bf] to-[#3b82f6] rounded-full text-[#050511] font-extrabold text-base tracking-wide hover:shadow-[0_0_30px_rgba(0,242,234,0.6)] transition-all duration-300 transform hover:-translate-y-1 uppercase flex items-center justify-center gap-2">
                     🚀 Cotizar mi Nueva Web
                 </a>
-                <a href="#soluciones" class="px-8 py-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-white font-semibold text-base hover:bg-white/10 hover:border-[#00f2ea]/50 transition-all duration-300">
+                <a href="#soluciones" class="w-full sm:w-auto px-8 py-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-white font-semibold text-base hover:bg-white/10 hover:border-[#00f2ea]/50 transition-all duration-300 text-center">
                     Ver Tipos de Páginas ↓
                 </a>
             </div>
-        </div>
-    </section>
 
-    <!-- SECCIÓN 2: EL PROBLEMA WEB -->
-    <section class="py-16 relative" style="z-index: 10;">
-        <div class="container mx-auto px-4 max-w-5xl">
-            <div class="p-10 md:p-14 rounded-3xl bg-[#0a0a1a]/80 border border-white/10 backdrop-blur-xl text-center relative overflow-hidden shadow-2xl">
-                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-[#00f2ea] to-transparent"></div>
-                <span class="block text-sm md:text-base font-bold mb-3 text-[#00f2ea] tracking-[0.25em] uppercase font-[family-name:var(--font-space-grotesk)]">
-                    Velocidad Web &amp; Conversión Comercial
-                </span>
-                <h2 class="text-2xl md:text-4xl font-bold text-white mb-5 font-[family-name:var(--font-space-grotesk)] leading-tight">
-                    ¿Por qué pierdes clientes y presupuesto publicitario con una web lenta?
-                </h2>
-                <p class="text-lg md:text-xl text-gray-200 leading-relaxed font-light max-w-3xl mx-auto">
-                    Una página lenta, desordenada o que no carga bien en celulares <span class="text-[#00f2ea] font-medium">espanta a tus prospectos en menos de 3 segundos</span>. Ya sea que recibas tráfico orgánico o de campañas en Google Ads y Meta Ads, una Landing Page veloz es la diferencia entre una cotización en tu WhatsApp y un cliente que se va con la competencia.
-                </p>
+            <!-- Micro-credenciales bajo los botones -->
+            <div class="pt-6 border-t border-white/10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs sm:text-sm text-gray-300">
+                <div class="flex items-center gap-2">
+                    <span class="text-[#00f2ea] font-bold">✓</span>
+                    <span>Carga en menos de 1 segundo (Astro)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-[#2dd4bf] font-bold">✓</span>
+                    <span>Diseño 100% Mobile-First y SEO Técnico</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-[#60a5fa] font-bold">✓</span>
+                    <span>Integración directa con WhatsApp y Google Ads</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN 3: SOLUCIONES A MEDIDA (Tipos de Web) -->
-    <section id="soluciones" class="py-20 relative bg-gradient-to-b from-transparent via-[#0a0a20]/60 to-transparent" style="z-index: 10;">
+    <!-- SECCIÓN 2: COMPARATIVA VISUAL (WEB LENTA VS ARQUITECTURA SEMTIC EN ASTRO) -->
+    <section id="comparativa-web" class="py-20 relative scroll-mt-28 border-y border-white/10 bg-[#070716]/70" style="z-index: 10;">
         <div class="container mx-auto px-4 max-w-6xl">
-            <div class="text-center mb-16">
-                <span class="px-4 py-1.5 rounded-full text-sm font-semibold bg-[#00f2ea]/10 text-[#00f2ea] border border-[#00f2ea]/30 mb-3 inline-block">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-[#00f2ea]/10 text-[#00f2ea] border border-[#00f2ea]/30 mb-3 inline-block uppercase tracking-wider">
+                    Velocidad Web &amp; Conversión Comercial
+                </span>
+                <h2 class="text-3xl md:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold text-white mb-4 leading-tight">
+                    ¿Por qué pierdes clientes y presupuesto con una <span class="text-gradient">web tradicional lenta</span>?
+                </h2>
+                <p class="text-gray-300 text-base md:text-lg font-light">
+                    El 53% de las visitas desde celulares abandona una página si tarda más de 3 segundos en abrir. Compara la diferencia entre una plantilla genérica y nuestra ingeniería en Astro.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+                <!-- Columna 1: Web Tradicional Lenta -->
+                <div class="p-7 sm:p-9 rounded-3xl bg-[#0a0a1a]/75 border border-rose-500/25 backdrop-blur-xl flex flex-col justify-between relative overflow-hidden group shadow-xl">
+                    <div>
+                        <div class="relative h-52 sm:h-60 w-full rounded-2xl overflow-hidden mb-6 border border-rose-500/25 bg-[#050511]">
+                            <img
+                                src="/web-img/web-antigua-lenta.jpg"
+                                alt="Sitio web tradicional lento con exceso de plugins y pantalla móvil rota"
+                                width="640"
+                                height="360"
+                                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a1a] via-[#0a0a1a]/20 to-transparent"></div>
+                            <div class="absolute top-3.5 left-3.5 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#050511]/90 border border-rose-500/40 text-rose-300 text-xs font-semibold uppercase tracking-wider backdrop-blur-md">
+                                <span class="text-rose-400 font-bold">✕</span>
+                                Plantillas Pesadas
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="w-8 h-8 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center font-bold text-sm shrink-0">✕</span>
+                            <h3 class="text-xl sm:text-2xl font-bold text-rose-100 font-[family-name:var(--font-space-grotesk)]">
+                                Sitios Tradicionales y Constructores Lentos
+                            </h3>
+                        </div>
+
+                        <p class="text-gray-300 text-sm sm:text-base mb-6 leading-relaxed font-light">
+                            Páginas armadas con decenas de plugins innecesarios que bloquean la carga en celulares y encarecen tus campañas en Google Ads.
+                        </p>
+
+                        <ul class="space-y-4 text-sm sm:text-base text-gray-300 font-light">
+                            <li class="flex items-start gap-3">
+                                <span class="mt-1 w-5 h-5 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center shrink-0 text-xs font-bold">✕</span>
+                                <span><strong class="text-white font-semibold">Espera de 4 a 8 segundos:</strong> El cliente se impacienta y vuelve atrás para hacer clic en tu competencia.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="mt-1 w-5 h-5 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center shrink-0 text-xs font-bold">✕</span>
+                                <span><strong class="text-white font-semibold">Diseño confuso en smartphones:</strong> Textos desalineados y botones difíciles de presionar con el pulgar.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="mt-1 w-5 h-5 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center shrink-0 text-xs font-bold">✕</span>
+                                <span><strong class="text-white font-semibold">Vulnerabilidad y mantenciones caras:</strong> Plugins que se desactualizan, rompen el formulario o sufren ataques.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 pt-4 border-t border-rose-500/20 flex items-center justify-between text-xs text-gray-400">
+                        <span>Carga móvil habitual: <strong class="text-rose-400">4.8s – 7.5s</strong></span>
+                        <span>Alto porcentaje de rebote</span>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Ingeniería Web SEMTIC (Astro) -->
+                <div class="p-7 sm:p-9 rounded-3xl bg-[#0a0a1a]/90 border border-[#00f2ea]/45 backdrop-blur-xl shadow-2xl shadow-[#00f2ea]/10 flex flex-col justify-between relative overflow-hidden group">
+                    <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-[#00f2ea] via-[#2dd4bf] to-[#3b82f6]"></div>
+                    <div>
+                        <div class="relative h-52 sm:h-60 w-full rounded-2xl overflow-hidden mb-6 border border-[#00f2ea]/35 bg-[#050511]">
+                            <img
+                                src="/web-img/web-astro-veloz.jpg"
+                                alt="Desarrollo web ultrarrápido con tecnología Astro y máximo puntaje en Google PageSpeed"
+                                width="640"
+                                height="360"
+                                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a1a] via-[#0a0a1a]/15 to-transparent"></div>
+                            <div class="absolute top-3.5 left-3.5 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#050511]/90 border border-[#00f2ea]/50 text-[#00f2ea] text-xs font-semibold uppercase tracking-wider backdrop-blur-md">
+                                <span>⚡</span>
+                                Tecnología Astro SEMTIC
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="w-8 h-8 rounded-full bg-[#00f2ea]/20 text-[#00f2ea] flex items-center justify-center font-bold text-sm shrink-0">✓</span>
+                            <h3 class="text-xl sm:text-2xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">
+                                Ingeniería Web SEMTIC (Astro + Conversión)
+                            </h3>
+                        </div>
+
+                        <p class="text-gray-200 text-sm sm:text-base mb-6 leading-relaxed font-light">
+                            Desarrollamos sitios ultralivianos con arquitectura moderna pensados para posicionar en Google y convertir visitas en clientes reales.
+                        </p>
+
+                        <ul class="space-y-4 text-sm sm:text-base text-gray-200 font-light">
+                            <li class="flex items-start gap-3">
+                                <span class="mt-1 w-5 h-5 rounded-full bg-[#00f2ea]/20 text-[#00f2ea] flex items-center justify-center shrink-0 text-xs font-bold">✓</span>
+                                <span><strong class="text-white font-semibold">Despliegue en menos de 1 segundo:</strong> Código limpio que Google premia con mejor posicionamiento y menor costo por clic.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="mt-1 w-5 h-5 rounded-full bg-[#00f2ea]/20 text-[#00f2ea] flex items-center justify-center shrink-0 text-xs font-bold">✓</span>
+                                <span><strong class="text-white font-semibold">Diseño persuasivo Mobile-First:</strong> Jerarquía visual que guía al usuario directo a cotizar por WhatsApp o teléfono.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="mt-1 w-5 h-5 rounded-full bg-[#00f2ea]/20 text-[#00f2ea] flex items-center justify-center shrink-0 text-xs font-bold">✓</span>
+                                <span><strong class="text-white font-semibold">Seguridad blindada y estabilidad:</strong> Sin bases de datos expuestas ni caídas inesperadas en plena campaña publicitaria.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 pt-4 border-t border-[#00f2ea]/25 flex items-center justify-between text-xs text-[#00f2ea] font-medium">
+                        <span>Carga móvil promedio: <strong class="text-emerald-400">&lt; 0.9 segundos</strong></span>
+                        <span>100% Core Web Vitals</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: SOLUCIONES A MEDIDA (4 TIPOS DE WEB CON IMÁGENES 3D GLASSMORPHISM) -->
+    <section id="soluciones" class="py-24 relative bg-gradient-to-b from-transparent via-[#0a0a20]/60 to-transparent scroll-mt-28" style="z-index: 10;">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <span class="px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-[#00f2ea]/10 text-[#00f2ea] border border-[#00f2ea]/30 mb-3 inline-block uppercase tracking-wider">
                     💻 Soluciones Web Adaptadas
                 </span>
                 <h2 class="text-3xl md:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold text-white mb-4">
-                    Plataformas Diseñadas para <span class="text-gradient">Cada Necesidad</span>
+                    Plataformas Diseñadas para <span class="text-gradient">Cada Objetivo Comercial</span>
                 </h2>
-                <p class="text-gray-300 text-base md:text-lg max-w-2xl mx-auto font-light">
-                    Elegimos la arquitectura técnica ideal según los objetivos comerciales de tu empresa.
+                <p class="text-gray-300 text-base md:text-lg font-light">
+                    Seleccionamos y construimos la arquitectura exacta que tu negocio necesita para captar prospectos o vender online en Valparaíso, Santiago y todo Chile.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Solución 1: E-Commerce -->
-                <div class="p-8 md:p-10 rounded-3xl bg-[#0a0a1a]/80 border border-white/10 backdrop-blur-xl relative overflow-hidden group hover:border-[#00f2ea]/50 transition-all duration-300 hover:-translate-y-1 shadow-xl flex flex-col justify-between">
-                    <div>
-                        <div class="w-14 h-14 mb-6 rounded-2xl bg-[#00f2ea]/10 border border-[#00f2ea]/30 flex items-center justify-center text-[#00f2ea] group-hover:scale-110 transition-transform">
-                            🛒
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)]">E-Commerce & Tiendas Online</h3>
-                        <p class="text-gray-300 text-sm md:text-base font-light leading-relaxed mb-6">
-                            Vende tus productos 24/7 con integración de pasarelas de pago seguras (Webpay Plus, MercadoPago, Fpay), control de inventario y panel autoadministrable.
-                        </p>
-                    </div>
-                    <ul class="space-y-2.5 text-sm text-gray-300 border-t border-white/10 pt-4 font-light">
-                        <li class="flex items-center gap-2"><span class="text-[#00f2ea]">✓</span> Carrito de compras fluido e intuitivo</li>
-                        <li class="flex items-center gap-2"><span class="text-[#00f2ea]">✓</span> Integración con boleta electrónica y envíos</li>
-                        <li class="flex items-center gap-2"><span class="text-[#00f2ea]">✓</span> Optimizado para ventas desde smartphones</li>
-                    </ul>
-                </div>
+                {webSolutions.map((item) => (
+                    <article class={`p-7 sm:p-9 rounded-3xl bg-[#0a0a1a]/85 border border-white/10 backdrop-blur-xl relative overflow-hidden group ${item.borderHover} transition-all duration-300 hover:-translate-y-1.5 shadow-xl flex flex-col justify-between`}>
+                        <div>
+                            <!-- Badge superior -->
+                            <div class="flex items-center justify-between gap-2 mb-4">
+                                <span class={`px-3.5 py-1 rounded-full text-xs font-semibold border ${item.accentBadge}`}>
+                                    {item.badge}
+                                </span>
+                            </div>
 
-                <!-- Solución 2: Landing Pages -->
-                <div class="p-8 md:p-10 rounded-3xl bg-[#0a0a1a]/80 border border-white/10 backdrop-blur-xl relative overflow-hidden group hover:border-[#2dd4bf]/50 transition-all duration-300 hover:-translate-y-1 shadow-xl flex flex-col justify-between">
-                    <div>
-                        <div class="w-14 h-14 mb-6 rounded-2xl bg-[#2dd4bf]/10 border border-[#2dd4bf]/30 flex items-center justify-center text-[#2dd4bf] group-hover:scale-110 transition-transform">
-                            🎯
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)]">Landing Pages de Alta Conversión</h3>
-                        <p class="text-gray-300 text-sm md:text-base font-light leading-relaxed mb-6">
-                            Páginas de aterrizaje enfocadas en una sola oferta o servicio, creadas específicamente para captar prospectos provenientes de campañas de Google Ads y Meta Ads.
-                        </p>
-                    </div>
-                    <ul class="space-y-2.5 text-sm text-gray-300 border-t border-white/10 pt-4 font-light">
-                        <li class="flex items-center gap-2"><span class="text-[#2dd4bf]">✓</span> Estructura persuasiva orientada a la acción</li>
-                        <li class="flex items-center gap-2"><span class="text-[#2dd4bf]">✓</span> Botón flotante directo a WhatsApp</li>
-                        <li class="flex items-center gap-2"><span class="text-[#2dd4bf]">✓</span> Carga ultrarrápida sin distracciones</li>
-                    </ul>
-                </div>
+                            <!-- Imagen 3D Glassmorphism (Reemplaza a los antiguos emojis) -->
+                            <div class="relative h-52 sm:h-56 w-full rounded-2xl overflow-hidden mb-6 border border-white/10 bg-[#050511] shadow-inner">
+                                <img
+                                    src={item.image}
+                                    alt={item.imageAlt}
+                                    width="560"
+                                    height="350"
+                                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                                <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a1a]/85 via-transparent to-transparent"></div>
+                            </div>
 
-                <!-- Solución 3: Sitios Corporativos -->
-                <div class="p-8 md:p-10 rounded-3xl bg-[#0a0a1a]/80 border border-white/10 backdrop-blur-xl relative overflow-hidden group hover:border-[#3b82f6]/50 transition-all duration-300 hover:-translate-y-1 shadow-xl flex flex-col justify-between">
-                    <div>
-                        <div class="w-14 h-14 mb-6 rounded-2xl bg-[#3b82f6]/10 border border-[#3b82f6]/30 flex items-center justify-center text-[#3b82f6] group-hover:scale-110 transition-transform">
-                            🏢
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)]">Sitios Web Corporativos & SEO</h3>
-                        <p class="text-gray-300 text-sm md:text-base font-light leading-relaxed mb-6">
-                            Posiciona tu empresa como líder del sector con una web institucional elegante, portafolio de proyectos y optimización SEO de base para Google.
-                        </p>
-                    </div>
-                    <ul class="space-y-2.5 text-sm text-gray-300 border-t border-white/10 pt-4 font-light">
-                        <li class="flex items-center gap-2"><span class="text-[#3b82f6]">✓</span> Arquitectura multi-página estructurada</li>
-                        <li class="flex items-center gap-2"><span class="text-[#3b82f6]">✓</span> Integración de Blog corporativo</li>
-                        <li class="flex items-center gap-2"><span class="text-[#3b82f6]">✓</span> Marcado de datos Schema.org para Google</li>
-                    </ul>
-                </div>
+                            <h3 class="text-2xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)] leading-snug">
+                                {item.title}
+                            </h3>
 
-                <!-- Solución 4: Desarrollo A Medida -->
-                <div class="p-8 md:p-10 rounded-3xl bg-[#0a0a1a]/80 border border-white/10 backdrop-blur-xl relative overflow-hidden group hover:border-[#4f46e5]/50 transition-all duration-300 hover:-translate-y-1 shadow-xl flex flex-col justify-between">
-                    <div>
-                        <div class="w-14 h-14 mb-6 rounded-2xl bg-[#4f46e5]/10 border border-[#4f46e5]/30 flex items-center justify-center text-[#4f46e5] group-hover:scale-110 transition-transform">
-                            ⚡
+                            <p class="text-gray-300 text-sm md:text-base font-light leading-relaxed mb-6">
+                                {item.description}
+                            </p>
+
+                            <ul class="space-y-2.5 text-xs sm:text-sm text-gray-300 border-t border-white/10 pt-5 mb-6 font-light">
+                                {item.features.map((feat) => (
+                                    <li class="flex items-start gap-2.5">
+                                        <span class={`${item.accentText} font-bold mt-0.5`}>✓</span>
+                                        <span>{feat}</span>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)]">Sistemas & Web A Medida</h3>
-                        <p class="text-gray-300 text-sm md:text-base font-light leading-relaxed mb-6">
-                            Plataformas dinámicas, paneles de gestión, sistemas de reservas o portales a medida desarrollados con tecnologías de vanguardia (Astro, React, Tailwind).
+
+                        <div class="pt-4 border-t border-white/10">
+                            <a
+                                href={`https://wa.me/56988169404?text=${encodeURIComponent(item.whatsappMsg)}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class={`inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider ${item.accentText} group-hover:text-white transition-colors`}
+                            >
+                                <span>{item.ctaText}</span>
+                            </a>
+                        </div>
+                    </article>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: VENTAJAS TÉCNICAS & COBERTURA REGIONAL -->
+    <section class="py-20 relative border-t border-white/10 bg-[#070716]/50" style="z-index: 10;">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-[#2dd4bf]/10 text-[#2dd4bf] border border-[#2dd4bf]/30 mb-3 inline-block uppercase tracking-wider">
+                    ⚙️ Estándar de Ingeniería SEMTIC
+                </span>
+                <h2 class="text-3xl md:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold text-white mb-4">
+                    ¿Por qué desarrollar tu web <span class="text-gradient">con nuestra agencia</span>?
+                </h2>
+                <p class="text-gray-300 text-base md:text-lg font-light">
+                    Construimos activos digitales duraderos que te pertenecen al 100% y están listos para escalar tus campañas publicitarias.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
+                {techAdvantages.map((adv) => (
+                    <div class="p-7 sm:p-8 rounded-3xl bg-[#0a0a1a]/80 border border-white/10 hover:border-[#00f2ea]/40 backdrop-blur-xl transition-all duration-300 shadow-lg">
+                        <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-[#00f2ea]/10 text-[#00f2ea] border border-[#00f2ea]/25 mb-4">
+                            {adv.tag}
+                        </span>
+                        <h3 class="text-xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)]">
+                            {adv.title}
+                        </h3>
+                        <p class="text-gray-300 text-sm sm:text-base font-light leading-relaxed">
+                            {adv.description}
                         </p>
                     </div>
-                    <ul class="space-y-2.5 text-sm text-gray-300 border-t border-white/10 pt-4 font-light">
-                        <li class="flex items-center gap-2"><span class="text-[#818cf8]">✓</span> Código 100% personalizado sin bloatware</li>
-                        <li class="flex items-center gap-2"><span class="text-[#818cf8]">✓</span> Integraciones con APIs y sistemas externos</li>
-                        <li class="flex items-center gap-2"><span class="text-[#818cf8]">✓</span> Máxima seguridad y rendimiento técnico</li>
-                    </ul>
+                ))}
+            </div>
+
+            <!-- Bloque de Cobertura Local: Valparaíso y Región Metropolitana -->
+            <div class="p-7 sm:p-9 rounded-3xl bg-gradient-to-r from-[#0a0a1a] via-[#0e1330] to-[#0a0a1a] border border-white/10 backdrop-blur-xl">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-5">
+                        <span class="text-xs font-bold uppercase tracking-widest text-[#00f2ea] block mb-2">
+                            Desarrollo Web &amp; Landing Pages en Chile
+                        </span>
+                        <h3 class="text-2xl sm:text-3xl font-bold text-white font-[family-name:var(--font-space-grotesk)] mb-3">
+                            Atención Directa en Valparaíso y Santiago
+                        </h3>
+                        <p class="text-gray-300 text-sm sm:text-base font-light leading-relaxed">
+                            Trabajamos directamente contigo por videollamada o WhatsApp, optimizando tu sitio para posicionar en las comunas donde operan tus clientes.
+                        </p>
+                    </div>
+                    <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-5 rounded-2xl bg-[#050511]/80 border border-[#00f2ea]/25">
+                            <h4 class="text-[#00f2ea] font-bold text-sm sm:text-base mb-1.5">📍 Región de Valparaíso</h4>
+                            <p class="text-gray-300 text-xs sm:text-sm font-light leading-relaxed">
+                                Viña del Mar, Valparaíso, Concón, Quilpué, Villa Alemana, Limache, Quillota y toda la V Región.
+                            </p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-[#050511]/80 border border-[#2dd4bf]/25">
+                            <h4 class="text-[#2dd4bf] font-bold text-sm sm:text-base mb-1.5">📍 Región Metropolitana (Santiago)</h4>
+                            <p class="text-gray-300 text-xs sm:text-sm font-light leading-relaxed">
+                                Santiago Centro, Providencia, Las Condes, Vitacura, Ñuñoa, La Florida, Maipú y toda la RM.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN 4: BANNER BLOG -->
-    <section class="py-10 relative" style="z-index: 10;">
+    <!-- SECCIÓN 5: BANNER BLOG -->
+    <section class="py-12 relative" style="z-index: 10;">
         <div class="container mx-auto px-4 max-w-5xl">
             <div class="p-8 md:p-10 rounded-3xl bg-gradient-to-r from-[#0a0a20] via-[#0d123b] to-[#0a0a20] border border-[#00f2ea]/40 backdrop-blur-xl relative overflow-hidden shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
                 <div class="max-w-2xl">
@@ -162,7 +435,7 @@ import "../styles/global.css";
                         Desarrollo Web con Astro: ¿Por qué la Velocidad es Vital para Convertir Clientes?
                     </h3>
                     <p class="text-gray-300 text-sm md:text-base font-light leading-relaxed">
-                        Lee nuestra guía en el Blog sobre cómo los sitios web ultralivianos mejoran el posicionamiento Google y multiplican tus conversiones.
+                        Lee nuestra guía en el Blog sobre cómo los sitios web ultralivianos mejoran el posicionamiento en Google y multiplican tus conversiones.
                     </p>
                 </div>
                 <a href="/blog/desarrollo-web-astro-velocidad-conversion" class="px-6 py-3.5 rounded-full bg-[#00f2ea] text-[#050511] font-semibold text-sm hover:bg-[#2dd4bf] hover:shadow-[0_0_20px_rgba(0,242,234,0.5)] transition-all whitespace-nowrap">
@@ -172,27 +445,26 @@ import "../styles/global.css";
         </div>
     </section>
 
-    <!-- SECCIÓN 5: CTA FINAL -->
+    <!-- SECCIÓN 6: CTA FINAL -->
     <section class="py-24 relative overflow-hidden" style="z-index: 10;">
         <div class="container mx-auto px-4 max-w-5xl">
             <div class="p-10 md:p-14 rounded-3xl bg-gradient-to-r from-[#0a0a20] via-[#0e103b] to-[#0a0a20] border border-[#00f2ea]/40 backdrop-blur-xl text-center relative overflow-hidden shadow-2xl">
                 <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-[#00f2ea] to-transparent"></div>
                 <h2 class="text-3xl md:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold mb-6 text-white leading-tight">
-                    ¿Listo para renovar tu presencia web con un <span class="text-gradient">diseño de alto nivel</span>?
+                    ¿Listo para lanzar una web rápida con un <span class="text-gradient">diseño que sí vende</span>?
                 </h2>
                 <p class="text-gray-300 text-base md:text-lg max-w-2xl mx-auto mb-8 font-light leading-relaxed">
-                    Solicita tu presupuesto sin compromiso. Analizamos tus requerimientos y te proponemos la mejor solución para tu empresa.
+                    Escríbenos directamente por WhatsApp. Evaluamos tu proyecto sin compromiso y te recomendamos la mejor solución entre Landing Page, Web Corporativa o E-Commerce.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4">
-                    <a href="https://wa.me/56988169404?text=Hola,%20quisiera%20cotizar%20un%20sitio%20web" target="_blank" class="px-8 py-4 rounded-full bg-gradient-to-r from-[#00f2ea] via-[#2dd4bf] to-[#3b82f6] text-[#050511] font-extrabold text-base uppercase tracking-wide hover:shadow-[0_0_30px_rgba(0,242,234,0.6)] transition-all transform hover:-translate-y-1 flex items-center gap-2">
-                        🚀 Cotizar Mi Sitio Web
+                    <a href="https://wa.me/56988169404?text=Hola,%20quisiera%20cotizar%20un%20sitio%20web" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-full bg-gradient-to-r from-[#00f2ea] via-[#2dd4bf] to-[#3b82f6] text-[#050511] font-extrabold text-base uppercase tracking-wide hover:shadow-[0_0_30px_rgba(0,242,234,0.6)] transition-all transform hover:-translate-y-1 flex items-center gap-2">
+                        🚀 Cotizar Mi Sitio Web por WhatsApp
                     </a>
-                    <a href="/contacto" class="px-8 py-4 rounded-full border border-[#00f2ea] text-[#00f2ea] font-semibold text-base hover:bg-[#00f2ea] hover:text-[#050511] transition-all">
-                        Ver Canales de Contacto
+                    <a href="/servicios" class="px-8 py-4 rounded-full border border-[#00f2ea] text-[#00f2ea] font-semibold text-base hover:bg-[#00f2ea] hover:text-[#050511] transition-all">
+                        Ver Pack Landing + Google Ads
                     </a>
                 </div>
             </div>
         </div>
     </section>
-
 </Layout>
