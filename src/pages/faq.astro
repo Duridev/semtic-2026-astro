@@ -4,110 +4,328 @@ import '../styles/global.css';
 
 const faqs = [
     {
-        category: "Desarrollo Web",
+        category: "Landing Pages & Web",
         color: "#00f2ea",
-        question: "¿Cuánto demora tener mi página web lista?",
-        answer: "Depende de la complejidad. Una Landing Page o sitio corporativo estándar toma entre 7 y 15 días hábiles; un e-commerce completo entre 15 y 30 días. Realizamos un diagnóstico gratuito inicial para calendarizar con precisión."
+        image: "/servicios-img/faq-delivery-time.jpg",
+        imageAlt: "Tiempos de entrega de Landing Pages y desarrollo web en Astro",
+        question: "¿Cuánto demora tener mi Landing Page o página web lista?",
+        answer: "Depende del alcance del proyecto. Una Landing Page de alta conversión para campañas en Google Ads o Meta Ads está lista y publicada en 5 a 7 días hábiles. Un sitio web corporativo multipágina toma entre 10 y 15 días hábiles, y un E-Commerce con pasarela de pagos Webpay/MercadoPago entre 15 y 25 días hábiles. Iniciamos con un diagnóstico gratuito para entregarte una carta Gantt exacta desde el día uno.",
+        highlight: "Entrega rápida: 5 a 7 días hábiles para Landing Pages",
+        linkText: "Ver Desarrollo de Páginas Web →",
+        linkHref: "/desarrollo-paginas-web"
     },
     {
-        category: "Desarrollo Web",
+        category: "Landing Pages & Web",
         color: "#00f2ea",
-        question: "¿Qué incluye el desarrollo de mi sitio web?",
-        answer: "Incluye diseño UX/UI a medida, maquetación responsive para móviles, integración directa con WhatsApp, seguridad SSL, optimización de velocidad de carga, SEO inicial y panel autoadministrable."
+        image: "/servicios-img/faq-astro-speed.jpg",
+        imageAlt: "Velocidad extrema de Astro frente a plantillas pesadas de WordPress",
+        question: "¿Por qué desarrollan en Astro en vez de plantillas pesadas de WordPress?",
+        answer: "Las plantillas tradicionales de WordPress cargan decenas de plugins innecesarios que hacen que tu web demore entre 4 y 8 segundos en abrir en celulares, haciendo que pierdas más del 50% de los clics pagados en anuncios. Con tecnología Astro generamos código estático ultra limpio que carga en menos de 1 segundo (98–100/100 en Google PageSpeed), es inmune a hackeos de plugins y mejora tu Nivel de Calidad en Google Ads para que pagues menos por cada clic.",
+        highlight: "98–100/100 en Google PageSpeed Insights",
+        linkText: "Comparar Astro vs. Plantillas Tradicionales →",
+        linkHref: "/desarrollo-paginas-web"
     },
     {
-        category: "SEO & Ads",
-        color: "#2dd4bf",
-        question: "¿Qué es SEO y por qué mi empresa lo necesita?",
-        answer: "El SEO es la optimización técnica y de contenido para buscadores. Permite que tu negocio aparezca orgánicamente en los primeros lugares de Google cuando tus clientes buscan lo que vendes en su zona."
+        category: "Landing Pages & Web",
+        color: "#00f2ea",
+        image: "/web-img/solucion-landing.jpg",
+        imageAlt: "Qué incluye el diseño y desarrollo de un sitio web profesional en SEMTIC",
+        question: "¿Qué incluye exactamente el desarrollo de mi sitio web o Landing Page?",
+        answer: "Incluye arquitectura de conversión y copywriting persuasivo, diseño UX/UI 100% a medida (Mobile-First), integración directa de botones y embudos a WhatsApp Business, certificado de seguridad SSL, optimización SEO técnica inicial (etiquetas H1-H3, metadatos, Schema.org y Sitemap XML), e instalación de Google Tag Manager y GA4 para medir cada contacto generado.",
+        highlight: "Diseño UX/UI + Copywriting + Tracking GA4 incluido",
+        linkText: "Cotizar mi Landing Page →",
+        linkHref: "/servicios"
     },
     {
-        category: "SEO & Ads",
+        category: "Google & Meta Ads",
         color: "#39ff14",
-        question: "¿Qué diferencia hay entre Google Ads y Meta Ads?",
-        answer: "Google Ads capta la intención directa de personas que buscan activamente tu servicio. Meta Ads (Instagram y Facebook) genera interés visual interrumpiendo el scroll con anuncios atractivos para crear demanda."
+        image: "/ads-img/canal-google-ads.jpg",
+        imageAlt: "Diferencias entre campañas en Google Ads y Meta Ads",
+        question: "¿Qué diferencia hay entre invertir en Google Ads y en Meta Ads?",
+        answer: "Google Ads captura demanda con intención inmediata de compra: tus anuncios aparecen justo cuando alguien busca en Google «empresa de [tu servicio] en Viña del Mar o Santiago». Meta Ads (Instagram y Facebook) genera demanda visual y retargeting: impactamos con videos, carruseles y anuncios persuasivos a usuarios segmentados por comuna, cargo o intereses, convirtiéndolos en prospectos por WhatsApp o formulario.",
+        highlight: "Intención de búsqueda (Google) + Demanda visual (Meta)",
+        linkText: "Ver Gestión de Campañas Google & Meta Ads →",
+        linkHref: "/publicidad-google-meta-ads"
     },
     {
-        category: "SEO & Ads",
+        category: "Google & Meta Ads",
+        color: "#39ff14",
+        image: "/ads-img/pilar-pixel-tracking.jpg",
+        imageAlt: "Medición de conversiones reales con Google Tag Manager y Meta Pixel",
+        question: "¿Cómo miden cuántos clientes y cotizaciones generan mis campañas?",
+        answer: "No medimos el éxito en «likes» ni impresiones vacías. Antes de activar cualquier campaña configuramos Google Tag Manager, Google Analytics 4 (GA4), el Píxel de Meta y la API de Conversiones. Así registramos con exactitud cada clic al botón de WhatsApp, cada llamada telefónica y cada formulario enviado, optimizando el presupuesto hacia los anuncios que te traen ventas reales.",
+        highlight: "Trazabilidad 100% real de clics a WhatsApp y llamadas",
+        linkText: "Conocer nuestra Metodología Performance →",
+        linkHref: "/agencia-marketing-digital"
+    },
+    {
+        category: "Google & Meta Ads",
+        color: "#39ff14",
+        image: "/servicios-img/about-transparency.jpg",
+        imageAlt: "Transparencia en inversión publicitaria y propiedad de cuentas de anuncios",
+        question: "¿Cómo se paga la inversión publicitaria a Google o Meta? ¿Las cuentas son mías?",
+        answer: "Total transparencia: tus cuentas de Google Ads y Meta Business Suite se crean a nombre de tu empresa y tú mantienes siempre la propiedad administrativa. El presupuesto publicitario se paga directamente con tu tarjeta en Google o Meta (con factura válida ante el SII), y nuestro honorario de agencia corresponde exclusivamente a la ingeniería, diseño, configuración y optimización continua de tus campañas.",
+        highlight: "100% propiedad de tus cuentas, datos y activos",
+        linkText: "Solicitar Auditoría de Campañas →",
+        linkHref: "/publicidad-google-meta-ads"
+    },
+    {
+        category: "Marketing & SEO",
         color: "#2dd4bf",
-        question: "¿Puedo combinar SEO con campañas pagadas en Google y Meta?",
-        answer: "¡Totalmente! Es la estrategia ideal: Google y Meta Ads te generan prospectos inmediatos mientras el trabajo de SEO va construyendo posicionamiento orgánico sostenible en el tiempo."
+        image: "/web-img/solucion-corporativa.jpg",
+        imageAlt: "Posicionamiento SEO Local en Google y Google Maps",
+        question: "¿Qué es el SEO Local y por qué mi empresa lo necesita?",
+        answer: "El SEO Local es la ingeniería técnica y de contenido para que tu negocio aparezca orgánicamente en los primeros lugares de Google y Google Maps cuando clientes en tu ciudad buscan tus servicios (por ejemplo, en Viña del Mar, Valparaíso, Concón, Quilpué o comunas de Santiago). A diferencia de los anuncios pagados, el tráfico orgánico que consigues con SEO no tiene costo por clic y construye un activo digital permanente.",
+        highlight: "Tráfico orgánico calificado 24/7 sin pagar por clic",
+        linkText: "Ver Estrategias de Crecimiento y SEO →",
+        linkHref: "/agencia-marketing-digital"
     },
     {
-        category: "Redes Sociales",
-        color: "#4f46e5",
-        question: "¿Qué incluye el servicio de Community Manager y Redes Sociales?",
-        answer: "Incluye planificación de línea gráfica, redacción de copys profesionales, diseño de piezas para feed e historias, calendario editorial mensual, programación estratégica y análisis de métricas clave."
+        category: "Marketing & SEO",
+        color: "#2dd4bf",
+        image: "/ads-img/ads-estrategia-semtic.jpg",
+        imageAlt: "Estrategia combinada de SEO orgánico con Google Ads y Meta Ads",
+        question: "¿Conviene combinar SEO con campañas pagadas en Google Ads y Meta Ads?",
+        answer: "¡Es la combinación más rentable! Las campañas en Google Ads y Meta Ads inyectan flujo inmediato de prospectos y llamadas desde la primera semana, permitiéndote facturar rápido y validar qué palabras clave convierten mejor. Al mismo tiempo, nuestra arquitectura SEO en Astro posiciona tu web orgánicamente para reducir tu costo de adquisición a mediano y largo plazo.",
+        highlight: "Ventas inmediatas con Ads + Crecimiento sostenible con SEO",
+        linkText: "Ver Soluciones de Agencia de Marketing →",
+        linkHref: "/agencia-marketing-digital"
     },
     {
-        category: "Redes Sociales",
+        category: "Proceso & Planes",
         color: "#4f46e5",
-        question: "¿Tienen planes para emprendedores y pymes en crecimiento?",
-        answer: "Sí. Ofrecemos planes flexibles ajustados a etapas iniciales, con landing pages livianas y paquetes de manejo de redes esenciales que te ayudan a crecer sin sobrecostos."
+        image: "/servicios-img/faq-no-lockin.jpg",
+        imageAlt: "Sin contratos de amarre ni cobros obligatorios por mantención web",
+        question: "¿Estoy obligado a pagar una mensualidad por tener mi página web activa?",
+        answer: "No. Tu página web o Landing Page se entrega 100% terminada, pagada y a tu nombre: no cobramos arriendos mensuales por mantener tu web en línea ni contratos de amarre forzosos. Solo inviertes mensualmente si decides contratar nuestra gestión activa de campañas publicitarias en Google Ads / Meta Ads o un plan de posicionamiento SEO continuo.",
+        highlight: "Pago único por tu web — Cero contratos de amarre",
+        linkText: "Ver Planes de Landing Page + Ads →",
+        linkHref: "/servicios"
+    },
+    {
+        category: "Proceso & Planes",
+        color: "#4f46e5",
+        image: "/servicios-img/about-pyme-focus.jpg",
+        imageAlt: "Planes escalables para Pymes, clínicas y empresas de servicios en Chile",
+        question: "¿Tienen planes adaptados para Pymes, clínicas y empresas de servicios?",
+        answer: "Sí. Nos especializamos en Pymes, empresas B2B, contratistas, clínicas, inmobiliarias y comercios de la Región de Valparaíso y la Región Metropolitana de Santiago. Diseñamos estrategias escalables donde puedes partir con una Landing Page de alta conversión + Google Ads e ir sumando nuevos canales a medida que tu retorno de inversión crece.",
+        highlight: "Soluciones rentables diseñadas para la realidad Pyme",
+        linkText: "Conocer quiénes somos en SEMTIC →",
+        linkHref: "/nosotros"
     },
     {
         category: "Servicios con Dron",
         color: "#3b82f6",
-        question: "¿En qué zonas prestan servicio de grabación e inspección con Dron?",
-        answer: "Tenemos cobertura preferente en toda la Región de Valparaíso (Viña del Mar, Valparaíso, Concón, Quilpué, Limache) y la Región Metropolitana (Santiago), con disponibilidad de traslado a cualquier región de Chile."
+        image: "/cards-img/Inspecciones & Ingeniería.webp",
+        imageAlt: "Cobertura de servicios de dron e inspección aérea en Valparaíso y Santiago",
+        question: "¿En qué zonas realizan grabaciones 4K, fotogrametría e inspecciones con Dron?",
+        answer: "Operamos de forma directa e inmediata en toda la Región de Valparaíso (Viña del Mar, Valparaíso, Concón, Quilpué, Villa Alemana, Limache, Quillota, Olmué y San Antonio) y en toda la Región Metropolitana de Santiago. Además, realizamos despliegues programados para proyectos industriales, agrícolas, inmobiliarios y de ingeniería en cualquier región de Chile.",
+        highlight: "Despliegue directo en Región de Valparaíso y RM",
+        linkText: "Ver Servicios de Dron e Inspección Aérea →",
+        linkHref: "/drone"
     },
     {
         category: "Servicios con Dron",
         color: "#3b82f6",
-        question: "¿Sus operaciones con Dron cuentan con normativa DGAC?",
-        answer: "Sí, todos nuestros vuelos comerciales son ejecutados bajo la normativa vigente de la Dirección General de Aeronáutica Civil (DGAC), previa planificación de espacio aéreo y protocolos de seguridad."
+        image: "/cards-img/Edicion Registro & Normativa.webp",
+        imageAlt: "Operaciones de dron certificadas bajo normativa DGAC DAN 91 y DAN 151",
+        question: "¿Sus vuelos comerciales con Dron cumplen con la normativa DGAC en Chile?",
+        answer: "Absolutamente. Todas nuestras operaciones aéreas son ejecutadas por pilotos con credencial RPAS vigente bajo las normativas DAN 91 y DAN 151 de la Dirección General de Aeronáutica Civil (DGAC), incluyendo evaluación previa de espacio aéreo, coordinación de permisos, bitácora de vuelo y seguros de responsabilidad civil cuando tu mandante o faena lo exige.",
+        highlight: "Pilotos acreditados DGAC (DAN 91 / DAN 151)",
+        linkText: "Cotizar Operación con Dron →",
+        linkHref: "/drone"
     },
     {
-        category: "Desarrollo Web",
+        category: "Landing Pages & Web",
         color: "#00f2ea",
-        question: "¿Puedo usar mi propio dominio (.cl) y hosting?",
-        answer: "Por supuesto. Si ya posees dominio en Nic.cl y servicio de hosting, nos encargamos de realizar las configuraciones DNS. Si no lo tienes, te guiamos en la compra sin costo adicional."
+        image: "/servicios-img/about-direct-contact.jpg",
+        imageAlt: "Configuración de dominio .cl en NIC Chile y hosting de alta velocidad",
+        question: "¿Puedo usar mi propio dominio .cl y hosting actual?",
+        answer: "Por supuesto. Si ya tienes tu dominio registrado en NIC.cl y un servidor de hosting activo, realizamos toda la configuración técnica de DNS, certificados SSL y despliegue sin costo adicional. Si aún no tienes dominio o quieres migrar desde un servidor lento a infraestructura Cloud de alta velocidad, te asesoramos paso a paso para que todo quede a tu nombre.",
+        highlight: "Configuración DNS y migración técnica incluida",
+        linkText: "Hablar con un Ingeniero Web →",
+        linkHref: "https://wa.me/56988169404?text=Hola%20SEMTIC,%20tengo%20dudas%20sobre%20mi%20dominio%20y%20p%C3%A1gina%20web"
     },
     {
-        category: "General",
+        category: "Proceso & Planes",
         color: "#2dd4bf",
-        question: "¿Cómo es el proceso para agendar un diagnóstico o cotización?",
-        answer: "Es muy fácil: escríbenos directamente por WhatsApp. Analizamos tu proyecto, respondemos tus dudas y te entregamos un presupuesto transparente en menos de 24 horas."
+        image: "/servicios-img/faq-steps-leads.jpg",
+        imageAlt: "Proceso de diagnóstico gratuito y cotización en menos de 24 horas",
+        question: "¿Cómo empezamos y cuánto demoran en entregar una cotización?",
+        answer: "El proceso es directo y sin burocracia: escríbenos por WhatsApp contándonos qué vendes y en qué ciudad operas. En una breve conversación con nuestros especialistas (no con vendedores comisionistas) auditamos tu caso y te enviamos una propuesta técnica y comercial transparente en menos de 24 horas.",
+        highlight: "Diagnóstico sin costo y propuesta en menos de 24h",
+        linkText: "Solicitar Diagnóstico por WhatsApp →",
+        linkHref: "https://wa.me/56988169404?text=Hola%20SEMTIC,%20quiero%20agendar%20un%20diagn%C3%B3stico%20gratuito%20para%20mi%20empresa"
+    }
+];
+
+const categories = [
+    "Todas",
+    "Landing Pages & Web",
+    "Google & Meta Ads",
+    "Marketing & SEO",
+    "Servicios con Dron",
+    "Proceso & Planes"
+];
+
+const quickLinks = [
+    {
+        title: "Landing Pages & Web Astro",
+        desc: "Sitios ultra rápidos (< 1s) con puntaje 98-100/100 en Google PageSpeed diseñados para convertir clics en clientes.",
+        image: "/web-img/web-astro-veloz.jpg",
+        href: "/desarrollo-paginas-web",
+        badge: "Ingeniería Web",
+        color: "#00f2ea"
+    },
+    {
+        title: "Campañas Google & Meta Ads",
+        desc: "Tráfico hiper-segmentado con medición real de conversiones (GA4, Tag Manager y Píxel) enfocado en retorno (ROI).",
+        image: "/ads-img/ads-estrategia-semtic.jpg",
+        href: "/publicidad-google-meta-ads",
+        badge: "Paid Media",
+        color: "#39ff14"
+    },
+    {
+        title: "Agencia de Marketing & SEO",
+        desc: "Estrategias integrales de captación B2B/B2C, posicionamiento SEO Local y embudos comerciales sin burocracia.",
+        image: "/mktn-img/estrategia-semtic.jpg",
+        href: "/agencia-marketing-digital",
+        badge: "Growth & SEO",
+        color: "#2dd4bf"
+    },
+    {
+        title: "Operaciones con Dron DGAC",
+        desc: "Filmación aérea en 4K HDR, fotogrametría técnica e inspección de obras con pilotos acreditados en Valparaíso y RM.",
+        image: "/cards-img/Producción Audiovisual 4K.webp",
+        href: "/drone",
+        badge: "Aero-Industrial",
+        color: "#3b82f6"
     }
 ];
 ---
 
 <Layout 
-    title="Preguntas Frecuentes | SEMTIC Agencia Digital" 
-    description="Resuelve tus dudas sobre desarrollo web, SEO, campañas de Google y Meta Ads y servicios de dron en Chile."
-    image="https://semtic.cl/social-img.webp">
+    title="Preguntas Frecuentes sobre Landing Pages, Google Ads, Meta Ads y Drones" 
+    description="Resuelve todas tus dudas sobre diseño de Landing Pages en Astro, campañas publicitarias en Google Ads y Meta Ads, posicionamiento SEO Local y vuelos con Dron DGAC en Valparaíso y Santiago."
+    image="https://semtic.cl/social-img.webp"
+    customFaqs={faqs.map(f => ({ question: f.question, answer: f.answer }))}>
 
     <!-- SECCIÓN 1: HERO -->
-    <section class="relative min-h-[60vh] flex items-center justify-center pt-32 pb-20 overflow-hidden" style="z-index: 10;">
+    <section class="relative min-h-[62vh] flex items-center justify-center pt-32 pb-16 overflow-hidden" style="z-index: 10;">
         <!-- Resplandores neón -->
         <div class="absolute top-1/4 left-1/4 w-80 md:w-96 h-80 md:h-96 bg-[#4f46e5] rounded-full mix-blend-screen filter blur-[140px] opacity-25 animate-pulse"></div>
         <div class="absolute bottom-1/4 right-1/4 w-80 md:w-96 h-80 md:h-96 bg-[#2dd4bf] rounded-full mix-blend-screen filter blur-[140px] opacity-25 animate-pulse" style="animation-delay: 2s;"></div>
 
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto hero-container">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-[#2dd4bf]/40 backdrop-blur-md mb-6">
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto hero-container">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-[#2dd4bf]/40 backdrop-blur-md mb-6 shadow-[0_0_20px_rgba(45,212,191,0.15)]">
                 <span class="w-2 h-2 rounded-full bg-[#2dd4bf] animate-ping"></span>
-                <span class="text-xs uppercase tracking-widest text-[#2dd4bf] font-bold">💡 Centro de Respuestas & Soporte</span>
+                <span class="text-xs uppercase tracking-widest text-[#2dd4bf] font-bold">Centro de Respuestas & Transparencia SEMTIC</span>
             </div>
 
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-[family-name:var(--font-space-grotesk)] font-bold mb-6 leading-tight text-white">
-                Preguntas <span class="text-gradient">Frecuentes</span>
+                Preguntas Frecuentes sobre <span class="text-gradient">Web, Ads y Drones</span>
             </h1>
 
-            <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
-                Encuentra respuestas claras y rápidas sobre el desarrollo de páginas web, SEO, campañas publicitarias y servicios con drones.
+            <p class="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto font-light leading-relaxed mb-10">
+                Respuestas claras, directas y sin letra chica sobre nuestros tiempos de entrega en <strong class="text-white font-medium">Landing Pages y desarrollo web en Astro</strong>, cómo rentabilizamos tu inversión en <strong class="text-white font-medium">Google Ads y Meta Ads</strong>, y cómo operamos vuelos con <strong class="text-white font-medium">Dron certificados por la DGAC</strong> en la <strong class="text-[#2dd4bf] font-medium">Región de Valparaíso</strong> y la <strong class="text-[#2dd4bf] font-medium">Región Metropolitana de Santiago</strong>.
             </p>
+
+            <!-- Micro-credenciales con imágenes 3D Glassmorphism -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto text-left">
+                <div class="group relative p-4 rounded-2xl bg-[#0a0a1a]/85 border border-white/10 hover:border-[#00f2ea]/50 backdrop-blur-xl flex items-center gap-3.5 transition-all duration-300 hover:-translate-y-1 shadow-[0_8px_30px_rgba(0,0,0,0.4)] overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-[#00f2ea] to-transparent opacity-60 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="w-14 h-14 rounded-xl overflow-hidden border border-[#00f2ea]/40 shadow-[0_0_15px_rgba(0,242,234,0.2)] shrink-0 bg-[#050511]">
+                        <img src="/servicios-img/faq-delivery-time.jpg" alt="Entrega rápida de Landing Pages" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="eager" />
+                    </div>
+                    <div>
+                        <span class="text-[10px] uppercase tracking-wider font-bold text-[#00f2ea] block mb-0.5">5 a 7 Días Hábiles</span>
+                        <div class="text-white text-sm font-bold font-[family-name:var(--font-space-grotesk)] leading-tight">Entrega Rápida</div>
+                        <div class="text-gray-400 text-xs mt-0.5">En Landing Pages Astro</div>
+                    </div>
+                </div>
+
+                <div class="group relative p-4 rounded-2xl bg-[#0a0a1a]/85 border border-white/10 hover:border-[#39ff14]/50 backdrop-blur-xl flex items-center gap-3.5 transition-all duration-300 hover:-translate-y-1 shadow-[0_8px_30px_rgba(0,0,0,0.4)] overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-[#39ff14] to-transparent opacity-60 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="w-14 h-14 rounded-xl overflow-hidden border border-[#39ff14]/40 shadow-[0_0_15px_rgba(57,255,20,0.2)] shrink-0 bg-[#050511]">
+                        <img src="/ads-img/pilar-pixel-tracking.jpg" alt="Medición de conversiones con GA4 y Tag Manager" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="eager" />
+                    </div>
+                    <div>
+                        <span class="text-[10px] uppercase tracking-wider font-bold text-[#39ff14] block mb-0.5">Trazabilidad Real</span>
+                        <div class="text-white text-sm font-bold font-[family-name:var(--font-space-grotesk)] leading-tight">100% Medible</div>
+                        <div class="text-gray-400 text-xs mt-0.5">GA4, GTM y Píxel activos</div>
+                    </div>
+                </div>
+
+                <div class="group relative p-4 rounded-2xl bg-[#0a0a1a]/85 border border-white/10 hover:border-[#2dd4bf]/50 backdrop-blur-xl flex items-center gap-3.5 transition-all duration-300 hover:-translate-y-1 shadow-[0_8px_30px_rgba(0,0,0,0.4)] overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-[#2dd4bf] to-transparent opacity-60 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="w-14 h-14 rounded-xl overflow-hidden border border-[#2dd4bf]/40 shadow-[0_0_15px_rgba(45,212,191,0.2)] shrink-0 bg-[#050511]">
+                        <img src="/servicios-img/faq-no-lockin.jpg" alt="Sin contratos de amarre ni mensualidades obligatorias" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="eager" />
+                    </div>
+                    <div>
+                        <span class="text-[10px] uppercase tracking-wider font-bold text-[#2dd4bf] block mb-0.5">Propiedad Total</span>
+                        <div class="text-white text-sm font-bold font-[family-name:var(--font-space-grotesk)] leading-tight">Sin Amarres</div>
+                        <div class="text-gray-400 text-xs mt-0.5">Cuentas y código tuyos</div>
+                    </div>
+                </div>
+
+                <div class="group relative p-4 rounded-2xl bg-[#0a0a1a]/85 border border-white/10 hover:border-[#3b82f6]/50 backdrop-blur-xl flex items-center gap-3.5 transition-all duration-300 hover:-translate-y-1 shadow-[0_8px_30px_rgba(0,0,0,0.4)] overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-[#3b82f6] to-transparent opacity-60 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="w-14 h-14 rounded-xl overflow-hidden border border-[#3b82f6]/40 shadow-[0_0_15px_rgba(59,130,246,0.2)] shrink-0 bg-[#050511]">
+                        <img src="/cards-img/Edicion Registro & Normativa.webp" alt="Operaciones de dron bajo normativa DGAC" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="eager" />
+                    </div>
+                    <div>
+                        <span class="text-[10px] uppercase tracking-wider font-bold text-[#3b82f6] block mb-0.5">Vuelos Certificados</span>
+                        <div class="text-white text-sm font-bold font-[family-name:var(--font-space-grotesk)] leading-tight">Normativa DGAC</div>
+                        <div class="text-gray-400 text-xs mt-0.5">DAN 91 y DAN 151</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- SECCIÓN 2: LISTADO DE FAQ INTERACTIVO -->
+    <!-- SECCIÓN 2: FILTROS + LISTADO DE FAQ CON IMÁGENES 3D GLASSMORPHISM -->
     <section class="py-16 relative" style="z-index: 10;">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <div class="space-y-4">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl md:text-4xl font-[family-name:var(--font-space-grotesk)] font-bold text-white mb-3">
+                    Todo lo que necesitas saber <span class="text-gradient">antes de empezar</span>
+                </h2>
+                <p class="text-gray-400 text-sm md:text-base max-w-2xl mx-auto font-light">
+                    Filtra por especialidad o haz clic en cada pregunta para revisar el detalle técnico y comercial de nuestro trabajo.
+                </p>
+            </div>
+
+            <!-- Botones de Filtro por Categoría -->
+            <div class="flex flex-wrap items-center justify-center gap-2.5 mb-10" id="faq-filters" role="tablist" aria-label="Filtrar preguntas frecuentes por categoría">
+                {categories.map((cat, idx) => (
+                    <button
+                        type="button"
+                        data-category={cat}
+                        class={`faq-filter-btn px-4 py-2.5 rounded-full text-xs md:text-sm font-semibold transition-all duration-300 border cursor-pointer ${
+                            idx === 0
+                                ? "bg-[#2dd4bf] text-[#050511] border-[#2dd4bf] shadow-[0_0_20px_rgba(45,212,191,0.35)]"
+                                : "bg-white/[0.04] text-gray-300 border-white/10 hover:border-[#2dd4bf]/50 hover:text-white"
+                        }`}
+                    >
+                        {cat}
+                    </button>
+                ))}
+            </div>
+
+            <!-- Acordeón de Preguntas Frecuentes -->
+            <div class="space-y-4" id="faq-list">
                 {faqs.map((faq, index) => (
-                    <details class="group rounded-3xl bg-[#0a0a1a]/80 border border-white/10 backdrop-blur-xl transition-all duration-300 open:border-[#2dd4bf]/50 open:bg-[#0a0a1a]/95 shadow-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
-                        <summary class="flex justify-between items-center p-6 md:p-8 cursor-pointer select-none">
-                            <div class="flex items-center gap-3 pr-4">
-                                <span class="px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-white/5 border border-white/10 text-[#2dd4bf] shrink-0">
+                    <details
+                        data-faq-category={faq.category}
+                        open={index === 0}
+                        class="faq-item group rounded-3xl bg-[#0a0a1a]/85 border border-white/10 backdrop-blur-xl transition-all duration-300 hover:border-[#2dd4bf]/35 open:border-[#2dd4bf]/60 open:bg-[#0a0a1f]/95 open:shadow-[0_10px_40px_rgba(0,242,234,0.08)] shadow-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden"
+                    >
+                        <summary class="flex justify-between items-center p-6 md:p-7 cursor-pointer select-none gap-4">
+                            <div class="flex flex-col sm:flex-row sm:items-center gap-2.5 sm:gap-4 pr-2">
+                                <span
+                                    class="px-3.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-white/5 border border-white/10 shrink-0 w-fit"
+                                    style={`color: ${faq.color}; border-color: ${faq.color}40; background-color: ${faq.color}12;`}
+                                >
                                     {faq.category}
                                 </span>
                                 <h3 class="text-lg md:text-xl font-bold text-white font-[family-name:var(--font-space-grotesk)] group-open:text-[#00f2ea] transition-colors leading-snug">
@@ -118,8 +336,40 @@ const faqs = [
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                         </summary>
-                        <div class="px-6 md:px-8 pb-8 text-gray-300 text-sm md:text-base leading-relaxed font-light border-t border-white/5 pt-4">
-                            {faq.answer}
+
+                        <div class="px-6 md:px-8 pb-7 pt-5 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center gap-5 md:gap-7 bg-gradient-to-b from-white/[0.01] to-transparent">
+                            <!-- Imagen 3D Glassmorphism a la izquierda de la respuesta -->
+                            <div class="w-24 h-24 md:w-28 md:h-28 rounded-2xl overflow-hidden shrink-0 border border-[#2dd4bf]/35 shadow-[0_0_25px_rgba(45,212,191,0.18)] bg-[#050511] relative group/img">
+                                <img
+                                    src={faq.image}
+                                    alt={faq.imageAlt}
+                                    class="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500"
+                                    loading="lazy"
+                                    width="112"
+                                    height="112"
+                                />
+                            </div>
+
+                            <!-- Contenido de la respuesta -->
+                            <div class="flex-1 space-y-3">
+                                <p class="text-gray-300 text-sm md:text-base leading-relaxed font-light">
+                                    {faq.answer}
+                                </p>
+                                <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
+                                    <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#2dd4bf] bg-[#2dd4bf]/10 border border-[#2dd4bf]/25 px-3 py-1 rounded-full">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-[#2dd4bf]"></span>
+                                        {faq.highlight}
+                                    </span>
+                                    <a
+                                        href={faq.linkHref}
+                                        target={faq.linkHref.startsWith("http") ? "_blank" : undefined}
+                                        rel={faq.linkHref.startsWith("http") ? "noopener noreferrer" : undefined}
+                                        class="text-xs md:text-sm font-bold text-[#00f2ea] hover:text-white transition-colors inline-flex items-center gap-1"
+                                    >
+                                        {faq.linkText}
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </details>
                 ))}
@@ -127,19 +377,104 @@ const faqs = [
         </div>
     </section>
 
-    <!-- SECCIÓN 3: BANNER AL BLOG -->
+    <!-- SECCIÓN 3: ACCESO DIRECTO A NUESTRAS ESPECIALIDADES -->
+    <section class="py-16 relative" style="z-index: 10;">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-12">
+                <span class="text-xs uppercase tracking-widest text-[#2dd4bf] font-bold block mb-2">Soluciones Especializadas</span>
+                <h2 class="text-2xl md:text-4xl font-[family-name:var(--font-space-grotesk)] font-bold text-white mb-3">
+                    Explora nuestras <span class="text-gradient">Áreas de Ingeniería y Marketing</span>
+                </h2>
+                <p class="text-gray-400 text-sm md:text-base max-w-2xl mx-auto font-light">
+                    Profundiza en la metodología, casos reales y entregables de cada servicio de SEMTIC.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {quickLinks.map((item) => (
+                    <a
+                        href={item.href}
+                        class="group rounded-3xl bg-[#0a0a1a]/80 border border-white/10 hover:border-[#2dd4bf]/50 p-5 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_12px_35px_rgba(45,212,191,0.12)] flex flex-col justify-between"
+                    >
+                        <div>
+                            <div class="relative h-40 w-full rounded-2xl overflow-hidden mb-4 border border-white/10 bg-[#050511]">
+                                <img
+                                    src={item.image}
+                                    alt={item.title}
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    loading="lazy"
+                                />
+                                <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a1a] via-transparent to-transparent opacity-70"></div>
+                                <span
+                                    class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#050511]/85 border backdrop-blur-md"
+                                    style={`color: ${item.color}; border-color: ${item.color}50;`}
+                                >
+                                    {item.badge}
+                                </span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white font-[family-name:var(--font-space-grotesk)] mb-2 group-hover:text-[#00f2ea] transition-colors">
+                                {item.title}
+                            </h3>
+                            <p class="text-gray-400 text-xs md:text-sm font-light leading-relaxed mb-4">
+                                {item.desc}
+                            </p>
+                        </div>
+                        <span class="text-xs font-bold text-[#2dd4bf] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                            Ver servicio completo →
+                        </span>
+                    </a>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: COBERTURA REGIONAL (VALPARAÍSO & SANTIAGO) + BANNER BLOG -->
     <section class="py-10 relative" style="z-index: 10;">
-        <div class="container mx-auto px-4 max-w-4xl">
+        <div class="container mx-auto px-4 max-w-5xl space-y-8">
+            <!-- Cobertura Regional -->
+            <div class="p-8 md:p-10 rounded-3xl bg-[#0a0a1a]/90 border border-white/10 backdrop-blur-xl shadow-2xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-[#00f2ea]/10 border border-[#00f2ea]/30 text-[#00f2ea] mb-3 inline-flex items-center gap-1.5">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            Presencia Local & Atención Directa
+                        </span>
+                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-3 font-[family-name:var(--font-space-grotesk)]">
+                            Atendemos empresas en <span class="text-gradient">Valparaíso y Santiago</span>
+                        </h2>
+                        <p class="text-gray-300 text-sm font-light leading-relaxed">
+                            Trabajamos codo a codo con negocios locales, clínicas, constructoras, inmobiliarias y empresas B2B tanto de manera presencial como 100% online en todo Chile.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                        <div class="p-4 rounded-2xl bg-white/[0.03] border border-[#2dd4bf]/25">
+                            <h3 class="text-[#2dd4bf] font-bold text-sm mb-1.5">Región de Valparaíso</h3>
+                            <p class="text-gray-400 leading-relaxed">
+                                Viña del Mar, Valparaíso, Concón, Quilpué, Villa Alemana, Limache, Olmué, Quillota, La Calera y San Antonio.
+                            </p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-white/[0.03] border border-[#3b82f6]/25">
+                            <h3 class="text-[#3b82f6] font-bold text-sm mb-1.5">Región Metropolitana</h3>
+                            <p class="text-gray-400 leading-relaxed">
+                                Santiago Centro, Providencia, Las Condes, Vitacura, Lo Barnechea, Ñuñoa, Huechuraba, Quilicura y Maipú.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Banner al Blog -->
             <div class="p-8 md:p-10 rounded-3xl bg-gradient-to-r from-[#0a0a20] via-[#0d123b] to-[#0a0a20] border border-[#2dd4bf]/40 backdrop-blur-xl relative overflow-hidden shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
                 <div class="max-w-xl">
-                    <span class="px-3 py-1 rounded-full text-xs font-semibold bg-[#2dd4bf]/10 border border-[#2dd4bf]/30 text-[#2dd4bf] mb-3 inline-block">
-                        📖 Guías & Artículos Técnicos
+                    <span class="px-3 py-1 rounded-full text-xs font-semibold bg-[#2dd4bf]/10 border border-[#2dd4bf]/30 text-[#2dd4bf] mb-3 inline-flex items-center gap-1.5">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                        Guías & Artículos Técnicos
                     </span>
-                    <h3 class="text-xl md:text-2xl font-bold text-white mb-2 font-[family-name:var(--font-space-grotesk)]">
-                        ¿Buscas información aún más detallada?
-                    </h3>
+                    <h2 class="text-xl md:text-2xl font-bold text-white mb-2 font-[family-name:var(--font-space-grotesk)]">
+                        ¿Buscas comparativas y guías aún más detalladas?
+                    </h2>
                     <p class="text-gray-300 text-sm font-light leading-relaxed">
-                        Explora nuestros artículos en el Blog sobre rendimiento web en Astro, posicionamiento SEO local y servicios de drones en Chile.
+                        Explora nuestros artículos en el Blog sobre velocidad web en Astro, optimización de campañas en Google Ads, SEO local y fotogrametría con drones en Chile.
                     </p>
                 </div>
                 <a href="/blog" class="px-6 py-3.5 rounded-full bg-[#2dd4bf] text-[#050511] font-semibold text-sm hover:bg-[#00f2ea] hover:shadow-[0_0_20px_rgba(0,242,234,0.5)] transition-all whitespace-nowrap">
@@ -149,27 +484,69 @@ const faqs = [
         </div>
     </section>
 
-    <!-- SECCIÓN 4: CTA FINAL -->
+    <!-- SECCIÓN 5: CTA FINAL -->
     <section class="py-24 relative overflow-hidden" style="z-index: 10;">
         <div class="container mx-auto px-4 max-w-4xl">
             <div class="p-10 md:p-14 rounded-3xl bg-gradient-to-r from-[#0a0a20] via-[#0e103b] to-[#0a0a20] border border-[#3b82f6]/40 backdrop-blur-xl text-center relative overflow-hidden shadow-2xl">
                 <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-[#00f2ea] to-transparent"></div>
+                <span class="inline-block px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-widest bg-[#25D366]/15 border border-[#25D366]/40 text-[#25D366] mb-4">
+                    Atención Directa sin Intermediarios
+                </span>
                 <h2 class="text-3xl md:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold mb-4 text-white">
-                    ¿Tienes una pregunta específica?
+                    ¿Tienes una duda específica sobre tu proyecto?
                 </h2>
-                <p class="text-gray-300 text-base md:text-lg max-w-xl mx-auto mb-8 font-light leading-relaxed">
-                    Escríbenos directamente y un especialista de nuestro equipo responderá todas tus inquietudes de inmediato.
+                <p class="text-gray-300 text-base md:text-lg max-w-2xl mx-auto mb-8 font-light leading-relaxed">
+                    Escríbenos directamente por WhatsApp. Hablarás con el ingeniero o especialista a cargo de tu proyecto (no con un bot ni vendedores) y recibirás respuesta inmediata.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4">
-                    <a href="https://wa.me/56988169404?text=Hola,%20tengo%20una%20consulta%20sobre%20sus%20servicios" target="_blank" class="px-8 py-4 rounded-full bg-gradient-to-r from-[#25D366] to-[#2dd4bf] text-[#050511] font-extrabold text-sm uppercase tracking-wide hover:shadow-[0_0_30px_rgba(45,212,191,0.5)] transition-all transform hover:-translate-y-1 flex items-center gap-2">
-                        💬 Hablar por WhatsApp
+                    <a href="https://wa.me/56988169404?text=Hola%20SEMTIC,%20tengo%20una%20consulta%20sobre%20sus%20servicios" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-full bg-gradient-to-r from-[#25D366] to-[#2dd4bf] text-[#050511] font-extrabold text-sm uppercase tracking-wide hover:shadow-[0_0_30px_rgba(45,212,191,0.5)] transition-all transform hover:-translate-y-1 flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+                        Hablar por WhatsApp Ahora
                     </a>
-                    <a href="/contacto" class="px-8 py-4 rounded-full border border-[#2dd4bf] text-[#2dd4bf] font-semibold text-sm hover:bg-[#2dd4bf] hover:text-[#050511] transition-all">
-                        Ver Canales de Contacto
+                    <a href="/servicios" class="px-8 py-4 rounded-full border border-[#2dd4bf] text-[#2dd4bf] font-semibold text-sm hover:bg-[#2dd4bf] hover:text-[#050511] transition-all">
+                        Ver Planes Landing Page + Ads
                     </a>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Script interactivo para filtrar preguntas por categoría -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const filterButtons = document.querySelectorAll<HTMLButtonElement>(".faq-filter-btn");
+            const faqItems = document.querySelectorAll<HTMLDetailsElement>(".faq-item");
+
+            filterButtons.forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    const selectedCat = btn.getAttribute("data-category") || "Todas";
+
+                    filterButtons.forEach((b) => {
+                        b.classList.remove("bg-[#2dd4bf]", "text-[#050511]", "border-[#2dd4bf]", "shadow-[0_0_20px_rgba(45,212,191,0.35)]");
+                        b.classList.add("bg-white/[0.04]", "text-gray-300", "border-white/10");
+                    });
+                    btn.classList.remove("bg-white/[0.04]", "text-gray-300", "border-white/10");
+                    btn.classList.add("bg-[#2dd4bf]", "text-[#050511]", "border-[#2dd4bf]", "shadow-[0_0_20px_rgba(45,212,191,0.35)]");
+
+                    let firstVisibleOpened = false;
+                    faqItems.forEach((item) => {
+                        const itemCat = item.getAttribute("data-faq-category");
+                        if (selectedCat === "Todas" || itemCat === selectedCat) {
+                            item.style.display = "block";
+                            if (!firstVisibleOpened) {
+                                item.open = true;
+                                firstVisibleOpened = true;
+                            } else {
+                                item.open = false;
+                            }
+                        } else {
+                            item.style.display = "none";
+                            item.open = false;
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 
 </Layout>
