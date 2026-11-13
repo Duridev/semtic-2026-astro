@@ -1,57 +1,204 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
+
+const aboutValues = [
+    {
+        number: "01",
+        title: "Trato Directo con Especialistas",
+        image: "/servicios-img/about-direct-contact.jpg",
+        imageAlt: "Trato directo con el especialista que programa tu web y gestiona tus campañas",
+        description:
+            "Hablas directamente por WhatsApp o videollamada con quien diseña la arquitectura de tu sitio web, configura tus campañas en Google Ads o pilota el dron en terreno. Sin intermediarios que distorsionen tu requerimiento."
+    },
+    {
+        number: "02",
+        title: "Transparencia Total y Propiedad",
+        image: "/servicios-img/about-transparency.jpg",
+        imageAlt: "Transparencia total en cuentas publicitarias, dominio web y métricas de conversión",
+        description:
+            "Tu dominio web, tu código y tus cuentas de Google Ads y Meta Ads son 100% tuyos desde el primer día. Sabes exactamente cuánto inviertes en publicidad y cuántos prospectos reales genera cada campaña."
+    },
+    {
+        number: "03",
+        title: "Enfoque en Ventas y Retorno (ROI)",
+        image: "/servicios-img/about-pyme-focus.jpg",
+        imageAlt: "Enfoque comercial en pymes y empresas para recibir cotizaciones reales",
+        description:
+            "Entendemos la realidad de las pymes y empresas de servicios en Chile: priorizamos que tu teléfono suene y tu WhatsApp reciba cotizaciones calificadas todos los días."
+    }
+];
+
+const workProcess = [
+    {
+        number: "01",
+        badge: "Fase 01 • Análisis",
+        title: "Diagnóstico Inicial",
+        image: "/mktn-img/paso-01-diagnostico.jpg",
+        imageAlt: "Diagnóstico inicial de negocio, mercado y público objetivo",
+        description:
+            "Analizamos tu negocio, tu zona geográfica de operación y tus objetivos comerciales para detectar las oportunidades más rápidas de captación.",
+        borderHover: "hover:border-[#00f2ea]/60",
+        accentText: "text-[#00f2ea]"
+    },
+    {
+        number: "02",
+        badge: "Fase 02 • Planificación",
+        title: "Estrategia a Medida",
+        image: "/servicios-img/faq-steps-leads.jpg",
+        imageAlt: "Diseño de estrategia digital personalizada de Landing Page, SEO y Ads",
+        description:
+            "Definimos la combinación exacta de Landing Page en Astro, campañas en Google/Meta Ads, SEO Local o producción aérea 4K según tu rubro.",
+        borderHover: "hover:border-[#2dd4bf]/60",
+        accentText: "text-[#2dd4bf]"
+    },
+    {
+        number: "03",
+        badge: "Fase 03 • Ejecución",
+        title: "Desarrollo & Producción",
+        image: "/ads-img/pilar-creativos-copy.jpg",
+        imageAlt: "Desarrollo web ultrarrápido y producción de anuncios y contenido 4K",
+        description:
+            "Programamos tu plataforma web sin código basura, configuramos la analítica de conversiones (GA4/Tag Manager) y producimos las piezas creativas.",
+        borderHover: "hover:border-[#3b82f6]/60",
+        accentText: "text-[#60a5fa]"
+    },
+    {
+        number: "04",
+        badge: "Fase 04 • Rendimiento",
+        title: "Optimización Continua",
+        image: "/ads-img/pilar-optimizacion-roi.jpg",
+        imageAlt: "Optimización continua de velocidad web y retorno de inversión publicitaria",
+        description:
+            "Medimos cada clic, llamada y mensaje de WhatsApp para ajustar pujas, filtrar búsquedas irrelevantes y maximizar tu tasa de cierre.",
+        borderHover: "hover:border-[#4f46e5]/60",
+        accentText: "text-[#818cf8]"
+    },
+    {
+        number: "05",
+        badge: "Fase 05 • Socio Digital",
+        title: "Acompañamiento Libre",
+        image: "/servicios-img/faq-no-lockin.jpg",
+        imageAlt: "Acompañamiento tecnológico flexible sin contratos de amarre",
+        description:
+            "Evolucionamos junto a tu empresa mes a mes con total libertad, sin contratos de amarre forzosos ni cobros ocultos por mantención.",
+        borderHover: "hover:border-emerald-400/60",
+        accentText: "text-emerald-400"
+    }
+];
 ---
 
 <Layout 
-    title="Quiénes Somos | Agencia Digital SEMTIC Chile" 
-    description="Conoce la historia, filosofía y equipo detrás de SEMTIC. Agencia especializada en desarrollo web, SEO, marketing digital y tecnología con drones en Chile."
+    title="Quiénes Somos | Agencia Digital SEMTIC en Valparaíso y Santiago" 
+    description="Conoce la historia, filosofía y equipo detrás de SEMTIC. Agencia especializada en diseño de Landing Pages, Google Ads, Meta Ads, desarrollo web en Astro y drones en Valparaíso y Santiago."
     image="https://semtic.cl/social-img.webp">
 
     <!-- SECCIÓN 1: HERO -->
-    <section class="relative min-h-[60vh] flex items-center justify-center pt-32 pb-16 overflow-hidden" style="z-index: 10;">
+    <section class="relative min-h-[68vh] flex items-center justify-center pt-32 pb-20 overflow-hidden" style="z-index: 10;">
         <!-- Luces y destellos neón -->
         <div class="absolute top-1/4 left-1/4 w-80 md:w-96 h-80 md:h-96 bg-[#2dd4bf] rounded-full mix-blend-screen filter blur-[140px] opacity-25 animate-pulse"></div>
         <div class="absolute bottom-1/4 right-1/4 w-80 md:w-96 h-80 md:h-96 bg-[#4f46e5] rounded-full mix-blend-screen filter blur-[140px] opacity-25 animate-pulse" style="animation-delay: 2s;"></div>
 
         <div class="relative z-10 text-center px-4 max-w-5xl mx-auto hero-container">
-            <div class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white/5 border border-[#2dd4bf]/40 backdrop-blur-md mb-6">
+            <div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-white/5 border border-[#2dd4bf]/40 backdrop-blur-md mb-6 shadow-lg">
                 <span class="w-2.5 h-2.5 rounded-full bg-[#2dd4bf] animate-ping"></span>
-                <span class="text-sm uppercase tracking-widest text-[#2dd4bf] font-bold">🚀 Agencia Digital en Chile</span>
+                <span class="text-xs sm:text-sm uppercase tracking-widest text-[#2dd4bf] font-bold">
+                    Agencia Digital &amp; Socio Tecnológico en Chile
+                </span>
             </div>
 
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-[family-name:var(--font-space-grotesk)] font-bold mb-6 leading-tight text-white">
                 Transformamos Visiones Complejas en <br class="hidden lg:block"/>
-                <span class="text-gradient">Resultados Digitales Predecibles</span>
+                <span class="text-gradient">Resultados Comerciales Predecibles</span>
             </h1>
 
             <p class="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto mb-10 font-light leading-relaxed">
-                Somos un equipo multidisciplinario de desarrolladores, estrategas de marketing y pilotos de dron con base en Limache, atendiendo proyectos en Santiago, Valparaíso, Viña del Mar y todo Chile.
+                Somos un equipo multidisciplinario de desarrolladores web en Astro, especialistas en <strong class="text-white font-medium">Google Ads y Meta Ads</strong> y pilotos de dron certificados por la DGAC. Nacimos en la <span class="text-[#2dd4bf] font-normal">Región de Valparaíso</span> y hoy impulsamos negocios en <span class="text-[#00f2ea] font-normal">Santiago (RM) y todo Chile</span>.
             </p>
+
+            <!-- Micro-credenciales -->
+            <div class="pt-6 border-t border-white/10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs sm:text-sm text-gray-300">
+                <div class="flex items-center gap-2">
+                    <span class="text-[#00f2ea] font-bold">✓</span>
+                    <span>Trato directo sin intermediarios ni burocracia</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-[#2dd4bf] font-bold">✓</span>
+                    <span>Ingeniería Web en Astro + Performance Ads</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-[#818cf8] font-bold">✓</span>
+                    <span>Enfoque 100% en el retorno de tu inversión</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- SECCIÓN 2: NUESTRA HISTORIA Y MANIFIESTO -->
-    <section class="py-16 relative" style="z-index: 10;">
-        <div class="container mx-auto px-4 max-w-5xl">
-            <div class="p-10 md:p-14 rounded-3xl bg-[#0a0a1a]/80 border border-white/10 backdrop-blur-xl relative overflow-hidden shadow-2xl">
+    <!-- SECCIÓN 2: MANIFIESTO SEMTIC & 3 VALORES CON IMÁGENES 3D GLASSMORPHISM -->
+    <section class="py-20 relative border-y border-white/10 bg-[#070716]/70" style="z-index: 10;">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="p-8 sm:p-12 rounded-3xl bg-[#0a0a1a]/85 border border-white/10 backdrop-blur-xl relative overflow-hidden shadow-2xl">
                 <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-[#2dd4bf] to-transparent"></div>
                 
-                <span class="block text-sm md:text-base font-bold mb-3 text-[#2dd4bf] tracking-[0.25em] uppercase font-[family-name:var(--font-space-grotesk)] text-center">
-                    Manifiesto SEMTIC
-                </span>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                    <!-- Columna Izquierda: Historia y Manifiesto -->
+                    <div class="lg:col-span-6 space-y-5">
+                        <span class="inline-block px-4 py-1.5 rounded-full text-xs font-bold text-[#2dd4bf] bg-[#2dd4bf]/10 border border-[#2dd4bf]/30 tracking-widest uppercase">
+                            Manifiesto SEMTIC
+                        </span>
 
-                <h2 class="text-2xl md:text-4xl font-bold text-white mb-6 font-[family-name:var(--font-space-grotesk)] text-center leading-tight">
-                    Creemos en el poder del diseño funcional, las Landing Pages veloces y las campañas rentables
-                </h2>
+                        <h2 class="text-2xl sm:text-4xl font-bold text-white font-[family-name:var(--font-space-grotesk)] leading-tight">
+                            Tu socio tecnológico directo, sin intermediarios ni burocracia
+                        </h2>
 
-                <div class="space-y-6 text-gray-300 text-base md:text-lg leading-relaxed font-light">
-                    <p>
-                        SEMTIC nació de una convención clara: las empresas en Chile no necesitan más sitios web "estáticos" ni presupuestos desperdiciados en publicidad sin retorno. Necesitan <strong class="text-white">sistemas digitales integrados</strong> que trabajen como un motor continuo de captación de clientes.
-                    </p>
-                    <p>
-                        Desde nuestro inicio en la Región de Valparaíso, combinamos las disciplinas más exigentes del ámbito digital: desarrollo web de ultra velocidad, posicionamiento SEO orgánico, anuncios en Google y Meta, y producción audiovisual con drones certificados.
-                    </p>
+                        <p class="text-gray-300 text-base sm:text-lg leading-relaxed font-light">
+                            SEMTIC nació de una convicción clara: las pymes y empresas en Chile no necesitan más sitios web lentos que nadie visita ni presupuestos quemados en publicidad sin retorno. Necesitan <strong class="text-white font-semibold">sistemas digitales integrados</strong> que funcionen como un motor diario de captación de clientes.
+                        </p>
+
+                        <p class="text-gray-300 text-base sm:text-lg leading-relaxed font-light">
+                            Unimos bajo un mismo techo las disciplinas clave del crecimiento digital moderno: <strong class="text-white font-semibold">diseño de Landing Pages ultrarrápidas en Astro</strong>, <strong class="text-white font-semibold">campañas de alta intención en Google Ads y Meta Ads</strong>, posicionamiento SEO Local y producción audiovisual aérea con drones certificados.
+                        </p>
+
+                        <!-- Cobertura Regional -->
+                        <div class="pt-3 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+                            <div class="p-4 rounded-2xl bg-[#050511]/80 border border-[#00f2ea]/25">
+                                <h3 class="text-[#00f2ea] font-bold text-xs sm:text-sm mb-1">📍 Región de Valparaíso</h3>
+                                <p class="text-gray-300 font-light">Viña del Mar, Valparaíso, Concón, Quilpué, Villa Alemana, Limache y Quillota.</p>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-[#050511]/80 border border-[#2dd4bf]/25">
+                                <h3 class="text-[#2dd4bf] font-bold text-xs sm:text-sm mb-1">📍 Región Metropolitana</h3>
+                                <p class="text-gray-300 font-light">Santiago Centro, Providencia, Las Condes, Vitacura, Ñuñoa, Maipú y toda la RM.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna Derecha: 3 Tarjetas de Valores con Ilustraciones 3D Glassmorphism -->
+                    <div class="lg:col-span-6 space-y-4">
+                        {aboutValues.map((val) => (
+                            <div class="p-5 rounded-2xl bg-[#050511]/85 border border-white/10 hover:border-[#2dd4bf]/40 transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center gap-4 shadow-lg group">
+                                <img
+                                    src={val.image}
+                                    alt={val.imageAlt}
+                                    width="88"
+                                    height="88"
+                                    class="w-20 h-20 sm:w-22 sm:h-22 rounded-2xl object-cover shrink-0 border border-[#2dd4bf]/30 bg-[#0a0a1a] shadow-md group-hover:scale-105 transition-transform duration-300"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                                <div>
+                                    <span class="text-xs font-bold uppercase tracking-widest text-[#00f2ea] block mb-0.5">
+                                        Pilar {val.number}
+                                    </span>
+                                    <h3 class="text-lg font-bold text-white font-[family-name:var(--font-space-grotesk)] mb-1">
+                                        {val.title}
+                                    </h3>
+                                    <p class="text-gray-300 text-xs sm:text-sm font-light leading-relaxed">
+                                        {val.description}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
@@ -61,11 +208,11 @@ import '../styles/global.css';
     <section class="py-20 relative bg-gradient-to-b from-transparent via-[#0a0a20]/60 to-transparent" style="z-index: 10;">
         <div class="container mx-auto px-4 max-w-6xl">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-6 flex justify-center">
-                    <div class="relative w-full max-w-md p-6 rounded-3xl bg-[#0a0a1a]/60 border border-white/10 backdrop-blur-xl shadow-2xl flex items-center justify-center">
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md p-6 rounded-3xl bg-[#0a0a1a]/70 border border-white/10 backdrop-blur-xl shadow-2xl flex items-center justify-center">
                         <img 
                             src="/toroide.webp" 
-                            alt="El Toroide SEMTIC - Flujo Digital Infinito" 
+                            alt="El Toroide SEMTIC - Flujo Digital Continuo de Ventas" 
                             class="max-h-80 object-contain drop-shadow-[0_0_35px_rgba(0,242,234,0.4)]"
                             loading="lazy"
                             decoding="async"
@@ -73,99 +220,86 @@ import '../styles/global.css';
                     </div>
                 </div>
 
-                <div class="lg:col-span-6">
-                    <span class="px-4 py-1.5 rounded-full text-sm font-semibold bg-[#00f2ea]/10 text-[#00f2ea] border border-[#00f2ea]/30 mb-4 inline-block">
-                        🌀 Nuestra Simbología
+                <div class="lg:col-span-7">
+                    <span class="px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-[#00f2ea]/10 text-[#00f2ea] border border-[#00f2ea]/30 mb-4 inline-block uppercase tracking-wider">
+                        🌀 Nuestra Metodología Circular
                     </span>
                     <h2 class="text-3xl md:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold text-white mb-6 leading-tight">
                         La Filosofía del <span class="text-gradient">Toroide Digital</span>
                     </h2>
                     <p class="text-gray-300 text-base md:text-lg mb-6 leading-relaxed font-light">
-                        Un toroide representa un flujo de energía autorregulable, continuo e infinito. En SEMTIC aplicamos este principio a la presencia online de nuestros clientes:
+                        Un toroide representa un sistema de energía continuo y autorregulable. En SEMTIC aplicamos esta arquitectura para que tu inversión digital no se pierda, sino que retroalimente tus ventas mes a mes:
                     </p>
-                    <ul class="space-y-4 text-gray-300 text-sm md:text-base font-light">
-                        <li class="flex items-start gap-3">
-                            <span class="text-[#00f2ea] font-bold">1. Entrada de Tráfico:</span> Atraemos visitantes calificados mediante Ads y SEO.
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-[#2dd4bf] font-bold">2. Conversión Fluida:</span> Tu web procesa las visitas y genera cotizaciones.
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-[#3b82f6] font-bold">3. Re-inversión & Datos:</span> Optimizamos las campañas con la información de conversiones obtenida.
-                        </li>
-                    </ul>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="p-4 rounded-2xl bg-[#0a0a1a]/80 border border-[#00f2ea]/25">
+                            <span class="text-[#00f2ea] font-extrabold text-sm block mb-1">1. Tráfico Calificado</span>
+                            <p class="text-gray-300 text-xs sm:text-sm font-light">Atraemos clientes con intención de compra mediante Google Ads, Meta Ads y SEO Local.</p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-[#0a0a1a]/80 border border-[#2dd4bf]/25">
+                            <span class="text-[#2dd4bf] font-extrabold text-sm block mb-1">2. Conversión Rápida</span>
+                            <p class="text-gray-300 text-xs sm:text-sm font-light">Tu Landing Page en Astro carga en menos de 1 segundo y convierte la visita en un WhatsApp.</p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-[#0a0a1a]/80 border border-[#3b82f6]/25">
+                            <span class="text-[#60a5fa] font-extrabold text-sm block mb-1">3. Optimización con Datos</span>
+                            <p class="text-gray-300 text-xs sm:text-sm font-light">Los datos reales de conversión entrenan tus campañas para bajar el costo por cliente.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN 4: PROCESO DE TRABAJO -->
-    <section class="py-20 relative" style="z-index: 10;">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <div class="text-center mb-16">
+    <!-- SECCIÓN 4: PROCESO DE TRABAJO (5 PASOS CON IMÁGENES 3D GLASSMORPHISM) -->
+    <section class="py-24 relative border-t border-white/10" style="z-index: 10;">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <span class="px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-[#2dd4bf]/10 text-[#2dd4bf] border border-[#2dd4bf]/30 mb-3 inline-block uppercase tracking-wider">
+                    ⚡ Ejecución Ágil y Sin Burocracia
+                </span>
                 <h2 class="text-3xl md:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold text-white mb-4">
                     Cómo Trabajamos en <span class="text-gradient">Cada Proyecto</span>
                 </h2>
-                <p class="text-gray-300 text-base md:text-lg max-w-2xl mx-auto font-light">
-                    Un proceso claro, transparente y enfocado en entregar la máxima calidad sin demoras innecesarias.
+                <p class="text-gray-300 text-base md:text-lg font-light">
+                    Un proceso estructurado en 5 etapas para llevar tu proyecto desde la idea inicial hasta la generación constante de prospectos.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                <!-- Paso 1 -->
-                <div class="p-6 rounded-3xl bg-[#0a0a1a]/80 border border-white/10 backdrop-blur-xl relative hover:border-[#00f2ea]/50 transition-all group flex flex-col justify-between">
-                    <div>
-                        <span class="text-3xl font-extrabold text-[#00f2ea] font-[family-name:var(--font-space-grotesk)] mb-3 block">01</span>
-                        <h3 class="text-lg font-bold text-white mb-2">Diagnóstico Inicial</h3>
-                        <p class="text-sm text-gray-300 font-light leading-relaxed">
-                            Entendemos tu negocio, tu mercado y definimos tus objetivos comerciales.
-                        </p>
-                    </div>
-                </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                {workProcess.map((step) => (
+                    <article class={`p-6 rounded-3xl bg-[#0a0a1a]/85 border border-white/10 backdrop-blur-xl relative ${step.borderHover} transition-all duration-300 hover:-translate-y-1.5 group flex flex-col justify-between shadow-xl`}>
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-3">
+                                <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                                    {step.badge}
+                                </span>
+                                <span class={`text-2xl font-extrabold ${step.accentText} font-[family-name:var(--font-space-grotesk)]`}>
+                                    {step.number}
+                                </span>
+                            </div>
 
-                <!-- Paso 2 -->
-                <div class="p-6 rounded-3xl bg-[#0a0a1a]/80 border border-white/10 backdrop-blur-xl relative hover:border-[#2dd4bf]/50 transition-all group flex flex-col justify-between">
-                    <div>
-                        <span class="text-3xl font-extrabold text-[#2dd4bf] font-[family-name:var(--font-space-grotesk)] mb-3 block">02</span>
-                        <h3 class="text-lg font-bold text-white mb-2">Estrategia Custom</h3>
-                        <p class="text-sm text-gray-300 font-light leading-relaxed">
-                            Diseñamos la combinación exacta de web, SEO, anuncios o videos.
-                        </p>
-                    </div>
-                </div>
+                            <!-- Imagen 3D Glassmorphism del Paso -->
+                            <div class="relative h-36 w-full rounded-2xl overflow-hidden mb-4 border border-white/10 bg-[#050511] shadow-inner">
+                                <img
+                                    src={step.image}
+                                    alt={step.imageAlt}
+                                    width="320"
+                                    height="240"
+                                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                                <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a1a]/80 via-transparent to-transparent"></div>
+                            </div>
 
-                <!-- Paso 3 -->
-                <div class="p-6 rounded-3xl bg-[#0a0a1a]/80 border border-white/10 backdrop-blur-xl relative hover:border-[#3b82f6]/50 transition-all group flex flex-col justify-between">
-                    <div>
-                        <span class="text-3xl font-extrabold text-[#3b82f6] font-[family-name:var(--font-space-grotesk)] mb-3 block">03</span>
-                        <h3 class="text-lg font-bold text-white mb-2">Desarrollo & Diseño</h3>
-                        <p class="text-sm text-gray-300 font-light leading-relaxed">
-                            Construimos tu plataforma o ejecutamos los contenidos con calidad 4K.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Paso 4 -->
-                <div class="p-6 rounded-3xl bg-[#0a0a1a]/80 border border-white/10 backdrop-blur-xl relative hover:border-[#4f46e5]/50 transition-all group flex flex-col justify-between">
-                    <div>
-                        <span class="text-3xl font-extrabold text-[#4f46e5] font-[family-name:var(--font-space-grotesk)] mb-3 block">04</span>
-                        <h3 class="text-lg font-bold text-white mb-2">Optimización</h3>
-                        <p class="text-sm text-gray-300 font-light leading-relaxed">
-                            Medimos el rendimiento y realizamos ajustes para maximizar conversión.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Paso 5 -->
-                <div class="p-6 rounded-3xl bg-[#0a0a1a]/80 border border-white/10 backdrop-blur-xl relative hover:border-emerald-400/50 transition-all group flex flex-col justify-between">
-                    <div>
-                        <span class="text-3xl font-extrabold text-emerald-400 font-[family-name:var(--font-space-grotesk)] mb-3 block">05</span>
-                        <h3 class="text-lg font-bold text-white mb-2">Acompañamiento</h3>
-                        <p class="text-sm text-gray-300 font-light leading-relaxed">
-                            Seguimos contigo para mantener tu web segura e impulsar tu crecimiento.
-                        </p>
-                    </div>
-                </div>
+                            <h3 class="text-lg font-bold text-white mb-2 font-[family-name:var(--font-space-grotesk)] leading-snug">
+                                {step.title}
+                            </h3>
+                            <p class="text-xs sm:text-sm text-gray-300 font-light leading-relaxed">
+                                {step.description}
+                            </p>
+                        </div>
+                    </article>
+                ))}
             </div>
         </div>
     </section>
@@ -179,10 +313,10 @@ import '../styles/global.css';
                         📖 Explora Nuestro Blog
                     </span>
                     <h3 class="text-xl md:text-2xl font-bold text-white mb-2 font-[family-name:var(--font-space-grotesk)]">
-                        Conocimiento, Tendencias Digitales & Tecnología Aérea
+                        Conocimiento, Tendencias Digitales &amp; Tecnología Aérea
                     </h3>
                     <p class="text-gray-300 text-sm md:text-base font-light leading-relaxed">
-                        Publicamos artículos periódicos sobre desarrollo en Astro, optimizaciones SEO en Chile y fotografía con drones.
+                        Publicamos artículos sobre desarrollo en Astro, estrategias de Google Ads, SEO Local en Chile y fotografía con drones.
                     </p>
                 </div>
                 <a href="/blog" class="px-6 py-3.5 rounded-full bg-[#2dd4bf] text-[#050511] font-semibold text-sm hover:bg-[#00f2ea] hover:shadow-[0_0_20px_rgba(0,242,234,0.5)] transition-all whitespace-nowrap">
@@ -198,17 +332,17 @@ import '../styles/global.css';
             <div class="p-10 md:p-14 rounded-3xl bg-gradient-to-r from-[#0a0a20] via-[#0e103b] to-[#0a0a20] border border-[#2dd4bf]/40 backdrop-blur-xl text-center relative overflow-hidden shadow-2xl">
                 <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-[#00f2ea] to-transparent"></div>
                 <h2 class="text-3xl md:text-5xl font-[family-name:var(--font-space-grotesk)] font-bold mb-6 text-white leading-tight">
-                    ¿Trabajamos juntos en tu <span class="text-gradient">próximo gran proyecto</span>?
+                    ¿Trabajamos juntos en tu <span class="text-gradient">próximo proyecto digital</span>?
                 </h2>
                 <p class="text-gray-300 text-base md:text-lg max-w-2xl mx-auto mb-8 font-light leading-relaxed">
-                    Escríbenos directamente o agenda una asesoría virtual para conversar sobre tus objetivos.
+                    Escríbenos directamente a nuestro WhatsApp comercial o revisa nuestro Pack de Landing Page + Google Ads para empezar a recibir cotizaciones reales.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4">
-                    <a href="https://wa.me/56988169404?text=Hola%20Semtic!%20Me%20gustaría%20conversar%20sobre%20un%20proyecto" target="_blank" class="px-8 py-4 rounded-full bg-gradient-to-r from-[#2dd4bf] to-[#00f2ea] text-[#050511] font-extrabold text-base uppercase tracking-wide hover:shadow-[0_0_30px_rgba(0,242,234,0.6)] transition-all transform hover:-translate-y-1 flex items-center gap-2">
-                        🚀 Agendar Asesoría Gratuita
+                    <a href="https://wa.me/56988169404?text=Hola%20Semtic!%20Me%20gustaría%20conversar%20sobre%20un%20proyecto" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-full bg-gradient-to-r from-[#2dd4bf] to-[#00f2ea] text-[#050511] font-extrabold text-base uppercase tracking-wide hover:shadow-[0_0_30px_rgba(0,242,234,0.6)] transition-all transform hover:-translate-y-1 flex items-center gap-2">
+                        🚀 Hablar con un Especialista
                     </a>
-                    <a href="/contacto" class="px-8 py-4 rounded-full border border-[#2dd4bf] text-[#2dd4bf] font-semibold text-base hover:bg-[#2dd4bf] hover:text-[#050511] transition-all">
-                        Ver Canales de Contacto
+                    <a href="/servicios" class="px-8 py-4 rounded-full border border-[#2dd4bf] text-[#2dd4bf] font-semibold text-base hover:bg-[#2dd4bf] hover:text-[#050511] transition-all">
+                        Ver Pack Landing + Ads
                     </a>
                 </div>
             </div>
