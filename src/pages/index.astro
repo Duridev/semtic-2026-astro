@@ -102,6 +102,19 @@ const interactiveComparisons = [
         ]
     }
 ];
+
+const clientBrands = [
+    { name: "TM Quinta", sector: "Maquinaria & Áridos", src: "/logos/logo-cuadrado-tmquinta.webp" },
+    { name: "Fugas Detect", sector: "Detección & Gasfitería", src: "/logos/logo-sin-fondo.webp" },
+    { name: "Agrosilver", sector: "Servicios Agrícolas", src: "/logos/Agrosilver.webp" },
+    { name: "Rebbel", sector: "Estudio de Arquitectura", src: "/logos/Rebbel_Logo trans-cuadrado.webp" },
+    { name: "Distribuidora Nasa", sector: "Logística & Mayorista", src: "/logos/DISTRIBUIDORA Nasa sin fondo.png" },
+    { name: "Rovegno", sector: "Repuestos & Lubricantes", src: "/logos/logo-rovegno.webp" },
+    { name: "Chileferret", sector: "Ferretería Industrial", src: "/logos/Logo Ferret-R.webp" },
+    { name: "Estrart", sector: "Producción & Diseño", src: "/logos/Estrart logo.webp" },
+    { name: "La Chilenísima", sector: "Eventos Masivos", src: "/logos/La Chilenisima Fonda Logo-cuadrado.webp" },
+    { name: "Ciudad Sexshop", sector: "E-Commerce Nacional", src: "/logos/logo-ciudadsexshop.webp" }
+];
 ---
 
 <Layout 
@@ -181,42 +194,53 @@ const interactiveComparisons = [
         </div>
     </header>
 
-    <!-- SECCIÓN 2: MARQUEE DE MARCAS (SOCIAL PROOF) -->
-    <section class="py-12 md:py-16 border-y border-white/10 bg-[#0a0a1a]/75 backdrop-blur-xl relative z-10 overflow-hidden">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-px bg-gradient-to-r from-transparent via-[#2dd4bf]/40 to-transparent"></div>
+    <!-- SECCIÓN 2: CARRUSEL DE MARCAS EN CÁPSULAS 3D GLASSMORPHISM (SOCIAL PROOF) -->
+    <section class="py-14 md:py-16 border-y border-white/10 bg-[#070818]/85 backdrop-blur-2xl relative z-10 overflow-hidden">
+        <!-- Líneas de luz superior e inferior -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-[#00f2ea]/50 to-transparent"></div>
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-2/3 h-px bg-gradient-to-r from-transparent via-[#2dd4bf]/30 to-transparent"></div>
+
         <div class="container mx-auto px-4">
-            <h2 class="text-center text-gray-300 text-xs md:text-sm font-bold tracking-[0.22em] uppercase mb-10">
-                Empresas en Valparaíso y Santiago que confían su crecimiento en SEMTIC
-            </h2>
+            <div class="flex flex-col items-center justify-center text-center mb-10">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/[0.04] border border-white/10 text-[11px] font-bold uppercase tracking-widest text-[#2dd4bf] mb-3">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#2dd4bf] animate-pulse"></span>
+                    Confianza &amp; Resultados Comprobados
+                </div>
+                <h2 class="text-gray-200 text-sm md:text-base font-bold font-[family-name:var(--font-space-grotesk)] tracking-[0.14em] uppercase">
+                    Empresas en <span class="text-[#00f2ea]">Valparaíso y Santiago</span> que confían su crecimiento en SEMTIC
+                </h2>
+            </div>
             
-            <div class="relative w-full flex overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-[50px] md:before:w-[150px] before:bg-gradient-to-r before:from-[#050511] before:to-transparent after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-[50px] md:after:w-[150px] after:bg-gradient-to-l after:from-[#050511] after:to-transparent">
+            <div class="relative w-full flex overflow-hidden py-2 before:absolute before:left-0 before:top-0 before:z-20 before:h-full before:w-[60px] md:before:w-[160px] before:bg-gradient-to-r before:from-[#070818] before:to-transparent before:pointer-events-none after:absolute after:right-0 after:top-0 after:z-20 after:h-full after:w-[60px] md:after:w-[160px] after:bg-gradient-to-l after:from-[#070818] after:to-transparent after:pointer-events-none">
                 <div class="flex w-max animate-marquee items-center">
-                    <!-- Set 1 -->
-                    <div class="flex gap-14 lg:gap-20 items-center px-6 lg:px-10">
-                        <img src="/logos/Agrosilver.webp" alt="Agrosilver" class="h-14 md:h-16 w-auto max-w-[10rem] object-contain opacity-65 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async" />
-                        <img src="/logos/DISTRIBUIDORA Nasa sin fondo.png" alt="Distribuidora Nasa" class="h-14 md:h-16 w-auto max-w-[10rem] object-contain opacity-65 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async" />
-                        <img src="/logos/Estrart logo.webp" alt="Estrart" class="h-14 md:h-16 w-auto max-w-[10rem] object-contain opacity-65 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async" />
-                        <img src="/logos/La Chilenisima Fonda Logo-cuadrado.webp" alt="La Chilenisima" class="h-14 md:h-16 w-auto max-w-[10rem] object-contain opacity-65 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async" />
-                        <img src="/logos/Logo Ferret-R.webp" alt="Ferret-R" class="h-14 md:h-16 w-auto max-w-[10rem] object-contain opacity-65 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async" />
-                        <img src="/logos/Rebbel_Logo trans-cuadrado.webp" alt="Rebbel Arquitectura" class="h-14 md:h-16 w-auto max-w-[10rem] object-contain opacity-65 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async" />
-                        <img src="/logos/logo-ciudadsexshop.webp" alt="Ciudad Sexshop" class="h-14 md:h-16 w-auto max-w-[10rem] object-contain opacity-65 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async" />
-                        <img src="/logos/logo-rovegno.webp" alt="Rovegno" class="h-14 md:h-16 w-auto max-w-[10rem] object-contain opacity-65 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async" />
-                        <img src="/logos/logo-cuadrado-tmquinta.webp" alt="TM Quinta" class="h-14 md:h-16 w-auto max-w-[10rem] object-contain opacity-65 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async" />
-                        <img src="/logos/logo-sin-fondo.webp" alt="Fugas Detect" class="h-14 md:h-16 w-auto max-w-[10rem] object-contain opacity-65 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async" />
-                    </div>
-                    <!-- Set 2 -->
-                    <div class="flex gap-14 lg:gap-20 items-center px-6 lg:px-10">
-                        <img src="/logos/Agrosilver.webp" alt="Agrosilver" class="h-14 md:h-16 w-auto max-w-[10rem] object-contain opacity-65 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async" />
-                        <img src="/logos/DISTRIBUIDORA Nasa sin fondo.png" alt="Distribuidora Nasa" class="h-14 md:h-16 w-auto max-w-[10rem] object-contain opacity-65 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async" />
-                        <img src="/logos/Estrart logo.webp" alt="Estrart" class="h-14 md:h-16 w-auto max-w-[10rem] object-contain opacity-65 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async" />
-                        <img src="/logos/La Chilenisima Fonda Logo-cuadrado.webp" alt="La Chilenisima" class="h-14 md:h-16 w-auto max-w-[10rem] object-contain opacity-65 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async" />
-                        <img src="/logos/Logo Ferret-R.webp" alt="Ferret-R" class="h-14 md:h-16 w-auto max-w-[10rem] object-contain opacity-65 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async" />
-                        <img src="/logos/Rebbel_Logo trans-cuadrado.webp" alt="Rebbel Arquitectura" class="h-14 md:h-16 w-auto max-w-[10rem] object-contain opacity-65 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async" />
-                        <img src="/logos/logo-ciudadsexshop.webp" alt="Ciudad Sexshop" class="h-14 md:h-16 w-auto max-w-[10rem] object-contain opacity-65 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async" />
-                        <img src="/logos/logo-rovegno.webp" alt="Rovegno" class="h-14 md:h-16 w-auto max-w-[10rem] object-contain opacity-65 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async" />
-                        <img src="/logos/logo-cuadrado-tmquinta.webp" alt="TM Quinta" class="h-14 md:h-16 w-auto max-w-[10rem] object-contain opacity-65 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async" />
-                        <img src="/logos/logo-sin-fondo.webp" alt="Fugas Detect" class="h-14 md:h-16 w-auto max-w-[10rem] object-contain opacity-65 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async" />
-                    </div>
+                    {[0, 1].map(() => (
+                        <div class="flex gap-5 lg:gap-6 items-center px-2.5 lg:px-3">
+                            {clientBrands.map((brand) => (
+                                <div class="group/brand min-w-[235px] sm:min-w-[255px] p-3.5 rounded-2xl bg-gradient-to-b from-white/[0.06] to-[#0a0b1e]/90 border border-white/10 hover:border-[#00f2ea]/50 backdrop-blur-xl shadow-[inset_0_1px_0_rgba(255,255,255,0.15),0_10px_25px_rgba(0,0,0,0.45)] hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.3),0_12px_30px_rgba(0,242,234,0.18)] transition-all duration-300 hover:-translate-y-1 flex items-center gap-3.5">
+                                    <!-- Pedestal luminoso para el logo -->
+                                    <div class="w-14 h-14 rounded-xl bg-white/[0.08] group-hover/brand:bg-white/[0.14] border border-white/15 group-hover/brand:border-[#00f2ea]/40 p-2 flex items-center justify-center shrink-0 transition-all duration-300 shadow-inner">
+                                        <img
+                                            src={brand.src}
+                                            alt={brand.name}
+                                            class="max-h-10 max-w-10 w-auto h-auto object-contain opacity-90 group-hover/brand:opacity-100 group-hover/brand:scale-110 transition-all duration-300"
+                                            loading="lazy"
+                                            decoding="async"
+                                        />
+                                    </div>
+                                    <!-- Nombre y rubro -->
+                                    <div class="min-w-0 flex-1">
+                                        <div class="text-white text-sm font-bold font-[family-name:var(--font-space-grotesk)] truncate group-hover/brand:text-[#00f2ea] transition-colors">
+                                            {brand.name}
+                                        </div>
+                                        <div class="text-[11px] text-gray-400 group-hover/brand:text-gray-200 truncate flex items-center gap-1.5 mt-0.5 transition-colors">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-[#2dd4bf] shrink-0"></span>
+                                            <span class="truncate">{brand.sector}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>
