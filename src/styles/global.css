@@ -208,12 +208,12 @@ body {
 
 /* 1. Botones Primarios (WhatsApp, Cotizar, Blog CTA y Acciones Principales) */
 .btn-semtic-primary,
-a.rounded-full[class*="from-[#25D366]"],
-a.rounded-full[class*="from-[#2dd4bf]"],
-a.rounded-full[class*="from-[#00f2ea]"],
-a.rounded-full[class*="bg-[#25D366]"],
-a.rounded-full[class*="bg-[#2dd4bf]"],
-a[class*="bg-emerald-500"] {
+a.rounded-full[class*="from-[#25D366]"]:not(.fixed),
+a.rounded-full[class*="from-[#2dd4bf]"]:not(.fixed),
+a.rounded-full[class*="from-[#00f2ea]"]:not(.fixed),
+a.rounded-full[class*="bg-[#25D366]"]:not(.fixed),
+a.rounded-full[class*="bg-[#2dd4bf]"]:not(.fixed),
+a[class*="bg-emerald-500"]:not(.fixed) {
   position: relative;
   overflow: hidden;
   border-radius: 0.9rem !important;
@@ -236,12 +236,12 @@ a[class*="bg-emerald-500"] {
 
 /* Barrido de luz diagonal sobre botones primarios */
 .btn-semtic-primary::before,
-a.rounded-full[class*="from-[#25D366]"]::before,
-a.rounded-full[class*="from-[#2dd4bf]"]::before,
-a.rounded-full[class*="from-[#00f2ea]"]::before,
-a.rounded-full[class*="bg-[#25D366]"]::before,
-a.rounded-full[class*="bg-[#2dd4bf]"]::before,
-a[class*="bg-emerald-500"]::before {
+a.rounded-full[class*="from-[#25D366]"]:not(.fixed)::before,
+a.rounded-full[class*="from-[#2dd4bf]"]:not(.fixed)::before,
+a.rounded-full[class*="from-[#00f2ea]"]:not(.fixed)::before,
+a.rounded-full[class*="bg-[#25D366]"]:not(.fixed)::before,
+a.rounded-full[class*="bg-[#2dd4bf]"]:not(.fixed)::before,
+a[class*="bg-emerald-500"]:not(.fixed)::before {
   content: "";
   position: absolute;
   top: 0;
@@ -261,12 +261,12 @@ a[class*="bg-emerald-500"]::before {
 }
 
 .btn-semtic-primary:hover,
-a.rounded-full[class*="from-[#25D366]"]:hover,
-a.rounded-full[class*="from-[#2dd4bf]"]:hover,
-a.rounded-full[class*="from-[#00f2ea]"]:hover,
-a.rounded-full[class*="bg-[#25D366]"]:hover,
-a.rounded-full[class*="bg-[#2dd4bf]"]:hover,
-a[class*="bg-emerald-500"]:hover {
+a.rounded-full[class*="from-[#25D366]"]:not(.fixed):hover,
+a.rounded-full[class*="from-[#2dd4bf]"]:not(.fixed):hover,
+a.rounded-full[class*="from-[#00f2ea]"]:not(.fixed):hover,
+a.rounded-full[class*="bg-[#25D366]"]:not(.fixed):hover,
+a.rounded-full[class*="bg-[#2dd4bf]"]:not(.fixed):hover,
+a[class*="bg-emerald-500"]:not(.fixed):hover {
   transform: translateY(-3px) scale(1.01) !important;
   background: linear-gradient(135deg, rgba(5, 150, 105, 0.98) 0%, rgba(20, 184, 166, 0.95) 50%, rgba(37, 99, 235, 0.98) 100%) !important;
   border-color: rgba(0, 242, 234, 0.95) !important;
@@ -279,12 +279,12 @@ a[class*="bg-emerald-500"]:hover {
 }
 
 .btn-semtic-primary:hover::before,
-a.rounded-full[class*="from-[#25D366]"]:hover::before,
-a.rounded-full[class*="from-[#2dd4bf]"]:hover::before,
-a.rounded-full[class*="from-[#00f2ea]"]:hover::before,
-a.rounded-full[class*="bg-[#25D366]"]:hover::before,
-a.rounded-full[class*="bg-[#2dd4bf]"]:hover::before,
-a[class*="bg-emerald-500"]:hover::before {
+a.rounded-full[class*="from-[#25D366]"]:not(.fixed):hover::before,
+a.rounded-full[class*="from-[#2dd4bf]"]:not(.fixed):hover::before,
+a.rounded-full[class*="from-[#00f2ea]"]:not(.fixed):hover::before,
+a.rounded-full[class*="bg-[#25D366]"]:not(.fixed):hover::before,
+a.rounded-full[class*="bg-[#2dd4bf]"]:not(.fixed):hover::before,
+a[class*="bg-emerald-500"]:not(.fixed):hover::before {
   left: 140%;
 }
 
