@@ -133,6 +133,18 @@ const caseStudies = [
       "Catálogo técnico directo al grano con arquitectura ligera que abre al instante incluso con baja señal móvil en faena.",
     resultHighlight: "Landing enfocada en captación vía WhatsApp con llamadas diarias registradas",
     metrics: ["Arquitectura Astro 100% estática", "Segmentación por comuna", "Alta tasa de cierre comercial"]
+  },
+  {
+    sector: "E-Commerce & Bienestar Íntimo",
+    clientName: "Ciudad Sexshop (Chile)",
+    url: "https://ciudadsexshop.netlify.app/",
+    image: "/ciudadsexshop-hero.webp",
+    challenge:
+      "Ofrecer una experiencia de compra online privada, elegante y sin fricciones desde el celular para aumentar la tasa de conversión.",
+    solution:
+      "Tienda digital ultrarrápida en Astro con catálogo filtrable, fichas claras y cierre asistido directo a WhatsApp y carrito.",
+    resultHighlight: "E-Commerce enfocado en conversión móvil, privacidad y carga instantánea",
+    metrics: ["Carga < 0.8s en móvil", "Catálogo UX Mobile-First", "Cierre asistido por WhatsApp"]
   }
 ];
 
@@ -631,7 +643,7 @@ const currentYear = new Date().getFullYear();
             </p>
           </div>
 
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             {caseStudies.map((item) => (
               <article class="rounded-2xl bg-slate-900/60 border border-white/10 overflow-hidden backdrop-blur-sm flex flex-col justify-between hover:border-cyan-400/40 transition-all duration-300">
                 <div>

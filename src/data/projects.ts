@@ -111,5 +111,28 @@ export const projectsData: ProjectItem[] = [
       "Presentación detallada de faenas realizadas con testimonios de confianza"
     ],
     additionalInfo: "Optimizada para Google PageSpeed y preparada para campañas publicitarias de Google Ads, transformando clics en llamadas y mensajes efectivos."
+  },
+  {
+    id: "ciudadsexshop",
+    title: "Ciudad Sexshop",
+    subtitle: "E-Commerce Boutique & Venta Online Discreta",
+    category: "E-Commerce en Astro & Conversión Móvil",
+    image: "/ciudadsexshop-hero.webp",
+    url: "https://ciudadsexshop.netlify.app/",
+    accentColor: "#f472b6",
+    accentBorderClass: "hover:border-[#f472b6]/60",
+    accentTextClass: "text-[#f472b6]",
+    accentBgClass: "bg-[#f472b6]/10 border-[#f472b6]/30 text-[#f472b6]",
+    shortDesc: "Tienda online ultrarrápida desarrollada en Astro con catálogo interactivo, envíos 100% discretos y cierre directo por carrito o WhatsApp.",
+    tags: ["E-Commerce", "Astro", "Catálogo Móvil", "Envío Discreto"],
+    targetAudience: "Público adulto y parejas en Chile que buscan comprar productos de bienestar íntimo y lencería con total privacidad, navegación fluida desde el celular y despacho discreto a domicilio.",
+    particularity: "Arquitectura e-commerce construida en Astro para lograr carga instantánea incluso en redes móviles, incorporando filtros de categoría claros, fichas de producto persuasivas y flujo de compra sin fricciones.",
+    highlights: [
+      "Catálogo e-commerce categorizado con búsqueda rápida y diseño mobile-first",
+      "Carga instantánea en smartphones que reduce el abandono del carrito",
+      "Flujo de compra y asesoría confidencial integrada con WhatsApp",
+      "Optimización SEO técnica y metadatos para posicionamiento orgánico"
+    ],
+    additionalInfo: "Diseñada para maximizar la confianza del comprador online mediante una estética moderna, elegante y tiempos de respuesta inmediatos."
   }
 ];
