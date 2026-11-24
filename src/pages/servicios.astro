@@ -96,19 +96,19 @@ const servicesPack = [
   }
 ];
 
-// Textos de prueba / Casos reales por sector (Reemplazables según el nicho de la campaña)
+// Textos de prueba / Casos reales por sector (Orden: Ciudad Sexshop, Agrosilver, TM Quinta, Fugas Detect)
 const caseStudies = [
   {
-    sector: "Detección de Fugas & Gasfitería Especializada",
-    clientName: "Fugas Detect (V Región)",
-    url: "https://fugasdetect.cl",
-    image: "/fugasdetect.webp",
+    sector: "E-Commerce & Bienestar Íntimo",
+    clientName: "Ciudad Sexshop (Chile)",
+    url: "https://ciudadsexshop.netlify.app/",
+    image: "/ciudadsexshop-hero.webp",
     challenge:
-      "Captar propietarios y empresas con urgencias de filtraciones ocultas que buscan solución inmediata desde el celular.",
+      "Ofrecer una experiencia de compra online privada, elegante y sin fricciones desde el celular para aumentar la tasa de conversión.",
     solution:
-      "Plataforma ultrarrápida en Astro con embudos de emergencia por servicio (geófono, termografía y gasfitería).",
-    resultHighlight: "Landing enfocada en captación vía WhatsApp con llamadas diarias registradas",
-    metrics: ["Carga < 0.8s en móvil", "+48 reseñas 5★ apoyando conversión", "Contactos directos en terreno"]
+      "Tienda digital ultrarrápida en Astro con catálogo filtrable, fichas claras y cierre asistido directo a WhatsApp y carrito.",
+    resultHighlight: "E-Commerce enfocado en conversión móvil, privacidad y carga instantánea",
+    metrics: ["Carga < 0.8s en móvil", "Catálogo UX Mobile-First", "Cierre asistido por WhatsApp"]
   },
   {
     sector: "Mantenimiento de Áreas Verdes & Agricultura",
@@ -135,16 +135,16 @@ const caseStudies = [
     metrics: ["Arquitectura Astro 100% estática", "Segmentación por comuna", "Alta tasa de cierre comercial"]
   },
   {
-    sector: "E-Commerce & Bienestar Íntimo",
-    clientName: "Ciudad Sexshop (Chile)",
-    url: "https://ciudadsexshop.netlify.app/",
-    image: "/ciudadsexshop-hero.webp",
+    sector: "Detección de Fugas & Gasfitería Especializada",
+    clientName: "Fugas Detect (V Región)",
+    url: "https://fugasdetect.cl",
+    image: "/fugasdetect.webp",
     challenge:
-      "Ofrecer una experiencia de compra online privada, elegante y sin fricciones desde el celular para aumentar la tasa de conversión.",
+      "Captar propietarios y empresas con urgencias de filtraciones ocultas que buscan solución inmediata desde el celular.",
     solution:
-      "Tienda digital ultrarrápida en Astro con catálogo filtrable, fichas claras y cierre asistido directo a WhatsApp y carrito.",
-    resultHighlight: "E-Commerce enfocado en conversión móvil, privacidad y carga instantánea",
-    metrics: ["Carga < 0.8s en móvil", "Catálogo UX Mobile-First", "Cierre asistido por WhatsApp"]
+      "Plataforma ultrarrápida en Astro con embudos de emergencia por servicio (geófono, termografía y gasfitería).",
+    resultHighlight: "Landing enfocada en captación vía WhatsApp con llamadas diarias registradas",
+    metrics: ["Carga < 0.8s en móvil", "+48 reseñas 5★ apoyando conversión", "Contactos directos en terreno"]
   }
 ];
 
@@ -730,81 +730,146 @@ const currentYear = new Date().getFullYear();
             </p>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {caseStudies.map((item, idx) => {
-              const cardColors = [
-                { top: "via-[#00f2ea]", hover: "hover:border-[#00f2ea]/60", badge: "text-[#00f2ea] border-[#00f2ea]/35" },
-                { top: "via-[#39ff14]", hover: "hover:border-[#39ff14]/60", badge: "text-[#39ff14] border-[#39ff14]/35" },
-                { top: "via-[#3b82f6]", hover: "hover:border-[#3b82f6]/60", badge: "text-[#60a5fa] border-[#3b82f6]/35" },
-                { top: "via-[#f472b6]", hover: "hover:border-[#f472b6]/60", badge: "text-[#f472b6] border-[#f472b6]/35" }
-              ];
-              const c = cardColors[idx % cardColors.length];
-              return (
-              <article class={`reveal-up group relative rounded-3xl bg-[#0a0a1a]/90 border border-white/10 ${c.hover} overflow-hidden backdrop-blur-xl flex flex-col justify-between shadow-[0_15px_40px_rgba(0,0,0,0.45)] hover:-translate-y-2 transition-all duration-500`}>
-                <div class={`absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-transparent ${c.top} to-transparent opacity-70 group-hover:opacity-100 z-20`}></div>
-                <div>
-                  <!-- Miniatura optimizada con lazy loading -->
-                  <div class="relative h-52 w-full bg-[#050511] overflow-hidden border-b border-white/10">
-                    <img
-                      src={item.image}
-                      alt={`${item.clientName} - ${item.sector}`}
-                      width="600"
-                      height="340"
-                      class="w-full h-full object-cover object-top opacity-95 group-hover:scale-105 transition-transform duration-700"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a1a] via-[#0a0a1a]/25 to-transparent"></div>
-                    <span class={`absolute bottom-3 left-4 px-3 py-1 rounded-full text-xs font-bold bg-[#050511]/90 border backdrop-blur-md ${c.badge}`}>
-                      {item.sector}
-                    </span>
-                  </div>
+          <!-- Carrusel Coverflow / Center-Stage de Casos de Éxito -->
+          <div class="relative max-w-6xl mx-auto" data-portfolio-carousel>
+            <!-- Difuminado lateral izquierdo y derecho en escritorio -->
+            <div class="hidden lg:block pointer-events-none absolute inset-y-0 left-0 w-36 xl:w-52 bg-gradient-to-r from-[#050511] via-[#050511]/85 to-transparent z-20" aria-hidden="true"></div>
+            <div class="hidden lg:block pointer-events-none absolute inset-y-0 right-0 w-36 xl:w-52 bg-gradient-to-l from-[#050511] via-[#050511]/85 to-transparent z-20" aria-hidden="true"></div>
 
-                  <div class="p-6 sm:p-7">
-                    <h3 class="text-lg sm:text-xl font-bold text-white font-[family-name:var(--font-space-grotesk)] mb-2 group-hover:text-[#00f2ea] transition-colors">
-                      {item.clientName}
-                    </h3>
-                    <p class="text-slate-300 text-sm mb-3 leading-relaxed font-light">
-                      <strong class="text-slate-100 font-semibold">Desafío:</strong> {item.challenge}
-                    </p>
-                    <p class="text-slate-300 text-sm mb-5 leading-relaxed font-light">
-                      <strong class="text-[#00f2ea] font-semibold">Solución SEMTIC:</strong> {item.solution}
-                    </p>
+            <!-- Botón Flecha Izquierda -->
+            <button
+              type="button"
+              data-carousel-prev
+              aria-label="Caso de éxito anterior"
+              class="hidden sm:flex absolute left-2 lg:left-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-2xl bg-[#0a0a1a]/90 hover:bg-[#00f2ea] text-[#00f2ea] hover:text-[#050511] border border-[#00f2ea]/40 backdrop-blur-xl shadow-[0_0_25px_rgba(0,242,234,0.2)] hover:shadow-[0_0_30px_rgba(0,242,234,0.55)] items-center justify-center transition-all duration-300 cursor-pointer active:scale-95"
+            >
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" d="M15 19l-7-7 7-7" /></svg>
+            </button>
 
-                    <!-- Sello de resultado -->
-                    <div class="p-3.5 rounded-xl bg-[#050511]/90 border border-[#2dd4bf]/30 mb-4">
-                      <p class="text-xs sm:text-sm font-medium text-[#2dd4bf] flex items-start gap-2">
-                        <span class="mt-0.5 shrink-0">⚡</span>
-                        <span>{item.resultHighlight}</span>
+            <!-- Botón Flecha Derecha -->
+            <button
+              type="button"
+              data-carousel-next
+              aria-label="Siguiente caso de éxito"
+              class="hidden sm:flex absolute right-2 lg:right-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-2xl bg-[#0a0a1a]/90 hover:bg-[#00f2ea] text-[#00f2ea] hover:text-[#050511] border border-[#00f2ea]/40 backdrop-blur-xl shadow-[0_0_25px_rgba(0,242,234,0.2)] hover:shadow-[0_0_30px_rgba(0,242,234,0.55)] items-center justify-center transition-all duration-300 cursor-pointer active:scale-95"
+            >
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" d="M9 5l7 7-7 7" /></svg>
+            </button>
+
+            <!-- Escenario de Cards -->
+            <div class="portfolio-carousel-stage px-1 sm:px-14 lg:px-0">
+              {caseStudies.map((item, idx) => {
+                const cardColors = [
+                  { top: "via-[#f472b6]", hover: "hover:border-[#f472b6]/60", badge: "text-[#f472b6] border-[#f472b6]/35" },
+                  { top: "via-[#39ff14]", hover: "hover:border-[#39ff14]/60", badge: "text-[#39ff14] border-[#39ff14]/35" },
+                  { top: "via-[#00f2ea]", hover: "hover:border-[#00f2ea]/60", badge: "text-[#00f2ea] border-[#00f2ea]/35" },
+                  { top: "via-[#3b82f6]", hover: "hover:border-[#3b82f6]/60", badge: "text-[#60a5fa] border-[#3b82f6]/35" }
+                ];
+                const c = cardColors[idx % cardColors.length];
+                return (
+                <article
+                  data-carousel-slide
+                  data-slide-index={idx}
+                  data-pos={idx === 0 ? "center" : idx === 1 ? "next" : idx === caseStudies.length - 1 ? "prev" : "hidden"}
+                  class={`portfolio-slide group relative rounded-3xl bg-[#0a0a1a]/95 border border-white/15 ${c.hover} overflow-hidden backdrop-blur-2xl flex flex-col justify-between shadow-[0_20px_55px_rgba(0,0,0,0.65)]`}
+                >
+                  <div class={`absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-transparent ${c.top} to-transparent opacity-70 group-hover:opacity-100 z-20`}></div>
+                  <div>
+                    <!-- Miniatura optimizada con lazy loading -->
+                    <div class="relative h-52 w-full bg-[#050511] overflow-hidden border-b border-white/10">
+                      <img
+                        src={item.image}
+                        alt={`${item.clientName} - ${item.sector}`}
+                        width="600"
+                        height="340"
+                        class="w-full h-full object-cover object-top opacity-95 group-hover:scale-105 transition-transform duration-700"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a1a] via-[#0a0a1a]/25 to-transparent"></div>
+                      <span class={`absolute bottom-3 left-4 px-3 py-1 rounded-full text-xs font-bold bg-[#050511]/90 border backdrop-blur-md ${c.badge}`}>
+                        {item.sector}
+                      </span>
+                    </div>
+
+                    <div class="p-6 sm:p-7">
+                      <h3 class="text-lg sm:text-xl font-bold text-white font-[family-name:var(--font-space-grotesk)] mb-2 group-hover:text-[#00f2ea] transition-colors">
+                        {item.clientName}
+                      </h3>
+                      <p class="text-slate-300 text-sm mb-3 leading-relaxed font-light">
+                        <strong class="text-slate-100 font-semibold">Desafío:</strong> {item.challenge}
                       </p>
+                      <p class="text-slate-300 text-sm mb-5 leading-relaxed font-light">
+                        <strong class="text-[#00f2ea] font-semibold">Solución SEMTIC:</strong> {item.solution}
+                      </p>
+
+                      <!-- Sello de resultado -->
+                      <div class="p-3.5 rounded-xl bg-[#050511]/90 border border-[#2dd4bf]/30 mb-4">
+                        <p class="text-xs sm:text-sm font-medium text-[#2dd4bf] flex items-start gap-2">
+                          <span class="mt-0.5 shrink-0">⚡</span>
+                          <span>{item.resultHighlight}</span>
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="px-6 pb-6 pt-2 space-y-4">
-                  <div class="flex flex-wrap gap-2">
-                    {item.metrics.map((metric) => (
-                      <span class="px-2.5 py-1 rounded-md text-xs bg-white/[0.04] text-slate-300 border border-white/10">
-                        {metric}
-                      </span>
-                    ))}
+                  <div class="px-6 pb-6 pt-2 space-y-4">
+                    <div class="flex flex-wrap gap-2">
+                      {item.metrics.map((metric) => (
+                        <span class="px-2.5 py-1 rounded-md text-xs bg-white/[0.04] text-slate-300 border border-white/10">
+                          {metric}
+                        </span>
+                      ))}
+                    </div>
+
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="btn-semtic-secondary w-full inline-flex items-center justify-center gap-2 px-4 py-3 text-xs sm:text-sm font-bold"
+                    >
+                      <span>Ver sitio web en vivo</span>
+                      <svg class="w-4 h-4 shrink-0 text-[#00f2ea]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
                   </div>
+                </article>
+                );
+              })}
+            </div>
 
-                  <a
-                    href={item.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn-semtic-secondary w-full inline-flex items-center justify-center gap-2 px-4 py-3 text-xs sm:text-sm font-bold"
-                  >
-                    <span>Ver sitio web en vivo</span>
-                    <svg class="w-4 h-4 shrink-0 text-[#00f2ea]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </a>
-                </div>
-              </article>
-              );
-            })}
+            <!-- Controles inferiores: Circulitos indicadores + flechas compactas en móvil -->
+            <div class="mt-6 flex items-center justify-center gap-4">
+              <button
+                type="button"
+                data-carousel-prev
+                aria-label="Caso de éxito anterior"
+                class="flex sm:hidden w-9 h-9 rounded-xl bg-white/5 border border-white/15 text-[#00f2ea] items-center justify-center active:scale-95"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" d="M15 19l-7-7 7-7" /></svg>
+              </button>
+
+              <div class="flex items-center justify-center gap-2.5" role="tablist" aria-label="Seleccionar caso de éxito">
+                {caseStudies.map((item, idx) => (
+                  <button
+                    type="button"
+                    data-carousel-dot={idx}
+                    aria-label={`Ver caso ${item.clientName}`}
+                    class={`carousel-dot ${idx === 0 ? "is-active" : ""}`}
+                  ></button>
+                ))}
+              </div>
+
+              <button
+                type="button"
+                data-carousel-next
+                aria-label="Siguiente caso de éxito"
+                class="flex sm:hidden w-9 h-9 rounded-xl bg-white/5 border border-white/15 text-[#00f2ea] items-center justify-center active:scale-95"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" d="M9 5l7 7-7 7" /></svg>
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -1391,10 +1456,79 @@ const currentYear = new Date().getFullYear();
         animateBg();
       }
 
+      function initPortfolioCarousel() {
+        document.querySelectorAll<HTMLElement>('[data-portfolio-carousel]').forEach((carousel) => {
+          const slides = Array.from(carousel.querySelectorAll<HTMLElement>('[data-carousel-slide]'));
+          const dots = Array.from(carousel.querySelectorAll<HTMLButtonElement>('[data-carousel-dot]'));
+          const prevBtns = carousel.querySelectorAll<HTMLButtonElement>('[data-carousel-prev]');
+          const nextBtns = carousel.querySelectorAll<HTMLButtonElement>('[data-carousel-next]');
+          const total = slides.length;
+          if (total === 0) return;
+
+          let current = 0;
+
+          function render() {
+            const prevIdx = (current - 1 + total) % total;
+            const nextIdx = (current + 1) % total;
+
+            slides.forEach((slide, idx) => {
+              if (idx === current) {
+                slide.setAttribute('data-pos', 'center');
+              } else if (idx === prevIdx) {
+                slide.setAttribute('data-pos', 'prev');
+              } else if (idx === nextIdx) {
+                slide.setAttribute('data-pos', 'next');
+              } else {
+                slide.setAttribute('data-pos', 'hidden');
+              }
+            });
+
+            dots.forEach((dot, idx) => {
+              dot.classList.toggle('is-active', idx === current);
+              dot.setAttribute('aria-selected', idx === current ? 'true' : 'false');
+            });
+          }
+
+          function goTo(index: number) {
+            current = (index + total) % total;
+            render();
+          }
+
+          prevBtns.forEach((btn) => btn.addEventListener('click', () => goTo(current - 1)));
+          nextBtns.forEach((btn) => btn.addEventListener('click', () => goTo(current + 1)));
+          dots.forEach((dot, idx) => dot.addEventListener('click', () => goTo(idx)));
+
+          slides.forEach((slide, idx) => {
+            slide.addEventListener('click', (e) => {
+              const pos = slide.getAttribute('data-pos');
+              if (pos === 'prev' || pos === 'next') {
+                e.preventDefault();
+                e.stopPropagation();
+                goTo(idx);
+              }
+            }, true);
+          });
+
+          let touchStartX = 0;
+          carousel.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].clientX;
+          }, { passive: true });
+          carousel.addEventListener('touchend', (e) => {
+            const diff = e.changedTouches[0].clientX - touchStartX;
+            if (Math.abs(diff) > 45) {
+              goTo(diff < 0 ? current + 1 : current - 1);
+            }
+          }, { passive: true });
+
+          render();
+        });
+      }
+
       function bootServiciosAnimations() {
         initScrollReveal();
         initBgParticles();
         initTorusCanvas();
+        initPortfolioCarousel();
       }
 
       if (typeof window !== 'undefined') {

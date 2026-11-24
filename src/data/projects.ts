@@ -19,75 +19,27 @@ export interface ProjectItem {
 
 export const projectsData: ProjectItem[] = [
   {
-    id: "tmquinta",
-    title: "TM Quinta",
-    subtitle: "Transportes, Maquinarias y Movimientos de Tierra",
-    category: "Plataforma Web & Venta de Áridos",
-    image: "/tmquinta-hero.webp",
-    url: "https://tmquinta.cl",
-    accentColor: "#00f2ea",
-    accentBorderClass: "hover:border-[#00f2ea]/60",
-    accentTextClass: "text-[#00f2ea]",
-    accentBgClass: "bg-[#00f2ea]/10 border-[#00f2ea]/30 text-[#00f2ea]",
-    shortDesc: "Plataforma de servicios de transporte, movimiento de tierras, arriendo de maquinaria, retiro de escombros y venta de áridos en la V Región.",
-    tags: ["Maquinaria Pesada", "Áridos & Maicillo", "Movimiento de Tierras", "Cotización WhatsApp"],
-    targetAudience: "Empresas constructoras, contratistas, parceleros y particulares en toda la Región de Valparaíso (Gran Valparaíso, Marga Marga, Quillota, Aconcagua y San Antonio) que necesitan arriendo de maquinaria pesada, venta de áridos o fletes con respuesta inmediata.",
-    particularity: "Desarrollo web enfocado en la conversión rápida y experiencia móvil para usuarios en obra. Dispone de catálogo de servicios segmentado (retroexcavadora, minicargador, camión 3/4, tolvas 16m³ y despacho de áridos) con cotización One-Click directa a WhatsApp y optimización para búsquedas locales de urgencia.",
+    id: "ciudadsexshop",
+    title: "Ciudad Sexshop",
+    subtitle: "E-Commerce Boutique & Venta Online Discreta",
+    category: "E-Commerce en Astro & Conversión Móvil",
+    image: "/ciudadsexshop-hero.webp",
+    url: "https://ciudadsexshop.netlify.app/",
+    accentColor: "#f472b6",
+    accentBorderClass: "hover:border-[#f472b6]/60",
+    accentTextClass: "text-[#f472b6]",
+    accentBgClass: "bg-[#f472b6]/10 border-[#f472b6]/30 text-[#f472b6]",
+    shortDesc: "Tienda online ultrarrápida desarrollada en Astro con catálogo interactivo, envíos 100% discretos y cierre directo por carrito o WhatsApp.",
+    tags: ["E-Commerce", "Astro", "Catálogo Móvil", "Envío Discreto"],
+    targetAudience: "Público adulto y parejas en Chile que buscan comprar productos de bienestar íntimo y lencería con total privacidad, navegación fluida desde el celular y despacho discreto a domicilio.",
+    particularity: "Arquitectura e-commerce construida en Astro para lograr carga instantánea incluso en redes móviles, incorporando filtros de categoría claros, fichas de producto persuasivas y flujo de compra sin fricciones.",
     highlights: [
-      "Catálogo completo de maquinaria pesada, fletes y tolvas de 16m³",
-      "Cotización One-Click directa a WhatsApp segmentada por servicio",
-      "Arquitectura ultra rápida adaptada para faenas y obras en terreno",
-      "Estrategia de SEO Local y cobertura en comunas de la V Región"
+      "Catálogo e-commerce categorizado con búsqueda rápida y diseño mobile-first",
+      "Carga instantánea en smartphones que reduce el abandono del carrito",
+      "Flujo de compra y asesoría confidencial integrada con WhatsApp",
+      "Optimización SEO técnica y metadatos para posicionamiento orgánico"
     ],
-    additionalInfo: "Optimizada para transformar visitas y búsquedas locales en conversaciones directas por WhatsApp y llamadas de cotización en tiempo récord."
-  },
-  /*
-  {
-    id: "rebbel",
-    title: "Rebbel Arquitectura",
-    subtitle: "Estudio de Arquitectura, Urbanismo & Diseño",
-    category: "Portafolio de Autor & SEO Local",
-    image: "/rebbel-hero.webp",
-    url: "https://rebbel.cl",
-    accentColor: "#818cf8",
-    accentBorderClass: "hover:border-[#4f46e5]/60",
-    accentTextClass: "text-[#818cf8]",
-    accentBgClass: "bg-[#4f46e5]/10 border-[#4f46e5]/30 text-[#818cf8]",
-    shortDesc: "Portafolio corporativo para estudio de arquitectura en Limache con galería visual interactiva y captación SEO.",
-    tags: ["Diseño UI/UX", "SEO Local", "Galería Interactiva", "Minimalismo"],
-    targetAudience: "Estudio boutique de arquitectura y diseño sustentable en la Región de Valparaíso (Limache, Olmué, Quillota, Viña del Mar), dirigido a particulares que proyectan su vivienda y a empresas que requieren obras comerciales con diseño de autor.",
-    particularity: "Diseño visual minimalista con estética editorial sofisticada. Incorpora galerías fotográficas en alta definición sin merma de velocidad y una estrategia de SEO Local optimizada para términos de arquitectura y construcción en la provincia de Marga Marga.",
-    highlights: [
-      "Galería visual interactiva de proyectos con visualización fluida",
-      "Diseño editorial limpio que proyecta exclusividad y prestigio",
-      "Posicionamiento SEO Local en Marga Marga, Quillota y Gran Valparaíso",
-      "Canal de contacto directo para agendar visitas técnicas y reuniones"
-    ],
-    additionalInfo: "Construido para proyectar el talento y la identidad arquitectónica del estudio, atrayendo clientes calificados para obras residenciales y corporativas."
-  },
-  */
-  {
-    id: "fugasdetect",
-    title: "Fugas Detect",
-    subtitle: "Detección No Invasiva de Fugas & Gasfitería Integral",
-    category: "Plataforma Web en Astro & SEO de Conversión",
-    image: "/fugasdetect.webp",
-    url: "https://fugasdetect.cl",
-    accentColor: "#38bdf8",
-    accentBorderClass: "hover:border-[#38bdf8]/60",
-    accentTextClass: "text-[#38bdf8]",
-    accentBgClass: "bg-[#38bdf8]/10 border-[#38bdf8]/30 text-[#38bdf8]",
-    shortDesc: "Plataforma web de máxima velocidad desarrollada en Astro para detección de filtraciones con geófono, termografía y gasfitería con captación directa a WhatsApp.",
-    tags: ["Astro", "Detección No Invasiva", "SEO Local V Región", "Conversión WhatsApp"],
-    targetAudience: "Propietarios de viviendas, parcelas, administradores de edificios y empresas en la Región de Valparaíso (Viña del Mar, Valparaíso, Concón, Quilpué, Villa Alemana, Limache y Quillota) que sufren filtraciones ocultas, alzas anormales en su cuenta de agua o problemas de gasfitería y calefón.",
-    particularity: "Desarrollo web ultraligero y de alto rendimiento construido en Astro. Diseñado para responder a situaciones de urgencia doméstica con arquitectura mobile-first, optimización SEO Local en toda la Región de Valparaíso ('fugas de agua', 'gasfitería de urgencia'), botón de cotización directa a WhatsApp y blog técnico educativo para posicionamiento orgánico.",
-    highlights: [
-      "Desarrollo en Astro con velocidad de carga instantánea y máximo puntaje en Core Web Vitals",
-      "Embudos de cotización directa a WhatsApp segmentados por tipo de servicio y urgencia",
-      "Estrategia de SEO Local geolocalizada en comunas del Gran Valparaíso y Marga Marga",
-      "Integración de blog técnico para captación orgánica y alta tasa de retención"
-    ],
-    additionalInfo: "Diseñado para transformar búsquedas de urgencia en contactos inmediatos, destacando su tecnología no destructiva y más de 48 reseñas 5 estrellas en Google."
+    additionalInfo: "Diseñada para maximizar la confianza del comprador online mediante una estética moderna, elegante y tiempos de respuesta inmediatos."
   },
   {
     id: "agrosilver",
@@ -113,26 +65,49 @@ export const projectsData: ProjectItem[] = [
     additionalInfo: "Optimizada para Google PageSpeed y preparada para campañas publicitarias de Google Ads, transformando clics en llamadas y mensajes efectivos."
   },
   {
-    id: "ciudadsexshop",
-    title: "Ciudad Sexshop",
-    subtitle: "E-Commerce Boutique & Venta Online Discreta",
-    category: "E-Commerce en Astro & Conversión Móvil",
-    image: "/ciudadsexshop-hero.webp",
-    url: "https://ciudadsexshop.netlify.app/",
-    accentColor: "#f472b6",
-    accentBorderClass: "hover:border-[#f472b6]/60",
-    accentTextClass: "text-[#f472b6]",
-    accentBgClass: "bg-[#f472b6]/10 border-[#f472b6]/30 text-[#f472b6]",
-    shortDesc: "Tienda online ultrarrápida desarrollada en Astro con catálogo interactivo, envíos 100% discretos y cierre directo por carrito o WhatsApp.",
-    tags: ["E-Commerce", "Astro", "Catálogo Móvil", "Envío Discreto"],
-    targetAudience: "Público adulto y parejas en Chile que buscan comprar productos de bienestar íntimo y lencería con total privacidad, navegación fluida desde el celular y despacho discreto a domicilio.",
-    particularity: "Arquitectura e-commerce construida en Astro para lograr carga instantánea incluso en redes móviles, incorporando filtros de categoría claros, fichas de producto persuasivas y flujo de compra sin fricciones.",
+    id: "tmquinta",
+    title: "TM Quinta",
+    subtitle: "Transportes, Maquinarias y Movimientos de Tierra",
+    category: "Plataforma Web & Venta de Áridos",
+    image: "/tmquinta-hero.webp",
+    url: "https://tmquinta.cl",
+    accentColor: "#00f2ea",
+    accentBorderClass: "hover:border-[#00f2ea]/60",
+    accentTextClass: "text-[#00f2ea]",
+    accentBgClass: "bg-[#00f2ea]/10 border-[#00f2ea]/30 text-[#00f2ea]",
+    shortDesc: "Plataforma de servicios de transporte, movimiento de tierras, arriendo de maquinaria, retiro de escombros y venta de áridos en la V Región.",
+    tags: ["Maquinaria Pesada", "Áridos & Maicillo", "Movimiento de Tierras", "Cotización WhatsApp"],
+    targetAudience: "Empresas constructoras, contratistas, parceleros y particulares en toda la Región de Valparaíso (Gran Valparaíso, Marga Marga, Quillota, Aconcagua y San Antonio) que necesitan arriendo de maquinaria pesada, venta de áridos o fletes con respuesta inmediata.",
+    particularity: "Desarrollo web enfocado en la conversión rápida y experiencia móvil para usuarios en obra. Dispone de catálogo de servicios segmentado (retroexcavadora, minicargador, camión 3/4, tolvas 16m³ y despacho de áridos) con cotización One-Click directa a WhatsApp y optimización para búsquedas locales de urgencia.",
     highlights: [
-      "Catálogo e-commerce categorizado con búsqueda rápida y diseño mobile-first",
-      "Carga instantánea en smartphones que reduce el abandono del carrito",
-      "Flujo de compra y asesoría confidencial integrada con WhatsApp",
-      "Optimización SEO técnica y metadatos para posicionamiento orgánico"
+      "Catálogo completo de maquinaria pesada, fletes y tolvas de 16m³",
+      "Cotización One-Click directa a WhatsApp segmentada por servicio",
+      "Arquitectura ultra rápida adaptada para faenas y obras en terreno",
+      "Estrategia de SEO Local y cobertura en comunas de la V Región"
     ],
-    additionalInfo: "Diseñada para maximizar la confianza del comprador online mediante una estética moderna, elegante y tiempos de respuesta inmediatos."
+    additionalInfo: "Optimizada para transformar visitas y búsquedas locales en conversaciones directas por WhatsApp y llamadas de cotización en tiempo récord."
+  },
+  {
+    id: "fugasdetect",
+    title: "Fugas Detect",
+    subtitle: "Detección No Invasiva de Fugas & Gasfitería Integral",
+    category: "Plataforma Web en Astro & SEO de Conversión",
+    image: "/fugasdetect.webp",
+    url: "https://fugasdetect.cl",
+    accentColor: "#38bdf8",
+    accentBorderClass: "hover:border-[#38bdf8]/60",
+    accentTextClass: "text-[#38bdf8]",
+    accentBgClass: "bg-[#38bdf8]/10 border-[#38bdf8]/30 text-[#38bdf8]",
+    shortDesc: "Plataforma web de máxima velocidad desarrollada en Astro para detección de filtraciones con geófono, termografía y gasfitería con captación directa a WhatsApp.",
+    tags: ["Astro", "Detección No Invasiva", "SEO Local V Región", "Conversión WhatsApp"],
+    targetAudience: "Propietarios de viviendas, parcelas, administradores de edificios y empresas en la Región de Valparaíso (Viña del Mar, Valparaíso, Concón, Quilpué, Villa Alemana, Limache y Quillota) que sufren filtraciones ocultas, alzas anormales en su cuenta de agua o problemas de gasfitería y calefón.",
+    particularity: "Desarrollo web ultraligero y de alto rendimiento construido en Astro. Diseñado para responder a situaciones de urgencia doméstica con arquitectura mobile-first, optimización SEO Local en toda la Región de Valparaíso ('fugas de agua', 'gasfitería de urgencia'), botón de cotización directa a WhatsApp y blog técnico educativo para posicionamiento orgánico.",
+    highlights: [
+      "Desarrollo en Astro con velocidad de carga instantánea y máximo puntaje en Core Web Vitals",
+      "Embudos de cotización directa a WhatsApp segmentados por tipo de servicio y urgencia",
+      "Estrategia de SEO Local geolocalizada en comunas del Gran Valparaíso y Marga Marga",
+      "Integración de blog técnico para captación orgánica y alta tasa de retención"
+    ],
+    additionalInfo: "Diseñado para transformar búsquedas de urgencia en contactos inmediatos, destacando su tecnología no destructiva y más de 48 reseñas 5 estrellas en Google."
   }
 ];
